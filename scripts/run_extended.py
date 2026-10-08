@@ -698,6 +698,7 @@ def integration_metrics(out: Path) -> dict:
         ROOT / "zoneshift/contracts.py",
         ROOT / "zoneshift/tzif.py",
         ROOT / "zoneshift/adapters.py",
+        ROOT / "zoneshift/vendor_support.py",
         ROOT / "zoneshift/execution.py",
         ROOT / "zoneshift/repair.py",
         ROOT / "zoneshift/attribution.py",
@@ -708,7 +709,7 @@ def integration_metrics(out: Path) -> dict:
     def sloc(path: Path) -> int:
         return sum(1 for line in path.read_text().splitlines() if line.strip() and not line.lstrip().startswith("#"))
     result = {
-        "core_python_sloc_nonblank_noncomment": {str(p.relative_to(ROOT)): sloc(p) for p in paths},
+        "core_python_sloc_nonblank_noncomment": {p.relative_to(ROOT).as_posix(): sloc(p) for p in paths},
         "core_total_sloc": sum(sloc(p) for p in paths),
         "protocol_top_level_fields": len(P),
         "pinned_zone_files": len(json.loads((ROOT / "data/tzdb/manifest.json").read_text())),

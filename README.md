@@ -13,7 +13,8 @@ python -m pytest -q
 python scripts/verify_inputs.py
 ```
 
-The suite contains 127 tests. Pinned TZif files and licensed scheduler
+The retained study reports 127 tests; the current suite also includes nested
+semantic-comparator and current-size regressions. Pinned TZif files and licensed scheduler
 sources are included in `data/` and `vendor/`; the checker does not fall back to
 the host's current time-zone database. Windows evaluation uses a bounded worker
 process, while POSIX supports the recorded signal-based boundary.
@@ -25,3 +26,14 @@ new experiment, choose a new output directory with the documented study runner.
 and `docs/` describes the supported recurrence fragment. Monthly recurrence,
 distributed delivery, and live deployment are not claimed by the core checker.
 Original code is MIT-licensed; vendored sources retain their own notices.
+
+The focused offline regressions need only Python's standard library:
+
+```sh
+python -B -m unittest discover -s tests -p test_reproduction_semantics.py -v
+```
+
+They check that variable startup durations do not change the semantic digest,
+while scheduled timestamps, verdicts, and source/data hashes still do, and that
+the current derived size includes the complete core package. They do not rerun
+the retained scheduler campaigns or replace their timing measurements.

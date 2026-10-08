@@ -655,17 +655,18 @@
   },
   "integration": {
     "core_python_sloc_nonblank_noncomment": {
-      "zoneshift/contracts.py": 311,
+      "zoneshift/contracts.py": 324,
       "zoneshift/tzif.py": 183,
       "zoneshift/adapters.py": 48,
-      "zoneshift/execution.py": 59,
+      "zoneshift/vendor_support.py": 39,
+      "zoneshift/execution.py": 163,
       "zoneshift/repair.py": 69,
       "zoneshift/attribution.py": 89,
       "zoneshift/profiles.py": 14,
-      "zoneshift/__main__.py": 150,
+      "zoneshift/__main__.py": 161,
       "zoneshift/__init__.py": 2
     },
-    "core_total_sloc": 925,
+    "core_total_sloc": 1092,
     "protocol_top_level_fields": 23,
     "pinned_zone_files": 47,
     "notes": "SLOC is an observable artifact measure, not engineer effort or adoption cost"

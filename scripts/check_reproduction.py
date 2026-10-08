@@ -3,7 +3,8 @@
 
 Scheduled timestamps, verdicts, classifications, trace ordering, source hashes and
 all test inputs remain in the digest. The comparison therefore does not hide a
-scheduler-output difference.
+scheduler-output difference. Exclusions affect the canonical comparison only;
+the source records retain their timings and runner metadata.
 """
 from __future__ import annotations
 
@@ -14,6 +15,7 @@ import sys
 
 IGNORED_KEYS = {
     "elapsed_ns",
+    "startup_ns",
     "after_elapsed_ns",
     "elapsed_seconds",
     "median_us",
