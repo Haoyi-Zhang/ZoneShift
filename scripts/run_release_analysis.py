@@ -304,19 +304,9 @@ def _first_mismatch(row: dict) -> tuple[str, int | str | None, int | None]:
 def behaviour_signature(row: dict) -> str | None:
     if row["qualification"]["status"] != "VIOLATION":
         return None
-    kind = "ordinary"
-    if row["kind"] == "transition":
-        if row["transition_delta"] > 0:
-            kind = f"gap:{abs(row['transition_delta'])}"
-        elif row["transition_delta"] < 0:
-            kind = f"fold:{abs(row['transition_delta'])}"
-        else:
-            kind = "transition:0"
     mismatch, value, ordinal = _first_mismatch(row)
     payload = {
         "profile": row["profile"],
-        "boundary": kind,
-        "anchor_offset": row["anchor_offset"],
         "reasons": sorted(row["qualification"]["reasons"]),
         "mismatch": mismatch,
         "value": value,
@@ -409,7 +399,7 @@ def signature_budget(out: Path) -> dict:
     result = {
         "design": cfg,
         "signature_definition": {
-            "included": ["profile", "transition kind and magnitude", "anchor offset", "contract reasons", "first mismatch type/delta/ordinal"],
+            "included": ["profile", "contract reasons", "first mismatch type/delta/ordinal"],
             "excluded": cfg["signature_excludes"],
             "claim_boundary": "Signatures are deterministic behavioural equivalence classes, not independently confirmed root causes or defect counts.",
         },

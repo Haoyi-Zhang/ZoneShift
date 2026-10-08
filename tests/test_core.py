@@ -282,10 +282,10 @@ def test_transition_sampling_improves_decorrelated_signature_yield():
 def test_minimized_witnesses_are_pinned_replayed_and_decision_preserving():
     data=json.loads((ROOT/'results/minimized-witnesses.json').read_text())
     s=data['summary']
-    assert s['witnesses']==57 and s['blocked']==45 and s['accepted_data_effects']==12
+    assert s['witnesses']==43 and s['blocked']==31 and s['accepted_data_effects']==12
     assert s['all_preserve_real_executed_prefixes']
     assert s['all_replayed_exactly'] and s['all_decisions_preserved']
-    assert s['replay_validation_api_calls']==538
+    assert s['replay_validation_api_calls']==426
     assert s['median_event_reduction'] >= 0.70
     for w in data['witnesses']:
         assert len(w['implementation_source_sha256'])==64

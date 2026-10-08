@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 import json
+import argparse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / 'results'
-OUT = ROOT / 'paper' / 'generated'
+parser = argparse.ArgumentParser()
+parser.add_argument('--paper-dir', type=Path, default=ROOT / 'paper')
+OUT = parser.parse_args().paper_dir / 'generated'
 OUT.mkdir(parents=True, exist_ok=True)
 
 def load(name: str):

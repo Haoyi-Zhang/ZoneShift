@@ -56,19 +56,23 @@ def _execute_cell(
     start_label: dict[str, Any],
     contract: Contract,
     count: int,
+    *, start_instant: float | None = None,
 ) -> dict[str, Any]:
     if (tzdb, zone_name) not in _manifest_pairs():
         raise ValueError(f"Zone/version not in pinned manifest: {tzdb}/{zone_name}")
     zone = load_zone(tzdb, zone_name)
-    start = _start(start_label, zone)
     oracle = TZif(ROOT / "data/tzdb" / tzdb / zone_name)
-    if start.timestamp() not in oracle.resolve(start.replace(tzinfo=None)):
-        raise ValueError("Starting label is nonexistent; choose a valid start instant")
-    run = run_trace(implementation, zone, contract, start.timestamp(), count)
+    if start_instant is None:
+        start = _start(start_label, zone)
+        if start.timestamp() not in oracle.resolve(start.replace(tzinfo=None)):
+            raise ValueError("Starting label is nonexistent; choose a valid start instant")
+        start_instant = start.timestamp()
+    run = run_trace(implementation, zone, contract, start_instant, count)
+    run['start_instant'] = start_instant
     run["qualification"] = qualify(
         oracle,
         contract,
-        start.timestamp(),
+        start_instant,
         run["trace"],
         run["error"],
     )
@@ -98,6 +102,12 @@ def _upgrade(cfg: dict[str, Any]) -> tuple[dict[str, Any], int]:
         raise ValueError(f"Unknown upgrade-check fields: {sorted(unknown)}")
     contract = _contract(cfg["contract"])
     count = int(cfg.get("count", 8))
+    old_zone = load_zone(cfg['old_tzdb'], cfg['zone'])
+    resolved_start = _start(cfg, old_zone)
+    old_oracle = TZif(ROOT / 'data/tzdb' / cfg['old_tzdb'] / cfg['zone'])
+    if resolved_start.timestamp() not in old_oracle.resolve(resolved_start.replace(tzinfo=None)):
+        raise ValueError("Starting label is nonexistent under the old data")
+    start_instant = resolved_start.timestamp()
     coordinates = {
         "old_code_old_data": (cfg["old_implementation"], cfg["old_tzdb"]),
         "new_code_old_data": (cfg["new_implementation"], cfg["old_tzdb"]),
@@ -112,6 +122,7 @@ def _upgrade(cfg: dict[str, Any]) -> tuple[dict[str, Any], int]:
             cfg,
             contract,
             count,
+            start_instant=start_instant,
         )
         for name, (implementation, tzdb) in coordinates.items()
     }

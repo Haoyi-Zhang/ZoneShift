@@ -104,6 +104,7 @@ def reference(
     contract: Contract,
     start: float,
     count: int = 8,
+    *, through: float | None = None,
 ) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
     """Enumerate a bounded prefix without invoking a scheduler under test.
 
@@ -156,11 +157,15 @@ def reference(
                                     }
                                 )
 
-        if reached is None and len(events) >= count:
+        selected_count = min(len(required(events, replace(contract, fold=fold)))
+                             for fold in ('first', 'second')) if through is None else 0
+        horizon_reached = through is not None and day >= zone.wall(through).date()
+        if reached is None and (selected_count >= count or horizon_reached):
             reached = day_index
         # Two extra local dates plus the one-day offset bound are sufficient to
         # establish UTC order for this limited recurrence domain.
-        if reached is not None and day_index >= reached + 2:
+        covered = through is None or day >= zone.wall(through).date() + timedelta(days=2)
+        if reached is not None and day_index >= reached + 2 and covered:
             break
     else:
         raise ValueError("Reference horizon exhausted")
@@ -198,6 +203,7 @@ def _qualify_complete(
     start: float,
     trace: list[dict[str, object]],
     error: str | None = None,
+    *, events: list[dict[str, object]] | None = None,
 ) -> dict[str, object]:
     if not contract.complete:
         raise ValueError("Explicit gap and fold policies are required")
@@ -216,7 +222,8 @@ def _qualify_complete(
             break
         previous = timestamp
 
-    events, _ = reference(zone, contract, start, max(8, len(values)))
+    if events is None:
+        events, _ = reference(zone, contract, start, max(8, len(values)), through=max(values))
     expected: dict[float, list[dict[str, object]]] = {}
     for event in events:
         expected.setdefault(float(event["timestamp"]), []).append(event)
@@ -277,8 +284,14 @@ def policy_completion_frontier(
     """
 
     rows: list[dict[str, object]] = []
+    by_gap: dict[str, list[dict[str, object]]] = {}
     for completion in contract.completions():
-        result = _qualify_complete(zone, completion, start, trace, error)
+        if trace and not error and completion.gap not in by_gap:
+            by_gap[completion.gap], _ = reference(
+                zone, completion, start, max(8, len(trace)),
+                through=max(float(item['timestamp']) for item in trace))
+        result = _qualify_complete(zone, completion, start, trace, error,
+                                   events=by_gap.get(completion.gap))
         rows.append(
             {
                 "gap": completion.gap,

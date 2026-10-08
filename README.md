@@ -13,7 +13,7 @@ python -m pytest -q
 python scripts/verify_inputs.py
 ```
 
-The current suite contains 112 tests. Pinned TZif files and licensed scheduler
+The suite contains 127 tests. Pinned TZif files and licensed scheduler
 sources are included in `data/` and `vendor/`; the checker does not fall back to
 the host's current time-zone database. Windows evaluation uses a bounded worker
 process, while POSIX supports the recorded signal-based boundary.

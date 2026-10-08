@@ -6,12 +6,12 @@
     "all_decisions_preserved": true,
     "all_preserve_real_executed_prefixes": true,
     "all_replayed_exactly": true,
-    "blocked": 45,
+    "blocked": 31,
     "interpretation": "Reduction minimizes evidence prefixes, not semantic inputs or root causes; an execution error is retained at its observed full prefix.",
     "median_byte_reduction": 0.7486631016042781,
     "median_event_reduction": 0.75,
-    "replay_validation_api_calls": 538,
-    "witnesses": 57
+    "replay_validation_api_calls": 426,
+    "witnesses": 43
   },
   "witnesses": [
     {
@@ -309,49 +309,6 @@
       "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268"
     },
     {
-      "case_id": "America/Los_Angeles:2022:1647162000:five_am",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "croniter-2.0.1",
-      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
-      "kind": "blocked_trace",
-      "minimized_bytes": 141,
-      "minimized_events": 2,
-      "minimized_prefix_qualification": {
-        "missing": [],
-        "reasons": [
-          "off_recurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "five_am",
-      "reasons": [
-        "off_recurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1647162000,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-03-13T05:00:00-07:00",
-          "timestamp": 1647172800.0
-        },
-        {
-          "fold": 0,
-          "iso": "2022-03-14T04:00:00-07:00",
-          "timestamp": 1647255600.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "America/Los_Angeles",
-      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268"
-    },
-    {
       "case_id": "America/Los_Angeles:2022:1667638800:midnight",
       "decision_preserved": true,
       "error": null,
@@ -480,53 +437,6 @@
           "fold": 0,
           "iso": "2022-11-07T01:00:00-08:00",
           "timestamp": 1667811600.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "America/Los_Angeles",
-      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268"
-    },
-    {
-      "case_id": "America/Los_Angeles:2022:1667721600:five_am",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "croniter-2.0.1",
-      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
-      "kind": "blocked_trace",
-      "minimized_bytes": 141,
-      "minimized_events": 2,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1667826000.0
-        ],
-        "reasons": [
-          "missing_required_occurrence",
-          "off_recurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "five_am",
-      "reasons": [
-        "missing_required_occurrence",
-        "off_recurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1667721600,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-11-06T05:00:00-08:00",
-          "timestamp": 1667739600.0
-        },
-        {
-          "fold": 0,
-          "iso": "2022-11-07T06:00:00-08:00",
-          "timestamp": 1667829600.0
         }
       ],
       "tzdb": "2025b",
@@ -838,98 +748,6 @@
       "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
     },
     {
-      "case_id": "Australia/Lord_Howe:2022:1648908000:five_am",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "croniter-2.0.1",
-      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
-      "kind": "blocked_trace",
-      "minimized_bytes": 141,
-      "minimized_events": 2,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1649010600.0
-        ],
-        "reasons": [
-          "missing_required_occurrence",
-          "off_recurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "five_am",
-      "reasons": [
-        "missing_required_occurrence",
-        "off_recurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1648908000,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-04-03T05:00:00+10:30",
-          "timestamp": 1648924200.0
-        },
-        {
-          "fold": 0,
-          "iso": "2022-04-04T05:30:00+10:30",
-          "timestamp": 1649012400.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "Australia/Lord_Howe",
-      "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
-    },
-    {
-      "case_id": "Australia/Lord_Howe:2022:1648908000:hourly_30",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "croniter-2.0.1",
-      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
-      "kind": "blocked_trace",
-      "minimized_bytes": 141,
-      "minimized_events": 2,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1648911600.0
-        ],
-        "reasons": [
-          "missing_required_occurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "hourly_30",
-      "reasons": [
-        "missing_required_occurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1648908000,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-04-03T01:30:00+11:00",
-          "timestamp": 1648909800.0
-        },
-        {
-          "fold": 0,
-          "iso": "2022-04-03T02:30:00+10:30",
-          "timestamp": 1648915200.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "Australia/Lord_Howe",
-      "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
-    },
-    {
       "case_id": "Australia/Lord_Howe:2022:1648908000:half_hourly",
       "decision_preserved": true,
       "error": null,
@@ -967,96 +785,6 @@
           "fold": 0,
           "iso": "2022-04-03T02:00:00+10:30",
           "timestamp": 1648913400.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "Australia/Lord_Howe",
-      "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
-    },
-    {
-      "case_id": "Australia/Lord_Howe:2022:1664551800:midnight",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "aps-3.11.3",
-      "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
-      "kind": "blocked_trace",
-      "minimized_bytes": 141,
-      "minimized_events": 2,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1664715600.0
-        ],
-        "reasons": [
-          "missing_required_occurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "missing_required_occurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1664551800,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-10-02T00:00:00+10:30",
-          "timestamp": 1664631000.0
-        },
-        {
-          "fold": 0,
-          "iso": "2022-10-04T00:00:00+11:00",
-          "timestamp": 1664802000.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "Australia/Lord_Howe",
-      "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
-    },
-    {
-      "case_id": "Australia/Lord_Howe:2022:1664551800:midnight",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "aps-3.11.2",
-      "implementation_source_sha256": "302605d17771ee5dc722604cdde052d72ef9b27ce4387761d20bab212cff41cc",
-      "kind": "blocked_trace",
-      "minimized_bytes": 141,
-      "minimized_events": 2,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1664715600.0
-        ],
-        "reasons": [
-          "missing_required_occurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "missing_required_occurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1664551800,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-10-02T00:00:00+10:30",
-          "timestamp": 1664631000.0
-        },
-        {
-          "fold": 0,
-          "iso": "2022-10-04T00:00:00+11:00",
-          "timestamp": 1664802000.0
         }
       ],
       "tzdb": "2025b",
@@ -1154,86 +882,6 @@
       "case_id": "Australia/Lord_Howe:2022:1664634600:midnight",
       "decision_preserved": true,
       "error": null,
-      "implementation": "aps-3.11.3",
-      "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
-      "kind": "blocked_trace",
-      "minimized_bytes": 71,
-      "minimized_events": 1,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1664715600.0
-        ],
-        "reasons": [
-          "missing_required_occurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "missing_required_occurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1664634600,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-10-04T00:00:00+11:00",
-          "timestamp": 1664802000.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "Australia/Lord_Howe",
-      "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
-    },
-    {
-      "case_id": "Australia/Lord_Howe:2022:1664634600:midnight",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "aps-3.11.2",
-      "implementation_source_sha256": "302605d17771ee5dc722604cdde052d72ef9b27ce4387761d20bab212cff41cc",
-      "kind": "blocked_trace",
-      "minimized_bytes": 71,
-      "minimized_events": 1,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1664715600.0
-        ],
-        "reasons": [
-          "missing_required_occurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "missing_required_occurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1664634600,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-10-04T00:00:00+11:00",
-          "timestamp": 1664802000.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "Australia/Lord_Howe",
-      "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
-    },
-    {
-      "case_id": "Australia/Lord_Howe:2022:1664634600:midnight",
-      "decision_preserved": true,
-      "error": null,
       "implementation": "croniter-2.0.1",
       "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
       "kind": "blocked_trace",
@@ -1267,91 +915,6 @@
       "verdict": "VIOLATION",
       "zone": "Australia/Lord_Howe",
       "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
-    },
-    {
-      "case_id": "Australia/Lord_Howe:2022:1664634600:five_am",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "croniter-2.0.1",
-      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
-      "kind": "blocked_trace",
-      "minimized_bytes": 141,
-      "minimized_events": 2,
-      "minimized_prefix_qualification": {
-        "missing": [],
-        "reasons": [
-          "off_recurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "five_am",
-      "reasons": [
-        "off_recurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1664634600,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-10-02T05:00:00+11:00",
-          "timestamp": 1664647200.0
-        },
-        {
-          "fold": 0,
-          "iso": "2022-10-03T04:30:00+11:00",
-          "timestamp": 1664731800.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "Australia/Lord_Howe",
-      "zone_file_sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df"
-    },
-    {
-      "case_id": "America/Santiago:2022:1648868400:midnight",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "croniter-2.0.1",
-      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
-      "kind": "blocked_trace",
-      "minimized_bytes": 71,
-      "minimized_events": 1,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1648958400.0
-        ],
-        "reasons": [
-          "missing_required_occurrence",
-          "off_recurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "missing_required_occurrence",
-        "off_recurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1648868400,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-04-03T01:00:00-04:00",
-          "timestamp": 1648962000.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "America/Santiago",
-      "zone_file_sha256": "d020f0d77742314b28aae32ea68260ba99330143610cae84d2557151103ba2c0"
     },
     {
       "case_id": "America/Santiago:2022:1648951200:five_am",
@@ -1566,82 +1129,6 @@
       "zone_file_sha256": "d020f0d77742314b28aae32ea68260ba99330143610cae84d2557151103ba2c0"
     },
     {
-      "case_id": "America/Santiago:2022:1662865200:midnight",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "croniter-6.2.4",
-      "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
-      "kind": "blocked_trace",
-      "minimized_bytes": 71,
-      "minimized_events": 1,
-      "minimized_prefix_qualification": {
-        "missing": [],
-        "reasons": [
-          "off_recurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "off_recurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1662865200,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-09-11T01:00:00-03:00",
-          "timestamp": 1662868800.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "America/Santiago",
-      "zone_file_sha256": "d020f0d77742314b28aae32ea68260ba99330143610cae84d2557151103ba2c0"
-    },
-    {
-      "case_id": "America/Santiago:2022:1662865200:midnight",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "croniter-2.0.1",
-      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
-      "kind": "blocked_trace",
-      "minimized_bytes": 71,
-      "minimized_events": 1,
-      "minimized_prefix_qualification": {
-        "missing": [],
-        "reasons": [
-          "off_recurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "off_recurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1662865200,
-      "study": "current-release",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-09-11T00:00:00-04:00",
-          "timestamp": 1662868800.0
-        }
-      ],
-      "tzdb": "2025b",
-      "verdict": "VIOLATION",
-      "zone": "America/Santiago",
-      "zone_file_sha256": "d020f0d77742314b28aae32ea68260ba99330143610cae84d2557151103ba2c0"
-    },
-    {
       "case_id": "America/Santiago:2022:1662865200:five_am",
       "decision_preserved": true,
       "error": null,
@@ -1765,46 +1252,6 @@
       "zone_file_sha256": "b249ca1f48d23d66a6f831df337e6a5ecf0d6a6edde5316591423d4a0c6bcb28"
     },
     {
-      "case_id": "Europe/Chisinau:2022:1648339201:midnight",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "aps-3.11.3",
-      "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
-      "kind": "blocked_trace",
-      "minimized_bytes": 71,
-      "minimized_events": 1,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1648414800.0
-        ],
-        "reasons": [
-          "missing_required_occurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "missing_required_occurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1648339201,
-      "study": "current-tzdb",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-03-29T00:00:00+03:00",
-          "timestamp": 1648501200.0
-        }
-      ],
-      "tzdb": "2026b",
-      "verdict": "VIOLATION",
-      "zone": "Europe/Chisinau",
-      "zone_file_sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e"
-    },
-    {
       "case_id": "2025b-py->2026a:Europe/Chisinau:2022:1648252800:midnight",
       "decision_preserved": true,
       "error": null,
@@ -1888,46 +1335,6 @@
       "verdict": "VIOLATION",
       "zone": "Europe/Chisinau",
       "zone_file_sha256": "e533e1902b71c5ad01c8b0afed8c4eadce55b5dba2dafd955fcbeb4a8a4f90fb"
-    },
-    {
-      "case_id": "2025b-py->2026a:Europe/Chisinau:2022:1648339201:midnight",
-      "decision_preserved": true,
-      "error": null,
-      "implementation": "aps-3.11.3",
-      "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
-      "kind": "blocked_trace",
-      "minimized_bytes": 71,
-      "minimized_events": 1,
-      "minimized_prefix_qualification": {
-        "missing": [
-          1648414800.0
-        ],
-        "reasons": [
-          "missing_required_occurrence"
-        ],
-        "status": "VIOLATION"
-      },
-      "original_bytes": 561,
-      "original_events": 8,
-      "prefix_of_executed_trace": true,
-      "profile": "midnight",
-      "reasons": [
-        "missing_required_occurrence"
-      ],
-      "replayed_exactly": true,
-      "start": 1648339201,
-      "study": "release-series",
-      "trace": [
-        {
-          "fold": 0,
-          "iso": "2022-03-29T00:00:00+03:00",
-          "timestamp": 1648501200.0
-        }
-      ],
-      "tzdb": "2026a",
-      "verdict": "VIOLATION",
-      "zone": "Europe/Chisinau",
-      "zone_file_sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e"
     },
     {
       "case_id": "America/Vancouver:2026:1793437200:five_am",

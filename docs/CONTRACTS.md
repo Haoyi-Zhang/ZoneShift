@@ -48,7 +48,7 @@ The historical main and factorial matrices remain frozen. Later sets are labeled
 - **Initial current-rule-data holdout:** APScheduler 3.11.3 and croniter 6.2.4, 2025b/2026b data, America/Vancouver and Europe/Chisinau selected from IANA 2026a/2026b notes before outcome inspection, years 2022/2026/2027, four profiles.
 - **Consecutive rule-release series:** the same current modules with exact tagged Python `tzdata` bytes for every source-named pair from IANA 2026a through 2026e. The six retained zones are Chisinau, Vancouver, Edmonton, Casablanca, Inuvik, and Winnipeg. A difference is accepted only when both endpoint traces pass and the retained source covers the affected zone/period.
 
-`results/decision-records.jsonl` stores 5,280 historical/current-holdout records. `results/release-series-decisions.jsonl` adds 1,752 paired old-data/new-data records with both TZif hashes and traces. `results/minimized-witnesses.json` retains 57 executed prefixes that preserve and exactly replay representative blocked and accepted decisions. Prefix reduction packages reviewable evidence; it does not minimize semantic inputs, isolate root causes, or provide independent confirmation.
+`results/decision-records.jsonl` stores 5,280 historical/current-holdout records. `results/release-series-decisions.jsonl` adds 1,752 paired old-data/new-data records with both TZif hashes and traces. `results/minimized-witnesses.json` retains 43 executed prefixes that preserve and exactly replay representative blocked and accepted decisions. Prefix reduction packages reviewable evidence; it does not minimize semantic inputs, isolate root causes, or provide independent confirmation.
 
 ## De-correlated failure signatures
 

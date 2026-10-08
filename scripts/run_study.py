@@ -80,6 +80,7 @@ def benchmark(out,only_transition=False):
                         lo=int(datetime(case['year'],1,1,tzinfo=UTC).timestamp())
                         hi=int(datetime(case['year']+1,1,1,tzinfo=UTC).timestamp())
                         spec['start']=rng.randrange(lo,hi)
+                        spec.update(kind='uniform', transition_delta=None, anchor_offset=None)
                     name=spec['zone']; c=PROFILES[spec['profile']]
                     ref=ref_cache[name]
                     zone=zone_cache[name]
