@@ -1,0 +1,1061 @@
+{
+  "schema_version": 2,
+  "audited_on": "2026-10-04",
+  "scope": "Offline retained verification ledger. It records the primary-source audit basis and manuscript use; the automated checker does not claim live DOI/URL resolution.",
+  "entry_count": 69,
+  "entries": [
+    {
+      "key": "apsdoc",
+      "entry_type": "misc",
+      "authors_latex": "{APScheduler contributors}",
+      "title_latex": "{apscheduler.triggers.cron}",
+      "year": "2025",
+      "identifier": "https://github.com/agronholm/apscheduler/blob/3.11.1/docs/modules/triggers/cron.rst",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Versioned DST policy and examples inspected. The paper preserves documented legal missing/repeated occurrences as negative controls.",
+      "citation_contexts": [
+        "At the same time, APScheduler documents that a cron schedule may legitimately execute zero or two times when its selected local time falls in a gap or fold~\\cite{apsdoc}."
+      ]
+    },
+    {
+      "key": "issue529",
+      "entry_type": "misc",
+      "authors_latex": "{rodrigoformi-zh}",
+      "title_latex": "{DST transitions cause APScheduler to incorrectly calculate next trigger times}",
+      "year": "2021",
+      "identifier": "https://github.com/agronholm/apscheduler/issues/529",
+      "source_kind": "public_practice_case",
+      "use_in_paper": "Motivates and bounds the historical problem family; not counted as newly discovered defects.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Issue body, recurrence, expected timestamp, labels, and status inspected; the original pandas/pytz environment is not claimed as rerun.",
+      "citation_contexts": [
+        "Issue 529 describes a valid midnight occurrence skipped after a spring transition; issue 606 reports a related daily synchronization symptom and is marked as a duplicate~\\cite{issue529,issue606}."
+      ]
+    },
+    {
+      "key": "issue606",
+      "entry_type": "misc",
+      "authors_latex": "{slipknotstrat}",
+      "title_latex": "{APScheduler With CronTrigger Skipped A Day Due To Daylight Savings}",
+      "year": "2022",
+      "identifier": "https://github.com/agronholm/apscheduler/issues/606",
+      "source_kind": "public_practice_case",
+      "use_in_paper": "Motivates and bounds the historical problem family; not counted as newly discovered defects.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Issue body and duplicate disposition inspected; treated as the same historical family as issue 529, not an independent defect.",
+      "citation_contexts": [
+        "Issue 529 describes a valid midnight occurrence skipped after a spring transition; issue 606 reports a related daily synchronization symptom and is marked as a duplicate~\\cite{issue529,issue606}."
+      ]
+    },
+    {
+      "key": "issue1021",
+      "entry_type": "misc",
+      "authors_latex": "{suola}",
+      "title_latex": "{CronTrigger runs into infinite loop at daylight savings time boundary}",
+      "year": "2025",
+      "identifier": "https://github.com/agronholm/apscheduler/issues/1021",
+      "source_kind": "public_practice_case",
+      "use_in_paper": "Motivates and bounds the historical problem family; not counted as newly discovered defects.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Issue body supplies the repeated-interval nonprogress input and names APScheduler 3.11.0; local replay is reported separately.",
+      "citation_contexts": [
+        "Issue 1021 instead concerns failure to advance through a repeated local interval~\\cite{issue1021}."
+      ]
+    },
+    {
+      "key": "sentryissue",
+      "entry_type": "misc",
+      "authors_latex": "{Evan Purkhiser}",
+      "title_latex": "{Crons: croniter library does not correctly compute DST transition for some schedules}",
+      "year": "2024",
+      "identifier": "https://github.com/getsentry/sentry/issues/66868",
+      "source_kind": "public_practice_case",
+      "use_in_paper": "Motivates and bounds the historical problem family; not counted as newly discovered defects.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Issue body and downstream effect description inspected; customer impact remains attributed context, while all numerical results are local measurements.",
+      "citation_contexts": [
+        "Sentry issue 66868 reports that the cron expression \\texttt{0 5 * * *} can yield an expected check-in one hour early when daylight saving time (DST) begins and one hour late when it ends~\\cite{sentryissue}."
+      ]
+    },
+    {
+      "key": "pep495",
+      "entry_type": "misc",
+      "authors_latex": "Alexander Belopolsky and Tim Peters",
+      "title_latex": "{Local Time Disambiguation}",
+      "year": "2015",
+      "identifier": "https://peps.python.org/pep-0495/",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Primary PEP inspected for fold/gap terminology and the semantics of the fold attribute.",
+      "citation_contexts": [
+        "PEP~495 introduces Python's \\texttt{fold} bit to disambiguate repeated labels, and PEP~615 defines \\texttt{ZoneInfo} plus explicit file loading from IANA data~\\cite{pep495,pep615}."
+      ]
+    },
+    {
+      "key": "pep615",
+      "entry_type": "misc",
+      "authors_latex": "Paul Ganssle",
+      "title_latex": "{Support for the IANA Time Zone Database in the Standard Library}",
+      "year": "2020",
+      "identifier": "https://peps.python.org/pep-0615/",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Primary PEP inspected for ZoneInfo construction and versioned data-source behavior.",
+      "citation_contexts": [
+        "PEP~495 introduces Python's \\texttt{fold} bit to disambiguate repeated labels, and PEP~615 defines \\texttt{ZoneInfo} plus explicit file loading from IANA data~\\cite{pep495,pep615}."
+      ]
+    },
+    {
+      "key": "tza",
+      "entry_type": "misc",
+      "authors_latex": "{Time Zone Database contributors}",
+      "title_latex": "{News for the tz database}",
+      "year": "2025",
+      "identifier": "https://github.com/eggert/tz/blob/2025a/NEWS",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "IANA 2025a NEWS entry for Paraguay inspected and used only to justify an expected rule-data change.",
+      "citation_contexts": [
+        "The IANA 2025a release, for example, records Paraguay's adoption of permanent UTC$-03$, affecting future timestamps from March 2025~\\cite{tza}."
+      ]
+    },
+    {
+      "key": "tzlicense",
+      "entry_type": "misc",
+      "authors_latex": "{Time Zone Database contributors}",
+      "title_latex": "{LICENSE}",
+      "year": "2025",
+      "identifier": "https://github.com/eggert/tz/blob/2025b/LICENSE",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Complete upstream notice inspected and retained with the pinned data.",
+      "citation_contexts": [
+        "Forty-seven zone files pin 21 zones across seven IANA releases and retain the applicable time-zone data notice~\\cite{tzlicense}."
+      ]
+    },
+    {
+      "key": "apshistory",
+      "entry_type": "misc",
+      "authors_latex": "{APScheduler contributors}",
+      "title_latex": "{Version history}",
+      "year": "2025",
+      "identifier": "https://github.com/agronholm/apscheduler/blob/3.11.2/docs/versionhistory.rst",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Versioned 3.11.0--3.11.2 release notes inspected for the folded-time fixes associated with issue 1021.",
+      "citation_contexts": [
+        "2 with the folded-time nonprogress report~\\cite{apshistory}."
+      ]
+    },
+    {
+      "key": "aps0",
+      "entry_type": "misc",
+      "authors_latex": "{APScheduler contributors}",
+      "title_latex": "{CronTrigger implementation}",
+      "year": "2024",
+      "identifier": "https://github.com/agronholm/apscheduler/blob/3.11.0/src/apscheduler/triggers/cron/__init__.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Exact released CronTrigger calculation source retained and byte-identified; execution uses the documented restricted harness, not a full distribution install.",
+      "citation_contexts": [
+        "3 release~\\cite{aps0,aps1,aps2,aps3}."
+      ]
+    },
+    {
+      "key": "aps1",
+      "entry_type": "misc",
+      "authors_latex": "{APScheduler contributors}",
+      "title_latex": "{CronTrigger implementation}",
+      "year": "2025",
+      "identifier": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/cron/__init__.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Exact released CronTrigger calculation source retained and byte-identified; execution uses the documented restricted harness.",
+      "citation_contexts": [
+        "3 release~\\cite{aps0,aps1,aps2,aps3}."
+      ]
+    },
+    {
+      "key": "aps2",
+      "entry_type": "misc",
+      "authors_latex": "{APScheduler contributors}",
+      "title_latex": "{CronTrigger implementation}",
+      "year": "2025",
+      "identifier": "https://github.com/agronholm/apscheduler/blob/3.11.2/src/apscheduler/triggers/cron/__init__.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Exact released CronTrigger calculation source retained and byte-identified; execution uses the documented restricted harness.",
+      "citation_contexts": [
+        "3 release~\\cite{aps0,aps1,aps2,aps3}."
+      ]
+    },
+    {
+      "key": "tests0",
+      "entry_type": "misc",
+      "authors_latex": "{APScheduler contributors}",
+      "title_latex": "{Cron trigger tests}",
+      "year": "2024",
+      "identifier": "https://github.com/agronholm/apscheduler/blob/3.11.0/tests/triggers/test_cron.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Only the four relevant released DST parameter inputs are reconstructed; the complete upstream suite is not claimed.",
+      "citation_contexts": [
+        "We reconstruct the four pre-existing DST inputs and the later focused fold regression~\\cite{tests0,tests2}."
+      ]
+    },
+    {
+      "key": "tests2",
+      "entry_type": "misc",
+      "authors_latex": "{APScheduler contributors}",
+      "title_latex": "{Cron trigger tests}",
+      "year": "2025",
+      "identifier": "https://github.com/agronholm/apscheduler/blob/3.11.2/tests/triggers/test_cron.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Relevant DST parameters and the focused fold-progress regression are reconstructed; the complete upstream suite is not claimed.",
+      "citation_contexts": [
+        "We reconstruct the four pre-existing DST inputs and the later focused fold regression~\\cite{tests0,tests2}."
+      ]
+    },
+    {
+      "key": "cronreadme",
+      "entry_type": "misc",
+      "authors_latex": "{croniter contributors}",
+      "title_latex": "{croniter README}",
+      "year": "2023",
+      "identifier": "https://github.com/pallets-eco/croniter/blob/2.0.1/README.rst",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "1 release are both executed~\\cite{cron1310,cron201}; their documentation explicitly requires timezone-aware bases for DST handling~\\cite{cronreadme}."
+      ]
+    },
+    {
+      "key": "cron1310",
+      "entry_type": "misc",
+      "authors_latex": "{croniter contributors}",
+      "title_latex": "{croniter implementation}",
+      "year": "2023",
+      "identifier": "https://github.com/pallets-eco/croniter/blob/1.3.10/src/croniter/croniter.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Exact released module retained and byte-identified; it is Sentry 24.3.0's frozen dependency in the local integration replay.",
+      "citation_contexts": [
+        "1 release are both executed~\\cite{cron1310,cron201}; their documentation explicitly requires timezone-aware bases for DST handling~\\cite{cronreadme}.",
+        "4~\\cite{cron1310,cron201,cron624}; a current release never replaces the frozen Sentry dependency."
+      ]
+    },
+    {
+      "key": "cron201",
+      "entry_type": "misc",
+      "authors_latex": "{croniter contributors}",
+      "title_latex": "{croniter implementation}",
+      "year": "2023",
+      "identifier": "https://github.com/pallets-eco/croniter/blob/2.0.1/src/croniter/croniter.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Exact released module retained and byte-identified; used as a later release comparator, not as Sentry's deployed version.",
+      "citation_contexts": [
+        "1 release are both executed~\\cite{cron1310,cron201}; their documentation explicitly requires timezone-aware bases for DST handling~\\cite{cronreadme}.",
+        "4~\\cite{cron1310,cron201,cron624}; a current release never replaces the frozen Sentry dependency."
+      ]
+    },
+    {
+      "key": "sentryschedule",
+      "entry_type": "misc",
+      "authors_latex": "{Sentry contributors}",
+      "title_latex": "{Monitor schedule calculation}",
+      "year": "2024",
+      "identifier": "https://github.com/getsentry/sentry/blob/24.3.0/src/sentry/monitors/schedule.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "The small crontab calculation branch is reconstructed; the complete Sentry service is not executed.",
+      "citation_contexts": [
+        "0's monitored-cron branch constructs croniter from a reference timestamp, requests the next datetime, and truncates seconds~\\cite{sentryschedule}."
+      ]
+    },
+    {
+      "key": "sentrypin",
+      "entry_type": "misc",
+      "authors_latex": "{Sentry contributors}",
+      "title_latex": "{Frozen requirements}",
+      "year": "2024",
+      "identifier": "https://github.com/getsentry/sentry/blob/24.3.0/requirements-frozen.txt",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Frozen requirements source inspected for croniter==1.3.10.",
+      "citation_contexts": [
+        "10~\\cite{sentrypin}."
+      ]
+    },
+    {
+      "key": "hypothesis",
+      "entry_type": "article",
+      "authors_latex": "David R. MacIver and Zac Hatfield-Dodds and {Many Other Contributors}",
+      "title_latex": "Hypothesis: A New Approach to Property-Based Testing",
+      "year": "2019",
+      "identifier": "https://doi.org/10.21105/joss.01891",
+      "source_kind": "test_generation_research",
+      "use_in_paper": "Positions boundary generation relative to property, random, symbolic, feedback-directed, and compiler-testing methods.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Publisher record and short open paper inspected; cited for property-based testing practice rather than as evidence about civil time.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "tang",
+      "entry_type": "article",
+      "authors_latex": "Xunzhu Tang and Haoye Tian and Pingfan Kong and Saad Ezzini and Kui Liu and Xin Xia and Jacques Klein and Tegawend{\\'e} F. Bissyand{\\'e}",
+      "title_latex": "App Review Driven Collaborative Bug Finding",
+      "year": "2024",
+      "identifier": "https://doi.org/10.1007/s10664-024-10489-x",
+      "source_kind": "bug_report_and_empirical_methodology",
+      "use_in_paper": "Supports report-to-replay procedure and cautions about duplicates, labels, and report quality.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Publisher record and substantive paper sections inspected; cited only as a methodological connection from reports to validated cases.",
+      "citation_contexts": [
+        "The report-to-replay process is related to work that uses user reports to guide validated failure discovery~\\cite{tang}, but we neither reuse that algorithm nor claim independent annotators or private data."
+      ]
+    },
+    {
+      "key": "genmorph",
+      "entry_type": "article",
+      "authors_latex": "Jon J. Ayerdi and Valerio Terragni and Gunel Jahangirova and Aitor Arrieta and Paolo Tonella",
+      "title_latex": "{GenMorph}: Automatically Generating Metamorphic Relations via Genetic Programming",
+      "year": "2024",
+      "identifier": "https://doi.org/10.1109/TSE.2024.3407840",
+      "source_kind": "differential_or_metamorphic_research",
+      "use_in_paper": "Explains differential/metamorphic baselines and why agreement alone is not an oracle.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Published IEEE TSE metadata used; cited for automatic metamorphic-relation generation, not as a directly reused algorithm.",
+      "citation_contexts": [
+        "GenMorph and MR-Scout automate relation generation from executions or tests~\\cite{genmorph,mrscout}."
+      ]
+    },
+    {
+      "key": "mckeeman",
+      "entry_type": "article",
+      "authors_latex": "William M. McKeeman",
+      "title_latex": "Differential Testing for Software",
+      "year": "1998",
+      "identifier": "https://bitsavers.org/pdf/dec/dtj/dtj_v10-01_1998.pdf",
+      "source_kind": "differential_or_metamorphic_research",
+      "use_in_paper": "Explains differential/metamorphic baselines and why agreement alone is not an oracle.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Primary archived article used for the origin and limits of differential testing.",
+      "citation_contexts": [
+        "Differential testing can expose disagreement without identifying the correct side~\\cite{mckeeman}."
+      ]
+    },
+    {
+      "key": "rfc6557",
+      "entry_type": "techreport",
+      "authors_latex": "Eliot Lear and Paul Eggert",
+      "title_latex": "Procedures for Maintaining the Time Zone Database",
+      "year": "2012",
+      "identifier": "https://doi.org/10.17487/RFC6557",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "The iCalendar specification formalizes recurring calendar components, while the IETF procedures for maintaining and distributing time-zone data recognize that rules are versioned operational inputs~\\cite{rfc5545,rfc6557,rfc7808}."
+      ]
+    },
+    {
+      "key": "rfc8536",
+      "entry_type": "techreport",
+      "authors_latex": "Arthur David Olson and Paul Eggert and Kenneth Murchison",
+      "title_latex": "The Time Zone Information Format ({TZif})",
+      "year": "2019",
+      "identifier": "https://doi.org/10.17487/RFC8536",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official RFC metadata retained because it governed part of the historical tool/data path; RFC 9636 is cited as its replacement.",
+      "citation_contexts": [
+        "TZif specifies the binary transition format consumed by many systems; the current RFC~9636 obsoletes RFC~8536 while preserving that role~\\cite{rfc8536,rfc9636}."
+      ]
+    },
+    {
+      "key": "rfc9636",
+      "entry_type": "techreport",
+      "authors_latex": "Arthur David Olson and Paul Eggert and Kenneth Murchison",
+      "title_latex": "The Time Zone Information Format ({TZif})",
+      "year": "2024",
+      "identifier": "https://doi.org/10.17487/RFC9636",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official RFC Editor record inspected; published October 2024 and explicitly obsoletes RFC 8536.",
+      "citation_contexts": [
+        "TZif specifies the binary transition format consumed by many systems; the current RFC~9636 obsoletes RFC~8536 while preserving that role~\\cite{rfc8536,rfc9636}."
+      ]
+    },
+    {
+      "key": "rfc5545",
+      "entry_type": "techreport",
+      "authors_latex": "Bernard Desruisseaux",
+      "title_latex": "Internet Calendaring and Scheduling Core Object Specification ({iCalendar})",
+      "year": "2009",
+      "identifier": "https://doi.org/10.17487/RFC5545",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "The iCalendar specification formalizes recurring calendar components, while the IETF procedures for maintaining and distributing time-zone data recognize that rules are versioned operational inputs~\\cite{rfc5545,rfc6557,rfc7808}."
+      ]
+    },
+    {
+      "key": "rfc7808",
+      "entry_type": "techreport",
+      "authors_latex": "Michael Douglass and Cyrus Daboo",
+      "title_latex": "Time Zone Data Distribution Service",
+      "year": "2016",
+      "identifier": "https://doi.org/10.17487/RFC7808",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "The iCalendar specification formalizes recurring calendar components, while the IETF procedures for maintaining and distributing time-zone data recognize that rules are versioned operational inputs~\\cite{rfc5545,rfc6557,rfc7808}."
+      ]
+    },
+    {
+      "key": "weyuker1982",
+      "entry_type": "article",
+      "authors_latex": "Elaine J. Weyuker",
+      "title_latex": "On Testing Non-Testable Programs",
+      "year": "1982",
+      "identifier": "https://doi.org/10.1093/comjnl/25.4.465",
+      "source_kind": "test_oracle_research",
+      "use_in_paper": "Frames the absence of a universal oracle and the need for an explicit bounded contract.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "\\subsection{Testing methods and the remaining gap} The test-oracle problem is longstanding~\\cite{weyuker1982,barr2015}."
+      ]
+    },
+    {
+      "key": "barr2015",
+      "entry_type": "article",
+      "authors_latex": "Earl T. Barr and Mark Harman and Phil McMinn and Muzammil Shahbaz and Shin Yoo",
+      "title_latex": "The Oracle Problem in Software Testing: A Survey",
+      "year": "2015",
+      "identifier": "https://doi.org/10.1109/TSE.2014.2372785",
+      "source_kind": "test_oracle_research",
+      "use_in_paper": "Frames the absence of a universal oracle and the need for an explicit bounded contract.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "\\subsection{Testing methods and the remaining gap} The test-oracle problem is longstanding~\\cite{weyuker1982,barr2015}."
+      ]
+    },
+    {
+      "key": "quickcheck",
+      "entry_type": "inproceedings",
+      "authors_latex": "Koen Claessen and John Hughes",
+      "title_latex": "{QuickCheck}: A Lightweight Tool for Random Testing of Haskell Programs",
+      "year": "2000",
+      "identifier": "https://doi.org/10.1145/351240.351266",
+      "source_kind": "test_generation_research",
+      "use_in_paper": "Positions boundary generation relative to property, random, symbolic, feedback-directed, and compiler-testing methods.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "dart",
+      "entry_type": "inproceedings",
+      "authors_latex": "Patrice Godefroid and Nils Klarlund and Koushik Sen",
+      "title_latex": "{DART}: Directed Automated Random Testing",
+      "year": "2005",
+      "identifier": "https://doi.org/10.1145/1065010.1065036",
+      "source_kind": "test_generation_research",
+      "use_in_paper": "Positions boundary generation relative to property, random, symbolic, feedback-directed, and compiler-testing methods.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "klee",
+      "entry_type": "inproceedings",
+      "authors_latex": "Cristian Cadar and Daniel Dunbar and Dawson Engler",
+      "title_latex": "{KLEE}: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs",
+      "year": "2008",
+      "identifier": "https://www.usenix.org/conference/osdi-08",
+      "source_kind": "test_generation_research",
+      "use_in_paper": "Positions boundary generation relative to property, random, symbolic, feedback-directed, and compiler-testing methods.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official USENIX proceedings record used for symbolic test generation context; no KLEE experiment is claimed.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "randoop",
+      "entry_type": "inproceedings",
+      "authors_latex": "Carlos Pacheco and Shuvendu K. Lahiri and Michael D. Ernst and Thomas Ball",
+      "title_latex": "Feedback-Directed Random Test Generation",
+      "year": "2007",
+      "identifier": "https://doi.org/10.1109/ICSE.2007.37",
+      "source_kind": "test_generation_research",
+      "use_in_paper": "Positions boundary generation relative to property, random, symbolic, feedback-directed, and compiler-testing methods.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "evosuite",
+      "entry_type": "inproceedings",
+      "authors_latex": "Gordon Fraser and Andrea Arcuri",
+      "title_latex": "{EvoSuite}: Automatic Test Suite Generation for Object-Oriented Software",
+      "year": "2011",
+      "identifier": "https://doi.org/10.1145/2025113.2025179",
+      "source_kind": "test_generation_research",
+      "use_in_paper": "Positions boundary generation relative to property, random, symbolic, feedback-directed, and compiler-testing methods.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "csmith",
+      "entry_type": "inproceedings",
+      "authors_latex": "Xuejun Yang and Yang Chen and Eric Eide and John Regehr",
+      "title_latex": "Finding and Understanding Bugs in {C} Compilers",
+      "year": "2011",
+      "identifier": "https://doi.org/10.1145/1993498.1993532",
+      "source_kind": "test_generation_research",
+      "use_in_paper": "Positions boundary generation relative to property, random, symbolic, feedback-directed, and compiler-testing methods.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "deltadebug",
+      "entry_type": "article",
+      "authors_latex": "Andreas Zeller and Ralf Hildebrandt",
+      "title_latex": "Simplifying and Isolating Failure-Inducing Input",
+      "year": "2002",
+      "identifier": "https://doi.org/10.1109/32.988498",
+      "source_kind": "testing_evidence_and_benchmarks",
+      "use_in_paper": "Supports cautious interpretation of generated faults, flaky behavior, reduction, and benchmark evidence.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "creduce",
+      "entry_type": "inproceedings",
+      "authors_latex": "John Regehr and Yang Chen and Pascal Cuoq and Eric Eide and Chucky Ellison and Xuejun Yang",
+      "title_latex": "Test-Case Reduction for {C} Compiler Bugs",
+      "year": "2012",
+      "identifier": "https://doi.org/10.1145/2254064.2254104",
+      "source_kind": "testing_evidence_and_benchmarks",
+      "use_in_paper": "Supports cautious interpretation of generated faults, flaky behavior, reduction, and benchmark evidence.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Property-based and generated testing provide reusable input exploration: QuickCheck and Hypothesis generate values from declarative properties~\\cite{quickcheck,hypothesis}; DART and KLEE explore paths symbolically or concolically~\\cite{dart,klee}; Randoop and EvoSuite generate object-oriented tests~\\cite{randoop,evosuite}; and compiler studies demonstrate the value of structured random generation and reducer-guided diagnosis~\\cite{csmith,deltadebug,creduce}."
+      ]
+    },
+    {
+      "key": "mtsurvey",
+      "entry_type": "article",
+      "authors_latex": "Sergio Segura and Gordon Fraser and Ana B. S\\'anchez and Antonio Ruiz-Cort\\'es",
+      "title_latex": "A Survey on Metamorphic Testing",
+      "year": "2016",
+      "identifier": "https://doi.org/10.1109/TSE.2016.2532875",
+      "source_kind": "differential_or_metamorphic_research",
+      "use_in_paper": "Explains differential/metamorphic baselines and why agreement alone is not an oracle.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Metamorphic testing likewise addresses missing exact outputs through relations, but useful relations require domain knowledge and false-alarm control~\\cite{mtsurvey,mtreview}."
+      ]
+    },
+    {
+      "key": "mtreview",
+      "entry_type": "article",
+      "authors_latex": "Tsong Yueh Chen and Fei-Ching Kuo and Huai Liu and Pak-Lok Poon and Dave Towey and T. H. Tse and Zhi Quan Zhou",
+      "title_latex": "Metamorphic Testing: A Review of Challenges and Opportunities",
+      "year": "2018",
+      "identifier": "https://doi.org/10.1145/3143561",
+      "source_kind": "differential_or_metamorphic_research",
+      "use_in_paper": "Explains differential/metamorphic baselines and why agreement alone is not an oracle.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Metamorphic testing likewise addresses missing exact outputs through relations, but useful relations require domain knowledge and false-alarm control~\\cite{mtsurvey,mtreview}."
+      ]
+    },
+    {
+      "key": "mrscout",
+      "entry_type": "article",
+      "authors_latex": "Congying Xu and Valerio Terragni and Hengcheng Zhu and Jiarong Wu and Shing-Chi Cheung",
+      "title_latex": "{MR-Scout}: Automated Synthesis of Metamorphic Relations from Existing Test Cases",
+      "year": "2024",
+      "identifier": "https://doi.org/10.1145/3656340",
+      "source_kind": "differential_or_metamorphic_research",
+      "use_in_paper": "Explains differential/metamorphic baselines and why agreement alone is not an oracle.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "GenMorph and MR-Scout automate relation generation from executions or tests~\\cite{genmorph,mrscout}."
+      ]
+    },
+    {
+      "key": "safeRTS",
+      "entry_type": "article",
+      "authors_latex": "Gregg Rothermel and Mary Jean Harrold",
+      "title_latex": "A Safe, Efficient Regression Test Selection Technique",
+      "year": "1997",
+      "identifier": "https://doi.org/10.1145/248233.248262",
+      "source_kind": "regression_testing_research",
+      "use_in_paper": "Positions equal-budget selection and prioritization against established regression-testing work.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Regression-test research offers safe selection, prioritization, and change-aware test execution~\\cite{safeRTS,prioritize2001,elbaum2002,yoo2012,ekstazi}."
+      ]
+    },
+    {
+      "key": "prioritize2001",
+      "entry_type": "article",
+      "authors_latex": "Gregg Rothermel and Roland H. Untch and Chengyun Chu and Mary Jean Harrold",
+      "title_latex": "Prioritizing Test Cases for Regression Testing",
+      "year": "2001",
+      "identifier": "https://doi.org/10.1109/32.962562",
+      "source_kind": "regression_testing_research",
+      "use_in_paper": "Positions equal-budget selection and prioritization against established regression-testing work.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Regression-test research offers safe selection, prioritization, and change-aware test execution~\\cite{safeRTS,prioritize2001,elbaum2002,yoo2012,ekstazi}."
+      ]
+    },
+    {
+      "key": "elbaum2002",
+      "entry_type": "article",
+      "authors_latex": "Sebastian Elbaum and Alexey G. Malishevsky and Gregg Rothermel",
+      "title_latex": "Test Case Prioritization: A Family of Empirical Studies",
+      "year": "2002",
+      "identifier": "https://doi.org/10.1109/32.988497",
+      "source_kind": "regression_testing_research",
+      "use_in_paper": "Positions equal-budget selection and prioritization against established regression-testing work.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Regression-test research offers safe selection, prioritization, and change-aware test execution~\\cite{safeRTS,prioritize2001,elbaum2002,yoo2012,ekstazi}."
+      ]
+    },
+    {
+      "key": "yoo2012",
+      "entry_type": "article",
+      "authors_latex": "Shin Yoo and Mark Harman",
+      "title_latex": "Regression Testing Minimization, Selection and Prioritization: A Survey",
+      "year": "2012",
+      "identifier": "https://doi.org/10.1002/stv.430",
+      "source_kind": "regression_testing_research",
+      "use_in_paper": "Positions equal-budget selection and prioritization against established regression-testing work.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Regression-test research offers safe selection, prioritization, and change-aware test execution~\\cite{safeRTS,prioritize2001,elbaum2002,yoo2012,ekstazi}."
+      ]
+    },
+    {
+      "key": "ekstazi",
+      "entry_type": "inproceedings",
+      "authors_latex": "Milos Gligoric and Lamyaa Eloussi and Darko Marinov",
+      "title_latex": "{Ekstazi}: Lightweight Test Selection",
+      "year": "2015",
+      "identifier": "https://doi.org/10.1109/ICSE.2015.230",
+      "source_kind": "regression_testing_research",
+      "use_in_paper": "Positions equal-budget selection and prioritization against established regression-testing work.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Regression-test research offers safe selection, prioritization, and change-aware test execution~\\cite{safeRTS,prioritize2001,elbaum2002,yoo2012,ekstazi}."
+      ]
+    },
+    {
+      "key": "flaky",
+      "entry_type": "inproceedings",
+      "authors_latex": "Qingzhou Luo and Farah Hariri and Lamyaa Eloussi and Darko Marinov",
+      "title_latex": "An Empirical Analysis of Flaky Tests",
+      "year": "2014",
+      "identifier": "https://doi.org/10.1145/2635868.2635920",
+      "source_kind": "testing_evidence_and_benchmarks",
+      "use_in_paper": "Supports cautious interpretation of generated faults, flaky behavior, reduction, and benchmark evidence.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Flaky-test studies show that environmental variation complicates maintenance signals~\\cite{flaky,deflaker}."
+      ]
+    },
+    {
+      "key": "deflaker",
+      "entry_type": "inproceedings",
+      "authors_latex": "Jonathan Bell and Owolabi Legunsen and Michael Hilton and Lamyaa Eloussi and Tifany Yung and Darko Marinov",
+      "title_latex": "{DeFlaker}: Automatically Detecting Flaky Tests",
+      "year": "2018",
+      "identifier": "https://doi.org/10.1145/3180155.3180164",
+      "source_kind": "testing_evidence_and_benchmarks",
+      "use_in_paper": "Supports cautious interpretation of generated faults, flaky behavior, reduction, and benchmark evidence.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Flaky-test studies show that environmental variation complicates maintenance signals~\\cite{flaky,deflaker}."
+      ]
+    },
+    {
+      "key": "defects4j",
+      "entry_type": "inproceedings",
+      "authors_latex": "Ren{\\'e} Just and Darioush Jalali and Michael D. Ernst",
+      "title_latex": "{Defects4J}: A Database of Existing Faults to Enable Controlled Testing Studies for {Java} Programs",
+      "year": "2014",
+      "identifier": "https://doi.org/10.1145/2610384.2628055",
+      "source_kind": "testing_evidence_and_benchmarks",
+      "use_in_paper": "Supports cautious interpretation of generated faults, flaky behavior, reduction, and benchmark evidence.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Benchmarks such as Defects4J and ManyBugs, and comparisons of mutants with real faults, emphasize the need to separate controlled faults from real defect claims~\\cite{defects4j,manybugs,mutantsreal}."
+      ]
+    },
+    {
+      "key": "mutantsreal",
+      "entry_type": "inproceedings",
+      "authors_latex": "Ren{\\'e} Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
+      "title_latex": "Are Mutants a Valid Substitute for Real Faults in Software Testing?",
+      "year": "2014",
+      "identifier": "https://doi.org/10.1145/2635868.2635929",
+      "source_kind": "testing_evidence_and_benchmarks",
+      "use_in_paper": "Supports cautious interpretation of generated faults, flaky behavior, reduction, and benchmark evidence.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Benchmarks such as Defects4J and ManyBugs, and comparisons of mutants with real faults, emphasize the need to separate controlled faults from real defect claims~\\cite{defects4j,manybugs,mutantsreal}.",
+        "The result demonstrates internal sensitivity and branch discrimination; because the mutants are defined relative to the same bounded contract, it is not independent proof of scheduler correctness and does not substitute for real faults~\\cite{mutantsreal}.",
+        "This separation follows the broader lesson that synthetic faults and real faults answer different validation questions~\\cite{mutantsreal}."
+      ]
+    },
+    {
+      "key": "manybugs",
+      "entry_type": "article",
+      "authors_latex": "Claire Le Goues and Neal Holtschulte and Edward K. Smith and Yuriy Brun and Premkumar Devanbu and Stephanie Forrest and Westley Weimer",
+      "title_latex": "The {ManyBugs} and {IntroClass} Benchmarks for Automated Repair of {C} Programs",
+      "year": "2015",
+      "identifier": "https://doi.org/10.1109/TSE.2015.2454513",
+      "source_kind": "testing_evidence_and_benchmarks",
+      "use_in_paper": "Supports cautious interpretation of generated faults, flaky behavior, reduction, and benchmark evidence.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Benchmarks such as Defects4J and ManyBugs, and comparisons of mutants with real faults, emphasize the need to separate controlled faults from real defect claims~\\cite{defects4j,manybugs,mutantsreal}."
+      ]
+    },
+    {
+      "key": "yin2011",
+      "entry_type": "inproceedings",
+      "authors_latex": "Zuoning Yin and Xiao Ma and Jing Zheng and Yuanyuan Zhou and Lakshmi N. Bairavasundaram and Shankar Pasupathy",
+      "title_latex": "An Empirical Study on Configuration Errors in Commercial and Open Source Systems",
+      "year": "2011",
+      "identifier": "https://doi.org/10.1145/2043556.2043572",
+      "source_kind": "configuration_and_dependency_evolution",
+      "use_in_paper": "Connects scheduler code and tzdb snapshots to versioned configuration/dependency maintenance.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Prior work studies configuration errors, extraction of configuration options, and delayed library updates~\\cite{yin2011,rabkin2011,kula2018}."
+      ]
+    },
+    {
+      "key": "rabkin2011",
+      "entry_type": "inproceedings",
+      "authors_latex": "Ariel Rabkin and Randy H. Katz",
+      "title_latex": "Static Extraction of Program Configuration Options",
+      "year": "2011",
+      "identifier": "https://doi.org/10.1145/1985793.1985812",
+      "source_kind": "configuration_and_dependency_evolution",
+      "use_in_paper": "Connects scheduler code and tzdb snapshots to versioned configuration/dependency maintenance.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Prior work studies configuration errors, extraction of configuration options, and delayed library updates~\\cite{yin2011,rabkin2011,kula2018}."
+      ]
+    },
+    {
+      "key": "kula2018",
+      "entry_type": "article",
+      "authors_latex": "Raula Gaikovina Kula and Daniel M. German and Ali Ouni and Takashi Ishio and Katsuro Inoue",
+      "title_latex": "Do Developers Update Their Library Dependencies? An Empirical Study on the Impact of Security Advisories on Library Migration",
+      "year": "2018",
+      "identifier": "https://doi.org/10.1007/s10664-017-9521-5",
+      "source_kind": "configuration_and_dependency_evolution",
+      "use_in_paper": "Connects scheduler code and tzdb snapshots to versioned configuration/dependency maintenance.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Prior work studies configuration errors, extraction of configuration options, and delayed library updates~\\cite{yin2011,rabkin2011,kula2018}."
+      ]
+    },
+    {
+      "key": "bettenburg2008",
+      "entry_type": "inproceedings",
+      "authors_latex": "Nicolas Bettenburg and Sascha Just and Adrian Schr{\\\"o}ter and Cathrin Weiss and Rahul Premraj and Thomas Zimmermann",
+      "title_latex": "What Makes a Good Bug Report?",
+      "year": "2008",
+      "identifier": "https://doi.org/10.1145/1453101.1453146",
+      "source_kind": "bug_report_and_empirical_methodology",
+      "use_in_paper": "Supports report-to-replay procedure and cautions about duplicates, labels, and report quality.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Bug-report quality, duplicate handling, and label error are known empirical concerns~\\cite{bettenburg2008,zimmermann2010,herzig2013,bird2009}; consequently, one issue thread, one generated trace, and one independently confirmed defect are not interchangeable units in our ledger."
+      ]
+    },
+    {
+      "key": "zimmermann2010",
+      "entry_type": "article",
+      "authors_latex": "Thomas Zimmermann and Rahul Premraj and Nicolas Bettenburg and Sascha Just and Adrian Schr{\\\"o}ter and Cathrin Weiss",
+      "title_latex": "What Makes a Good Bug Report?",
+      "year": "2010",
+      "identifier": "https://doi.org/10.1109/TSE.2010.63",
+      "source_kind": "bug_report_and_empirical_methodology",
+      "use_in_paper": "Supports report-to-replay procedure and cautions about duplicates, labels, and report quality.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Bug-report quality, duplicate handling, and label error are known empirical concerns~\\cite{bettenburg2008,zimmermann2010,herzig2013,bird2009}; consequently, one issue thread, one generated trace, and one independently confirmed defect are not interchangeable units in our ledger."
+      ]
+    },
+    {
+      "key": "herzig2013",
+      "entry_type": "inproceedings",
+      "authors_latex": "Kim Herzig and Sascha Just and Andreas Zeller",
+      "title_latex": "It's Not a Bug, It's a Feature: How Misclassification Impacts Bug Prediction",
+      "year": "2013",
+      "identifier": "https://doi.org/10.1109/ICSE.2013.6606585",
+      "source_kind": "bug_report_and_empirical_methodology",
+      "use_in_paper": "Supports report-to-replay procedure and cautions about duplicates, labels, and report quality.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Bug-report quality, duplicate handling, and label error are known empirical concerns~\\cite{bettenburg2008,zimmermann2010,herzig2013,bird2009}; consequently, one issue thread, one generated trace, and one independently confirmed defect are not interchangeable units in our ledger."
+      ]
+    },
+    {
+      "key": "bird2009",
+      "entry_type": "inproceedings",
+      "authors_latex": "Christian Bird and Adrian Bachmann and Eirik Aune and John Duffy and Abraham Bernstein and Vladimir Filkov and Premkumar Devanbu",
+      "title_latex": "Fair and Balanced? Bias in Bug-Fix Datasets",
+      "year": "2009",
+      "identifier": "https://doi.org/10.1145/1595696.1595716",
+      "source_kind": "bug_report_and_empirical_methodology",
+      "use_in_paper": "Supports report-to-replay procedure and cautions about duplicates, labels, and report quality.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Bug-report quality, duplicate handling, and label error are known empirical concerns~\\cite{bettenburg2008,zimmermann2010,herzig2013,bird2009}; consequently, one issue thread, one generated trace, and one independently confirmed defect are not interchangeable units in our ledger."
+      ]
+    },
+    {
+      "key": "collberg2016",
+      "entry_type": "article",
+      "authors_latex": "Christian Collberg and Todd A. Proebsting",
+      "title_latex": "Repeatability in Computer Systems Research",
+      "year": "2016",
+      "identifier": "https://doi.org/10.1145/2812803",
+      "source_kind": "reproducibility_and_empirical_design",
+      "use_in_paper": "Supports the recorded design, reproducibility boundaries, and limits of a single self-reproduction.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Repeatability guidance for systems and software-engineering experiments motivates retaining exact inputs, commands, and limitations~\\cite{collberg2016,wohlin2012,nas2019}.",
+        "The full source and result ledger supports repeatability while recognizing that reproducibility in systems work also depends on environment and independent reruns~\\cite{collberg2016,nas2019}."
+      ]
+    },
+    {
+      "key": "wohlin2012",
+      "entry_type": "book",
+      "authors_latex": "Claes Wohlin and Per Runeson and Martin H{\\\"o}st and Magnus C. Ohlsson and Bj{\\\"o}rn Regnell and Anders Wessl{\\'e}n",
+      "title_latex": "Experimentation in Software Engineering",
+      "year": "2012",
+      "identifier": "https://doi.org/10.1007/978-3-642-29044-2",
+      "source_kind": "reproducibility_and_empirical_design",
+      "use_in_paper": "Supports the recorded design, reproducibility boundaries, and limits of a single self-reproduction.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Repeatability guidance for systems and software-engineering experiments motivates retaining exact inputs, commands, and limitations~\\cite{collberg2016,wohlin2012,nas2019}."
+      ]
+    },
+    {
+      "key": "nas2019",
+      "entry_type": "book",
+      "authors_latex": "{National Academies of Sciences, Engineering, and Medicine}",
+      "title_latex": "Reproducibility and Replicability in Science",
+      "year": "2019",
+      "identifier": "https://doi.org/10.17226/25303",
+      "source_kind": "reproducibility_and_empirical_design",
+      "use_in_paper": "Supports the recorded design, reproducibility boundaries, and limits of a single self-reproduction.",
+      "read_scope": "Bibliographic metadata and the source's cited methodological contribution were checked; no unreported numerical result is imported.",
+      "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
+      "citation_contexts": [
+        "Repeatability guidance for systems and software-engineering experiments motivates retaining exact inputs, commands, and limitations~\\cite{collberg2016,wohlin2012,nas2019}.",
+        "The full source and result ledger supports repeatability while recognizing that reproducibility in systems work also depends on environment and independent reruns~\\cite{collberg2016,nas2019}."
+      ]
+    },
+    {
+      "key": "aps3",
+      "entry_type": "misc",
+      "authors_latex": "{APScheduler contributors}",
+      "title_latex": "{CronTrigger implementation}",
+      "year": "2026",
+      "identifier": "https://github.com/agronholm/apscheduler/blob/3.11.3/src/apscheduler/triggers/cron/__init__.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Exact tagged CronTrigger source retained and byte-identified; executed only in the time-separated current-release holdout, not substituted into historical counts.",
+      "citation_contexts": [
+        "3 release~\\cite{aps0,aps1,aps2,aps3}.",
+        "4's later behavior cannot rewrite the historical Sentry result~\\cite{aps3,cron624}."
+      ]
+    },
+    {
+      "key": "cron624",
+      "entry_type": "misc",
+      "authors_latex": "{croniter contributors}",
+      "title_latex": "{croniter implementation}",
+      "year": "2026",
+      "identifier": "https://github.com/pallets-eco/croniter/blob/6.2.4/src/croniter/croniter.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Tagged source retained with upstream blob identity and documented whitespace normalization; executed only in the time-separated current-release holdout while the Sentry replay remains pinned to 1.3.10.",
+      "citation_contexts": [
+        "4~\\cite{cron1310,cron201,cron624}; a current release never replaces the frozen Sentry dependency.",
+        "4's later behavior cannot rewrite the historical Sentry result~\\cite{aps3,cron624}."
+      ]
+    },
+    {
+      "key": "tz2026a",
+      "entry_type": "misc",
+      "authors_latex": "{IANA Time Zone Database maintainers}",
+      "title_latex": "{Time Zone Database Release 2026a}",
+      "year": "2026",
+      "identifier": "https://www.iana.org/time-zones/releases/2026a",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official IANA 2026a release note inspected for Moldova's transition-time correction; used to preselect Europe/Chisinau before outcome inspection.",
+      "citation_contexts": [
+        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}."
+      ]
+    },
+    {
+      "key": "tz2026b",
+      "entry_type": "misc",
+      "authors_latex": "{IANA Time Zone Database maintainers}",
+      "title_latex": "{Time Zone Database Release 2026b}",
+      "year": "2026",
+      "identifier": "https://www.iana.org/time-zones/releases/2026b",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official IANA 2026b release note inspected for British Columbia's permanent UTC-07 change; used to preselect America/Vancouver before outcome inspection.",
+      "citation_contexts": [
+        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "Vancouver contributes 31 accepted 2025b--2026b effects because both endpoints pass and the IANA note supports the permanent-offset change~\\cite{tz2026b}."
+      ]
+    },
+    {
+      "key": "tz2026e",
+      "entry_type": "misc",
+      "authors_latex": "{IANA Time Zone Database maintainers}",
+      "title_latex": "{Time Zone Database Release 2026e}",
+      "year": "2026",
+      "identifier": "https://www.iana.org/time-zones/releases/2026e",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official IANA 2026e release note inspected for Manitoba permanent UTC-05; America/Winnipeg is executed in the stepwise holdout.",
+      "citation_contexts": [
+        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The sequence matters: Alberta and Morocco change in 2026c, Inuvik in 2026d, and Winnipeg in 2026e~\\cite{tz2026c,tz2026d,tz2026e}.",
+        "The source-named release series executes exact tagged Python tzdata bytes through IANA 2026e; releases or zones outside those retained pairs are not inferred~\\cite{tz2026e}."
+      ]
+    },
+    {
+      "key": "tz2026c",
+      "entry_type": "misc",
+      "authors_latex": "{IANA Time Zone Database maintainers}",
+      "title_latex": "{Time Zone Database Release 2026c}",
+      "year": "2026",
+      "identifier": "https://www.iana.org/time-zones/releases/2026c",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official IANA 2026c release note inspected for Alberta's permanent UTC-06 and Morocco's permanent UTC+00 changes; both zones are executed in the stepwise holdout.",
+      "citation_contexts": [
+        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The sequence matters: Alberta and Morocco change in 2026c, Inuvik in 2026d, and Winnipeg in 2026e~\\cite{tz2026c,tz2026d,tz2026e}."
+      ]
+    },
+    {
+      "key": "tz2026d",
+      "entry_type": "misc",
+      "authors_latex": "{IANA Time Zone Database maintainers}",
+      "title_latex": "{Time Zone Database Release 2026d}",
+      "year": "2026",
+      "identifier": "https://www.iana.org/time-zones/releases/2026d",
+      "source_kind": "standard_or_rule_data",
+      "use_in_paper": "Defines civil-time representation, versioned rule-data practice, or a specific source-backed rule change.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official IANA 2026d release note inspected for Northwest Territories permanent UTC-06; America/Inuvik is executed in the stepwise holdout.",
+      "citation_contexts": [
+        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The sequence matters: Alberta and Morocco change in 2026c, Inuvik in 2026d, and Winnipeg in 2026e~\\cite{tz2026c,tz2026d,tz2026e}."
+      ]
+    }
+  ]
+}

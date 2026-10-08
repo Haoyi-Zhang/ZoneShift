@@ -1,0 +1,2 @@
+# version 2025b
+Source: /usr/share/zoneinfo (runtime OS image)

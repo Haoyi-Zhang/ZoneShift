@@ -1,0 +1,9 @@
+{
+  "python_tzdata": "2026.4",
+  "iana": "2026d",
+  "tag": "2026.4",
+  "commit": "b4d2086cb5a5ca5032ef8f6955057c49e5e12903",
+  "repository": "https://github.com/python/tzdata",
+  "path_prefix": "src/tzdata/zoneinfo",
+  "note": "Exact retained TZif bytes from the tagged Python tzdata distribution; only source-named zones needed by the release-series experiment are retained."
+}

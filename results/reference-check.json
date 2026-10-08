@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "bib_entries": 69,
+  "unique_cited_keys": 69,
+  "citation_occurrences": 87,
+  "all_entries_cited": true,
+  "all_entries_have_author_title_year_and_identifier": true,
+  "ledger_matches_bibtex": true,
+  "live_audit_matches_bibtex": true,
+  "doi_count": 40,
+  "url_only_count": 29,
+  "errors": [],
+  "limitations": "This offline check validates the frozen live-audit snapshot, retained metadata/citation chain, and identifier syntax. The live publisher/official-record audit was performed separately on 2026-10-04; this script does not re-resolve the network on every run."
+}

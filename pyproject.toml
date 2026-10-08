@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zoneshift"
+version = "0.2.0"
+description = "Policy-aware qualification for civil-time scheduler updates"
+requires-python = ">=3.11"
+dependencies = [
+  "python-dateutil==2.9.0.post0",
+  "pytz==2026.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest==9.0.2", "coverage==7.13.3"]
+
+[project.scripts]
+zoneshift = "zoneshift.__main__:main"
+
+[tool.setuptools]
+packages = ["zoneshift"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+branch = true
+source = ["zoneshift"]
+omit = ["zoneshift/vendor_support.py"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false

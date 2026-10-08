@@ -1,0 +1,18 @@
+{
+  "implementation": "sentry-24.3.0",
+  "tzdb": "2024a",
+  "zone": "America/New_York",
+  "start": "2024-03-09T05:00:00",
+  "start_fold": 0,
+  "count": 8,
+  "contract": {
+    "hours": [
+      5
+    ],
+    "minutes": [
+      0
+    ],
+    "gap": "skip",
+    "fold": "both"
+  }
+}

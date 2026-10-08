@@ -1,0 +1,223 @@
+{
+  "table": [
+    {
+      "implementation": "aps-3.11.0",
+      "boundary_v": 224,
+      "boundary_u": 0,
+      "uniform_mean": 4.4,
+      "uniform_min": 3,
+      "uniform_max": 7,
+      "boundary_calls": 8000,
+      "boundary_policy_blind": 224,
+      "boundary_median_us": 307.165
+    },
+    {
+      "implementation": "aps-3.11.1",
+      "boundary_v": 64,
+      "boundary_u": 0,
+      "uniform_mean": 4,
+      "uniform_min": 3,
+      "uniform_max": 6,
+      "boundary_calls": 8960,
+      "boundary_policy_blind": 216,
+      "boundary_median_us": 326.713
+    },
+    {
+      "implementation": "aps-3.11.2",
+      "boundary_v": 64,
+      "boundary_u": 0,
+      "uniform_mean": 4,
+      "uniform_min": 3,
+      "uniform_max": 6,
+      "boundary_calls": 8960,
+      "boundary_policy_blind": 216,
+      "boundary_median_us": 345.311
+    },
+    {
+      "implementation": "croniter-1.3.10",
+      "boundary_v": 472,
+      "boundary_u": 0,
+      "uniform_mean": 18.6,
+      "uniform_min": 15,
+      "uniform_max": 22,
+      "boundary_calls": 8456,
+      "boundary_policy_blind": 400,
+      "boundary_median_us": 320.415
+    },
+    {
+      "implementation": "croniter-2.0.1",
+      "boundary_v": 472,
+      "boundary_u": 0,
+      "uniform_mean": 18.6,
+      "uniform_min": 15,
+      "uniform_max": 22,
+      "boundary_calls": 8456,
+      "boundary_policy_blind": 400,
+      "boundary_median_us": 302.979
+    }
+  ],
+  "comparisons": [
+    {
+      "left": "aps-3.11.0",
+      "right": "aps-3.11.1",
+      "counts": {
+        "same": 960,
+        "same:VIOLATION:VIOLATION": 64,
+        "same:PASS:PASS": 896,
+        "different": 160,
+        "different:VIOLATION:PASS": 160
+      }
+    },
+    {
+      "left": "aps-3.11.1",
+      "right": "aps-3.11.2",
+      "counts": {
+        "same": 1120,
+        "same:VIOLATION:VIOLATION": 64,
+        "same:PASS:PASS": 1056
+      }
+    },
+    {
+      "left": "croniter-1.3.10",
+      "right": "croniter-2.0.1",
+      "counts": {
+        "same": 1120,
+        "same:VIOLATION:VIOLATION": 472,
+        "same:PASS:PASS": 648
+      }
+    },
+    {
+      "left": "aps-3.11.2",
+      "right": "croniter-2.0.1",
+      "counts": {
+        "different": 472,
+        "different:VIOLATION:VIOLATION": 64,
+        "different:PASS:VIOLATION": 408,
+        "same": 648,
+        "same:PASS:PASS": 648
+      }
+    }
+  ],
+  "anchor": {
+    "aps-3.11.0:-86400:VIOLATION": 32,
+    "aps-3.11.0:-86400:PASS": 288,
+    "aps-3.11.0:-3600:VIOLATION": 112,
+    "aps-3.11.0:-3600:PASS": 208,
+    "aps-3.11.0:1:PASS": 240,
+    "aps-3.11.0:1:VIOLATION": 80,
+    "aps-3.11.0:ordinary:PASS": 160,
+    "aps-3.11.1:-86400:VIOLATION": 32,
+    "aps-3.11.1:-86400:PASS": 288,
+    "aps-3.11.1:-3600:VIOLATION": 32,
+    "aps-3.11.1:-3600:PASS": 288,
+    "aps-3.11.1:1:PASS": 320,
+    "aps-3.11.1:ordinary:PASS": 160,
+    "aps-3.11.2:-86400:VIOLATION": 32,
+    "aps-3.11.2:-86400:PASS": 288,
+    "aps-3.11.2:-3600:VIOLATION": 32,
+    "aps-3.11.2:-3600:PASS": 288,
+    "aps-3.11.2:1:PASS": 320,
+    "aps-3.11.2:ordinary:PASS": 160,
+    "croniter-1.3.10:-86400:VIOLATION": 160,
+    "croniter-1.3.10:-86400:PASS": 160,
+    "croniter-1.3.10:-3600:VIOLATION": 240,
+    "croniter-1.3.10:-3600:PASS": 80,
+    "croniter-1.3.10:1:PASS": 248,
+    "croniter-1.3.10:1:VIOLATION": 72,
+    "croniter-1.3.10:ordinary:PASS": 160,
+    "croniter-2.0.1:-86400:VIOLATION": 160,
+    "croniter-2.0.1:-86400:PASS": 160,
+    "croniter-2.0.1:-3600:VIOLATION": 240,
+    "croniter-2.0.1:-3600:PASS": 80,
+    "croniter-2.0.1:1:PASS": 248,
+    "croniter-2.0.1:1:VIOLATION": 72,
+    "croniter-2.0.1:ordinary:PASS": 160
+  },
+  "reason": {
+    "aps-3.11.0:missing_required_occurrence": 64,
+    "aps-3.11.0:nonprogress": 160,
+    "aps-3.11.1:missing_required_occurrence": 64,
+    "aps-3.11.2:missing_required_occurrence": 64,
+    "croniter-1.3.10:off_recurrence": 320,
+    "croniter-1.3.10:missing_required_occurrence": 240,
+    "croniter-1.3.10:nonprogress": 72,
+    "croniter-2.0.1:off_recurrence": 320,
+    "croniter-2.0.1:missing_required_occurrence": 240,
+    "croniter-2.0.1:nonprogress": 72
+  },
+  "profiles": {
+    "aps-3.11.0:midnight:VIOLATION": 64,
+    "aps-3.11.0:five_am:PASS": 280,
+    "aps-3.11.0:hourly_30:PASS": 200,
+    "aps-3.11.0:half_hourly:PASS": 200,
+    "aps-3.11.0:midnight:PASS": 216,
+    "aps-3.11.0:hourly_30:VIOLATION": 80,
+    "aps-3.11.0:half_hourly:VIOLATION": 80,
+    "aps-3.11.1:midnight:VIOLATION": 64,
+    "aps-3.11.1:five_am:PASS": 280,
+    "aps-3.11.1:hourly_30:PASS": 280,
+    "aps-3.11.1:half_hourly:PASS": 280,
+    "aps-3.11.1:midnight:PASS": 216,
+    "aps-3.11.2:midnight:VIOLATION": 64,
+    "aps-3.11.2:five_am:PASS": 280,
+    "aps-3.11.2:hourly_30:PASS": 280,
+    "aps-3.11.2:half_hourly:PASS": 280,
+    "aps-3.11.2:midnight:PASS": 216,
+    "croniter-1.3.10:midnight:VIOLATION": 160,
+    "croniter-1.3.10:five_am:VIOLATION": 160,
+    "croniter-1.3.10:hourly_30:PASS": 204,
+    "croniter-1.3.10:half_hourly:PASS": 204,
+    "croniter-1.3.10:midnight:PASS": 120,
+    "croniter-1.3.10:five_am:PASS": 120,
+    "croniter-1.3.10:hourly_30:VIOLATION": 76,
+    "croniter-1.3.10:half_hourly:VIOLATION": 76,
+    "croniter-2.0.1:midnight:VIOLATION": 160,
+    "croniter-2.0.1:five_am:VIOLATION": 160,
+    "croniter-2.0.1:hourly_30:PASS": 204,
+    "croniter-2.0.1:half_hourly:PASS": 204,
+    "croniter-2.0.1:midnight:PASS": 120,
+    "croniter-2.0.1:five_am:PASS": 120,
+    "croniter-2.0.1:hourly_30:VIOLATION": 76,
+    "croniter-2.0.1:half_hourly:VIOLATION": 76
+  },
+  "scopes": {
+    "aps-3.11.0:discovery:VIOLATION": 72,
+    "aps-3.11.0:discovery:PASS": 216,
+    "aps-3.11.0:extension:VIOLATION": 152,
+    "aps-3.11.0:extension:PASS": 520,
+    "aps-3.11.0:control:PASS": 160,
+    "aps-3.11.1:discovery:VIOLATION": 24,
+    "aps-3.11.1:discovery:PASS": 264,
+    "aps-3.11.1:extension:VIOLATION": 40,
+    "aps-3.11.1:extension:PASS": 632,
+    "aps-3.11.1:control:PASS": 160,
+    "aps-3.11.2:discovery:VIOLATION": 24,
+    "aps-3.11.2:discovery:PASS": 264,
+    "aps-3.11.2:extension:VIOLATION": 40,
+    "aps-3.11.2:extension:PASS": 632,
+    "aps-3.11.2:control:PASS": 160,
+    "croniter-1.3.10:discovery:VIOLATION": 144,
+    "croniter-1.3.10:discovery:PASS": 144,
+    "croniter-1.3.10:extension:VIOLATION": 328,
+    "croniter-1.3.10:extension:PASS": 344,
+    "croniter-1.3.10:control:PASS": 160,
+    "croniter-2.0.1:discovery:VIOLATION": 144,
+    "croniter-2.0.1:discovery:PASS": 144,
+    "croniter-2.0.1:extension:VIOLATION": 328,
+    "croniter-2.0.1:extension:PASS": 344,
+    "croniter-2.0.1:control:PASS": 160
+  },
+  "intervention_cost": {
+    "before_median_us": 589.438,
+    "after_median_us": 305.903,
+    "before_total_ms": 50.980166,
+    "after_total_ms": 25.838566,
+    "windows": 80
+  },
+  "total_runs": 33600,
+  "total_calls": 266828,
+  "timeouts": 0,
+  "errors": {
+    "nonprogress": 306
+  }
+}

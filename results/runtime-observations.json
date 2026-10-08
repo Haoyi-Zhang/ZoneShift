@@ -1,0 +1,17 @@
+{
+  "historical_benchmark": {
+    "real_seconds": 30.44,
+    "user_seconds": 30.38,
+    "sys_seconds": 0.39
+  },
+  "extended_matrix_and_holdouts": {
+    "real_seconds": 12.45,
+    "user_seconds": 12.49,
+    "sys_seconds": 0.28
+  },
+  "sentry_adapter_replay": {
+    "real_seconds": 0.88,
+    "user_seconds": 1.16,
+    "sys_seconds": 0.04
+  }
+}

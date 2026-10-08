@@ -1,0 +1,299 @@
+[
+  {
+    "version": "2024a",
+    "zone": "America/New_York",
+    "sha256": "e9ed07d7bee0c76a9d442d091ef1f01668fee7c4f26014c0a868b19fe6c18a95",
+    "bytes": 3552
+  },
+  {
+    "version": "2025b",
+    "zone": "America/New_York",
+    "sha256": "e9ed07d7bee0c76a9d442d091ef1f01668fee7c4f26014c0a868b19fe6c18a95",
+    "bytes": 3552
+  },
+  {
+    "version": "2024a",
+    "zone": "America/Chicago",
+    "sha256": "feba326ebe88eac20017a718748c46c68469a1e7f5e7716dcb8f1d43a6e6f686",
+    "bytes": 3592
+  },
+  {
+    "version": "2025b",
+    "zone": "America/Chicago",
+    "sha256": "feba326ebe88eac20017a718748c46c68469a1e7f5e7716dcb8f1d43a6e6f686",
+    "bytes": 3592
+  },
+  {
+    "version": "2024a",
+    "zone": "America/Los_Angeles",
+    "sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+    "bytes": 2852
+  },
+  {
+    "version": "2025b",
+    "zone": "America/Los_Angeles",
+    "sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+    "bytes": 2852
+  },
+  {
+    "version": "2024a",
+    "zone": "Europe/Helsinki",
+    "sha256": "184901ecbb158667a0b7b62eb9685e083bc3182edbecdc3d6d3743192f6a9097",
+    "bytes": 1900
+  },
+  {
+    "version": "2025b",
+    "zone": "Europe/Helsinki",
+    "sha256": "184901ecbb158667a0b7b62eb9685e083bc3182edbecdc3d6d3743192f6a9097",
+    "bytes": 1900
+  },
+  {
+    "version": "2024a",
+    "zone": "Europe/Berlin",
+    "sha256": "5ee475f71a0fc1a32faeb849f8c39c6e7aa66d6d41ec742b97b3a7436b3b0701",
+    "bytes": 2298
+  },
+  {
+    "version": "2025b",
+    "zone": "Europe/Berlin",
+    "sha256": "5ee475f71a0fc1a32faeb849f8c39c6e7aa66d6d41ec742b97b3a7436b3b0701",
+    "bytes": 2298
+  },
+  {
+    "version": "2024a",
+    "zone": "Europe/London",
+    "sha256": "c85495070dca42687df6a1c3ee780a27cbcb82f1844750ea6f642833a44d29b4",
+    "bytes": 3664
+  },
+  {
+    "version": "2025b",
+    "zone": "Europe/London",
+    "sha256": "c85495070dca42687df6a1c3ee780a27cbcb82f1844750ea6f642833a44d29b4",
+    "bytes": 3664
+  },
+  {
+    "version": "2024a",
+    "zone": "Australia/Lord_Howe",
+    "sha256": "2ee7f42f1fe2247ba1de465de0bc518dfdfab4b179fb05b650531534a353ee08",
+    "bytes": 1860
+  },
+  {
+    "version": "2025b",
+    "zone": "Australia/Lord_Howe",
+    "sha256": "a323c5433991a963eb497b7da4d1d09848bf3ef5f5d64d9c9649f388e4bab9df",
+    "bytes": 1846
+  },
+  {
+    "version": "2024a",
+    "zone": "Pacific/Apia",
+    "sha256": "726e92e83d15747b1da8b264ba95091faa4bca76a8e50970a4c99123d9b9647e",
+    "bytes": 612
+  },
+  {
+    "version": "2025b",
+    "zone": "Pacific/Apia",
+    "sha256": "33740ab29ef943b1f55f769e13ff59a90962f5a12434209072d650e6c10abb4d",
+    "bytes": 598
+  },
+  {
+    "version": "2024a",
+    "zone": "America/Asuncion",
+    "sha256": "1532ed164e8c8c9a21e55203809d927f807f88d7820f1ad5d0c5b040bfac3953",
+    "bytes": 2044
+  },
+  {
+    "version": "2025b",
+    "zone": "America/Asuncion",
+    "sha256": "f727c68843615cd81ddbfd311d5b05fa12de264192a91b3ecc3f4ef78e4a2567",
+    "bytes": 1644
+  },
+  {
+    "version": "2024a",
+    "zone": "Asia/Kathmandu",
+    "sha256": "4d4796eeb0d289f3934ac371be8f628086197c621311951ffb4123825c910d6b",
+    "bytes": 212
+  },
+  {
+    "version": "2025b",
+    "zone": "Asia/Kathmandu",
+    "sha256": "fd1b1f79259b0abf24338611262ed7bfa8401221d6d7820586c5ec7e16cf8e83",
+    "bytes": 198
+  },
+  {
+    "version": "2024a",
+    "zone": "Asia/Tokyo",
+    "sha256": "a02b9e66044dc5c35c5f76467627fdcba4aee1cc958606b85c777095cad82ceb",
+    "bytes": 309
+  },
+  {
+    "version": "2025b",
+    "zone": "Asia/Tokyo",
+    "sha256": "a02b9e66044dc5c35c5f76467627fdcba4aee1cc958606b85c777095cad82ceb",
+    "bytes": 309
+  },
+  {
+    "version": "2024a",
+    "zone": "Etc/UTC",
+    "sha256": "8b85846791ab2c8a5463c83a5be3c043e2570d7448434d41398969ed47e3e6f2",
+    "bytes": 114
+  },
+  {
+    "version": "2025b",
+    "zone": "Etc/UTC",
+    "sha256": "8b85846791ab2c8a5463c83a5be3c043e2570d7448434d41398969ed47e3e6f2",
+    "bytes": 114
+  },
+  {
+    "version": "2024a",
+    "zone": "America/Santiago",
+    "sha256": "ef9d2bf24112c65671eea391722ad6ae2cbf5f2f6ed5fcee8cc2c860780bfa01",
+    "bytes": 2529
+  },
+  {
+    "version": "2025b",
+    "zone": "America/Santiago",
+    "sha256": "d020f0d77742314b28aae32ea68260ba99330143610cae84d2557151103ba2c0",
+    "bytes": 2515
+  },
+  {
+    "version": "2024a",
+    "zone": "Africa/Casablanca",
+    "sha256": "e11a956f0fc5dd9b9ca29202da2bc027c583c23e7044e0c007aeed0697577200",
+    "bytes": 2429
+  },
+  {
+    "version": "2025b",
+    "zone": "Africa/Casablanca",
+    "sha256": "e11a956f0fc5dd9b9ca29202da2bc027c583c23e7044e0c007aeed0697577200",
+    "bytes": 2429
+  },
+  {
+    "version": "2024a",
+    "zone": "Pacific/Auckland",
+    "sha256": "8000e3a323e8fd0212414e9426b020707a771c368ca0e151747f9ddb7b814b27",
+    "bytes": 2437
+  },
+  {
+    "version": "2025b",
+    "zone": "Pacific/Auckland",
+    "sha256": "8000e3a323e8fd0212414e9426b020707a771c368ca0e151747f9ddb7b814b27",
+    "bytes": 2437
+  },
+  {
+    "version": "2024a",
+    "zone": "America/Phoenix",
+    "sha256": "8a5973d2c62e2cbf2520f2b44e4a2ee9d2f455c93f0f45bfdeb4533af1584664",
+    "bytes": 360
+  },
+  {
+    "version": "2025b",
+    "zone": "America/Phoenix",
+    "sha256": "8a5973d2c62e2cbf2520f2b44e4a2ee9d2f455c93f0f45bfdeb4533af1584664",
+    "bytes": 360
+  },
+  {
+    "version": "2025b",
+    "zone": "America/Vancouver",
+    "sha256": "b249ca1f48d23d66a6f831df337e6a5ecf0d6a6edde5316591423d4a0c6bcb28",
+    "bytes": 2892,
+    "provenance": "system tzdata 2025b"
+  },
+  {
+    "version": "2025b",
+    "zone": "Europe/Chisinau",
+    "sha256": "a7527faea144d77a4bf1ca4146b1057beb5e088f1fd1f28ae2e4d4cbfe1d885e",
+    "bytes": 2390,
+    "provenance": "system tzdata 2025b"
+  },
+  {
+    "version": "2026b",
+    "zone": "America/Vancouver",
+    "sha256": "7d23681b36849ac7f50537b9c02bd8d3aa000b98bd3d1825ce85e7ea3e5534c9",
+    "bytes": 1673,
+    "provenance": "Python tzdata 2026.2 (IANA 2026b)"
+  },
+  {
+    "version": "2026b",
+    "zone": "Europe/Chisinau",
+    "sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e",
+    "bytes": 1207,
+    "provenance": "Python tzdata 2026.2 (IANA 2026b)"
+  },
+  {
+    "version": "2025b-py",
+    "zone": "Europe/Chisinau",
+    "sha256": "e533e1902b71c5ad01c8b0afed8c4eadce55b5dba2dafd955fcbeb4a8a4f90fb",
+    "bytes": 755,
+    "provenance": "python/tzdata tag 2025.2 (IANA 2025b)"
+  },
+  {
+    "version": "2026a",
+    "zone": "America/Vancouver",
+    "sha256": "129a2eef5b147dfbc7075addef04f492bbe8de8917015e39fd359c385a72dba4",
+    "bytes": 1330,
+    "provenance": "python/tzdata tag 2026.1 (IANA 2026a)"
+  },
+  {
+    "version": "2026a",
+    "zone": "Europe/Chisinau",
+    "sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e",
+    "bytes": 1207,
+    "provenance": "python/tzdata tag 2026.1 (IANA 2026a)"
+  },
+  {
+    "version": "2026b",
+    "zone": "Africa/Casablanca",
+    "sha256": "30ca6cf13e00c2a6c437a3c837fa643623cc04406ab5165165c78b37ef6bc4c3",
+    "bytes": 1919,
+    "provenance": "installed Python tzdata 2026.2 (IANA 2026b)"
+  },
+  {
+    "version": "2026b",
+    "zone": "America/Edmonton",
+    "sha256": "0eada6c5c48d59984c591ab1c30b4c71aab000818cc243b3cfe996f1f26c715f",
+    "bytes": 970,
+    "provenance": "installed Python tzdata 2026.2 (IANA 2026b)"
+  },
+  {
+    "version": "2026c",
+    "zone": "Africa/Casablanca",
+    "sha256": "6b026cdcb00868a3dc1f24f7072a1ce3ac0c3ff83b3d847fee5f3cc01fa85f50",
+    "bytes": 793,
+    "provenance": "python/tzdata tag 2026.3 (IANA 2026c)"
+  },
+  {
+    "version": "2026c",
+    "zone": "America/Edmonton",
+    "sha256": "d52173b56a28205d8d6f792bcfa8bc07614ee0d269f7bf6e43ec91f68d410600",
+    "bytes": 1313,
+    "provenance": "python/tzdata tag 2026.3 (IANA 2026c)"
+  },
+  {
+    "version": "2026c",
+    "zone": "America/Inuvik",
+    "sha256": "77f657f94492ef41c84fefcf44928c63a99b411bdb28bbeccbd6abeee2f6338d",
+    "bytes": 817,
+    "provenance": "python/tzdata tag 2026.3 (IANA 2026c)"
+  },
+  {
+    "version": "2026d",
+    "zone": "America/Inuvik",
+    "sha256": "bd932739fc83073f8b9ad0f54f1252983b1be98d718f7d6843d1a9396310b18b",
+    "bytes": 1160,
+    "provenance": "python/tzdata tag 2026.4 (IANA 2026d)"
+  },
+  {
+    "version": "2026d",
+    "zone": "America/Winnipeg",
+    "sha256": "00dcf0606054d4f927416e0b47e1fdda2e5ce036fde4b53e51084f8566428c3a",
+    "bytes": 1294,
+    "provenance": "python/tzdata tag 2026.4 (IANA 2026d)"
+  },
+  {
+    "version": "2026e",
+    "zone": "America/Winnipeg",
+    "sha256": "6072e5fb802900b193407239b4fb4de9fb2ce80b43ea0f4286a954665b565cbd",
+    "bytes": 1637,
+    "provenance": "python/tzdata tag 2026.5 (IANA 2026e)"
+  }
+]

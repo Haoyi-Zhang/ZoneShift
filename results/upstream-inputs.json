@@ -1,0 +1,122 @@
+[
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "absolute_spring",
+    "version": "3.11.0",
+    "expected": "2013-03-10 08:00:00-04:00",
+    "actual": "2013-03-10 08:00:00-04:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "absolute_autumn",
+    "version": "3.11.0",
+    "expected": "2013-11-03 08:00:00-05:00",
+    "actual": "2013-11-03 08:00:00-05:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "interval_spring",
+    "version": "3.11.0",
+    "expected": "2013-03-10 03:00:00-04:00",
+    "actual": "2013-03-10 03:00:00-04:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "interval_autumn",
+    "version": "3.11.0",
+    "expected": "2013-11-03 01:00:00-05:00",
+    "actual": "2013-11-03 01:00:00-05:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.2-regression-input",
+    "name": "fold_microseconds",
+    "version": "3.11.0",
+    "expected": "2017-10-29 04:30:00+02:00",
+    "actual": "2017-10-29 03:30:00+02:00",
+    "passed": false
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "absolute_spring",
+    "version": "3.11.1",
+    "expected": "2013-03-10 08:00:00-04:00",
+    "actual": "2013-03-10 08:00:00-04:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "absolute_autumn",
+    "version": "3.11.1",
+    "expected": "2013-11-03 08:00:00-05:00",
+    "actual": "2013-11-03 08:00:00-05:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "interval_spring",
+    "version": "3.11.1",
+    "expected": "2013-03-10 03:00:00-04:00",
+    "actual": "2013-03-10 03:00:00-04:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "interval_autumn",
+    "version": "3.11.1",
+    "expected": "2013-11-03 01:00:00-05:00",
+    "actual": "2013-11-03 01:00:00-05:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.2-regression-input",
+    "name": "fold_microseconds",
+    "version": "3.11.1",
+    "expected": "2017-10-29 04:30:00+02:00",
+    "actual": "2017-10-29 04:30:00+02:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "absolute_spring",
+    "version": "3.11.2",
+    "expected": "2013-03-10 08:00:00-04:00",
+    "actual": "2013-03-10 08:00:00-04:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "absolute_autumn",
+    "version": "3.11.2",
+    "expected": "2013-11-03 08:00:00-05:00",
+    "actual": "2013-11-03 08:00:00-05:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "interval_spring",
+    "version": "3.11.2",
+    "expected": "2013-03-10 03:00:00-04:00",
+    "actual": "2013-03-10 03:00:00-04:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.0-DST-inputs",
+    "name": "interval_autumn",
+    "version": "3.11.2",
+    "expected": "2013-11-03 01:00:00-05:00",
+    "actual": "2013-11-03 01:00:00-05:00",
+    "passed": true
+  },
+  {
+    "suite": "upstream-3.11.2-regression-input",
+    "name": "fold_microseconds",
+    "version": "3.11.2",
+    "expected": "2017-10-29 04:30:00+02:00",
+    "actual": "2017-10-29 04:30:00+02:00",
+    "passed": true
+  }
+]

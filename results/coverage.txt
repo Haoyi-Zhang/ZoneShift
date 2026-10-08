@@ -1,0 +1,13 @@
+Name                       Stmts   Miss Branch BrPart  Cover   Missing
+----------------------------------------------------------------------
+zoneshift/__init__.py          1      0      0      0   100%
+zoneshift/__main__.py         91      5     24      3    93%   82-92, 155->158, 169
+zoneshift/adapters.py         40      0     12      0   100%
+zoneshift/attribution.py      49      1     28      1    97%   68
+zoneshift/contracts.py       171      6     90      7    95%   99, 116, 125->159, 144->127, 166, 177, 203, 361
+zoneshift/execution.py        55      0     20      0   100%
+zoneshift/profiles.py          3      0      0      0   100%
+zoneshift/repair.py           56      6     38      7    86%   31, 37, 46, 51, 61, 70->79, 84
+zoneshift/tzif.py            157     14     60     12    87%   32, 42, 45, 85, 88->95, 92, 97, 106, 108, 139-140, 166, 198, 202-203
+----------------------------------------------------------------------
+TOTAL                        623     32    272     30    93%

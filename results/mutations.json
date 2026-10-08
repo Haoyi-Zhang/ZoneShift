@@ -1,0 +1,84 @@
+[
+  {
+    "name": "drop_valid",
+    "qualification": {
+      "status": "VIOLATION",
+      "reasons": [
+        "missing_required_occurrence"
+      ],
+      "missing": [
+        1705075200.0
+      ]
+    }
+  },
+  {
+    "name": "repeat_instant",
+    "qualification": {
+      "status": "VIOLATION",
+      "reasons": [
+        "nonprogress"
+      ],
+      "missing": []
+    }
+  },
+  {
+    "name": "move_one_hour",
+    "qualification": {
+      "status": "VIOLATION",
+      "reasons": [
+        "missing_required_occurrence",
+        "off_recurrence"
+      ],
+      "missing": [
+        1704902400.0,
+        1704988800.0,
+        1705075200.0,
+        1705161600.0,
+        1705248000.0,
+        1705334400.0,
+        1705420800.0,
+        1705507200.0
+      ]
+    }
+  },
+  {
+    "name": "reverse_pair",
+    "qualification": {
+      "status": "VIOLATION",
+      "reasons": [
+        "nonprogress"
+      ],
+      "missing": []
+    }
+  },
+  {
+    "name": "wrong_minute",
+    "qualification": {
+      "status": "VIOLATION",
+      "reasons": [
+        "missing_required_occurrence",
+        "off_recurrence"
+      ],
+      "missing": [
+        1704902400.0,
+        1704988800.0,
+        1705075200.0,
+        1705161600.0,
+        1705248000.0,
+        1705334400.0,
+        1705420800.0,
+        1705507200.0
+      ]
+    }
+  },
+  {
+    "name": "empty",
+    "qualification": {
+      "status": "VIOLATION",
+      "reasons": [
+        "empty_trace"
+      ],
+      "missing": []
+    }
+  }
+]

@@ -1,0 +1,906 @@
+{
+  "schema": "zoneshift.regression-pack",
+  "selection": "first deterministic representative per study, implementation, verdict, and first reason",
+  "records": [
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1642248000:midnight",
+      "implementation": "aps-3.11.3",
+      "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1642248000,
+      "trace_sha256": "283a407a09db5c065fb0bb72d39a2d86ca1750d2ae01c1693390e7cf19afad71",
+      "calls": 8,
+      "error": null,
+      "verdict": "PASS",
+      "reasons": [],
+      "expected_trace": [
+        {
+          "timestamp": 1642320000.0,
+          "iso": "2022-01-16T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642406400.0,
+          "iso": "2022-01-17T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642492800.0,
+          "iso": "2022-01-18T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642579200.0,
+          "iso": "2022-01-19T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642665600.0,
+          "iso": "2022-01-20T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642752000.0,
+          "iso": "2022-01-21T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642838400.0,
+          "iso": "2022-01-22T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642924800.0,
+          "iso": "2022-01-23T00:00:00-08:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1642248000:midnight --implementation aps-3.11.3"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1642248000:midnight",
+      "implementation": "aps-3.11.2",
+      "implementation_source_sha256": "302605d17771ee5dc722604cdde052d72ef9b27ce4387761d20bab212cff41cc",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1642248000,
+      "trace_sha256": "283a407a09db5c065fb0bb72d39a2d86ca1750d2ae01c1693390e7cf19afad71",
+      "calls": 8,
+      "error": null,
+      "verdict": "PASS",
+      "reasons": [],
+      "expected_trace": [
+        {
+          "timestamp": 1642320000.0,
+          "iso": "2022-01-16T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642406400.0,
+          "iso": "2022-01-17T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642492800.0,
+          "iso": "2022-01-18T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642579200.0,
+          "iso": "2022-01-19T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642665600.0,
+          "iso": "2022-01-20T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642752000.0,
+          "iso": "2022-01-21T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642838400.0,
+          "iso": "2022-01-22T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642924800.0,
+          "iso": "2022-01-23T00:00:00-08:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1642248000:midnight --implementation aps-3.11.2"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1642248000:midnight",
+      "implementation": "croniter-6.2.4",
+      "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1642248000,
+      "trace_sha256": "283a407a09db5c065fb0bb72d39a2d86ca1750d2ae01c1693390e7cf19afad71",
+      "calls": 8,
+      "error": null,
+      "verdict": "PASS",
+      "reasons": [],
+      "expected_trace": [
+        {
+          "timestamp": 1642320000.0,
+          "iso": "2022-01-16T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642406400.0,
+          "iso": "2022-01-17T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642492800.0,
+          "iso": "2022-01-18T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642579200.0,
+          "iso": "2022-01-19T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642665600.0,
+          "iso": "2022-01-20T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642752000.0,
+          "iso": "2022-01-21T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642838400.0,
+          "iso": "2022-01-22T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642924800.0,
+          "iso": "2022-01-23T00:00:00-08:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1642248000:midnight --implementation croniter-6.2.4"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1642248000:midnight",
+      "implementation": "croniter-2.0.1",
+      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1642248000,
+      "trace_sha256": "283a407a09db5c065fb0bb72d39a2d86ca1750d2ae01c1693390e7cf19afad71",
+      "calls": 8,
+      "error": null,
+      "verdict": "PASS",
+      "reasons": [],
+      "expected_trace": [
+        {
+          "timestamp": 1642320000.0,
+          "iso": "2022-01-16T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642406400.0,
+          "iso": "2022-01-17T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642492800.0,
+          "iso": "2022-01-18T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642579200.0,
+          "iso": "2022-01-19T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642665600.0,
+          "iso": "2022-01-20T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642752000.0,
+          "iso": "2022-01-21T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642838400.0,
+          "iso": "2022-01-22T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642924800.0,
+          "iso": "2022-01-23T00:00:00-08:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1642248000:midnight --implementation croniter-2.0.1"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1647079200:midnight",
+      "implementation": "aps-3.11.3",
+      "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1647079200,
+      "trace_sha256": "6e15965e88a446a415d2cb025325357686512f9711bfff66e248b16fbcd4e1df",
+      "calls": 8,
+      "error": null,
+      "verdict": "VIOLATION",
+      "reasons": [
+        "missing_required_occurrence"
+      ],
+      "expected_trace": [
+        {
+          "timestamp": 1647158400.0,
+          "iso": "2022-03-13T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647327600.0,
+          "iso": "2022-03-15T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647414000.0,
+          "iso": "2022-03-16T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647500400.0,
+          "iso": "2022-03-17T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647586800.0,
+          "iso": "2022-03-18T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647673200.0,
+          "iso": "2022-03-19T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647759600.0,
+          "iso": "2022-03-20T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647846000.0,
+          "iso": "2022-03-21T00:00:00-07:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1647079200:midnight --implementation aps-3.11.3"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1647079200:midnight",
+      "implementation": "aps-3.11.2",
+      "implementation_source_sha256": "302605d17771ee5dc722604cdde052d72ef9b27ce4387761d20bab212cff41cc",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1647079200,
+      "trace_sha256": "6e15965e88a446a415d2cb025325357686512f9711bfff66e248b16fbcd4e1df",
+      "calls": 8,
+      "error": null,
+      "verdict": "VIOLATION",
+      "reasons": [
+        "missing_required_occurrence"
+      ],
+      "expected_trace": [
+        {
+          "timestamp": 1647158400.0,
+          "iso": "2022-03-13T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647327600.0,
+          "iso": "2022-03-15T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647414000.0,
+          "iso": "2022-03-16T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647500400.0,
+          "iso": "2022-03-17T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647586800.0,
+          "iso": "2022-03-18T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647673200.0,
+          "iso": "2022-03-19T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647759600.0,
+          "iso": "2022-03-20T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647846000.0,
+          "iso": "2022-03-21T00:00:00-07:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1647079200:midnight --implementation aps-3.11.2"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1647079200:midnight",
+      "implementation": "croniter-2.0.1",
+      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1647079200,
+      "trace_sha256": "21b7c91d386d584aeb28b723b2d587774c2311305cf90b64dd660aecb4b312f4",
+      "calls": 8,
+      "error": null,
+      "verdict": "VIOLATION",
+      "reasons": [
+        "off_recurrence"
+      ],
+      "expected_trace": [
+        {
+          "timestamp": 1647158400.0,
+          "iso": "2022-03-13T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647237600.0,
+          "iso": "2022-03-13T23:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647241200.0,
+          "iso": "2022-03-14T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647327600.0,
+          "iso": "2022-03-15T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647414000.0,
+          "iso": "2022-03-16T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647500400.0,
+          "iso": "2022-03-17T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647586800.0,
+          "iso": "2022-03-18T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647673200.0,
+          "iso": "2022-03-19T00:00:00-07:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1647079200:midnight --implementation croniter-2.0.1"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1667638800:midnight",
+      "implementation": "croniter-2.0.1",
+      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1667638800,
+      "trace_sha256": "61358e1bb094b52094297151c0fc28096715f05e0562ab0dc90017016f7a2ba2",
+      "calls": 8,
+      "error": null,
+      "verdict": "VIOLATION",
+      "reasons": [
+        "missing_required_occurrence",
+        "off_recurrence"
+      ],
+      "expected_trace": [
+        {
+          "timestamp": 1667718000.0,
+          "iso": "2022-11-06T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1667811600.0,
+          "iso": "2022-11-07T01:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1667894400.0,
+          "iso": "2022-11-08T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1667980800.0,
+          "iso": "2022-11-09T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1668067200.0,
+          "iso": "2022-11-10T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1668153600.0,
+          "iso": "2022-11-11T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1668240000.0,
+          "iso": "2022-11-12T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1668326400.0,
+          "iso": "2022-11-13T00:00:00-08:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1667638800:midnight --implementation croniter-2.0.1"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Los_Angeles:2022:1667725201:hourly_30",
+      "implementation": "croniter-2.0.1",
+      "implementation_source_sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
+      "tzdb": "2025b",
+      "zone": "America/Los_Angeles",
+      "zone_file_sha256": "68977bb9ad6d186fefc6c7abd36010a66e30008dcb2d376087a41c49861e7268",
+      "contract": {
+        "hours": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "minutes": [
+          30
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1667725201,
+      "trace_sha256": "9cf01e5b5de34b06c78f01e781288204283e8c43d6da62ecb8fd2b9f03a0c811",
+      "calls": 1,
+      "error": "nonprogress",
+      "verdict": "VIOLATION",
+      "reasons": [
+        "nonprogress"
+      ],
+      "expected_trace": [
+        {
+          "timestamp": 1667723400.0,
+          "iso": "2022-11-06T01:30:00-07:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Los_Angeles:2022:1667725201:hourly_30 --implementation croniter-2.0.1"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-release",
+      "case_id": "America/Santiago:2022:1662782400:midnight",
+      "implementation": "croniter-6.2.4",
+      "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+      "tzdb": "2025b",
+      "zone": "America/Santiago",
+      "zone_file_sha256": "d020f0d77742314b28aae32ea68260ba99330143610cae84d2557151103ba2c0",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1662782400,
+      "trace_sha256": "2ec86132cebe3d6dd92904e69d3e4c7acdf8846c17c173f1a4a23444a4b67c5c",
+      "calls": 8,
+      "error": null,
+      "verdict": "VIOLATION",
+      "reasons": [
+        "off_recurrence"
+      ],
+      "expected_trace": [
+        {
+          "timestamp": 1662868800.0,
+          "iso": "2022-09-11T01:00:00-03:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1662951600.0,
+          "iso": "2022-09-12T00:00:00-03:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1663038000.0,
+          "iso": "2022-09-13T00:00:00-03:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1663124400.0,
+          "iso": "2022-09-14T00:00:00-03:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1663210800.0,
+          "iso": "2022-09-15T00:00:00-03:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1663297200.0,
+          "iso": "2022-09-16T00:00:00-03:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1663383600.0,
+          "iso": "2022-09-17T00:00:00-03:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1663470000.0,
+          "iso": "2022-09-18T00:00:00-03:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-release --case-id America/Santiago:2022:1662782400:midnight --implementation croniter-6.2.4"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-tzdb",
+      "case_id": "America/Vancouver:2022:1642248000:midnight",
+      "implementation": "aps-3.11.3",
+      "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+      "tzdb": "2025b",
+      "zone": "America/Vancouver",
+      "zone_file_sha256": "b249ca1f48d23d66a6f831df337e6a5ecf0d6a6edde5316591423d4a0c6bcb28",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1642248000,
+      "trace_sha256": "283a407a09db5c065fb0bb72d39a2d86ca1750d2ae01c1693390e7cf19afad71",
+      "calls": 8,
+      "error": null,
+      "verdict": "PASS",
+      "reasons": [],
+      "expected_trace": [
+        {
+          "timestamp": 1642320000.0,
+          "iso": "2022-01-16T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642406400.0,
+          "iso": "2022-01-17T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642492800.0,
+          "iso": "2022-01-18T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642579200.0,
+          "iso": "2022-01-19T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642665600.0,
+          "iso": "2022-01-20T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642752000.0,
+          "iso": "2022-01-21T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642838400.0,
+          "iso": "2022-01-22T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642924800.0,
+          "iso": "2022-01-23T00:00:00-08:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-tzdb --case-id America/Vancouver:2022:1642248000:midnight --implementation aps-3.11.3"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-tzdb",
+      "case_id": "America/Vancouver:2022:1642248000:midnight",
+      "implementation": "croniter-6.2.4",
+      "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+      "tzdb": "2025b",
+      "zone": "America/Vancouver",
+      "zone_file_sha256": "b249ca1f48d23d66a6f831df337e6a5ecf0d6a6edde5316591423d4a0c6bcb28",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1642248000,
+      "trace_sha256": "283a407a09db5c065fb0bb72d39a2d86ca1750d2ae01c1693390e7cf19afad71",
+      "calls": 8,
+      "error": null,
+      "verdict": "PASS",
+      "reasons": [],
+      "expected_trace": [
+        {
+          "timestamp": 1642320000.0,
+          "iso": "2022-01-16T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642406400.0,
+          "iso": "2022-01-17T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642492800.0,
+          "iso": "2022-01-18T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642579200.0,
+          "iso": "2022-01-19T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642665600.0,
+          "iso": "2022-01-20T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642752000.0,
+          "iso": "2022-01-21T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642838400.0,
+          "iso": "2022-01-22T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1642924800.0,
+          "iso": "2022-01-23T00:00:00-08:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-tzdb --case-id America/Vancouver:2022:1642248000:midnight --implementation croniter-6.2.4"
+    },
+    {
+      "schema": "zoneshift.decision-record",
+      "study": "current-tzdb",
+      "case_id": "America/Vancouver:2022:1647079200:midnight",
+      "implementation": "aps-3.11.3",
+      "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+      "tzdb": "2025b",
+      "zone": "America/Vancouver",
+      "zone_file_sha256": "b249ca1f48d23d66a6f831df337e6a5ecf0d6a6edde5316591423d4a0c6bcb28",
+      "contract": {
+        "hours": [
+          0
+        ],
+        "minutes": [
+          0
+        ],
+        "gap": "skip",
+        "fold": "both"
+      },
+      "start": 1647079200,
+      "trace_sha256": "6e15965e88a446a415d2cb025325357686512f9711bfff66e248b16fbcd4e1df",
+      "calls": 8,
+      "error": null,
+      "verdict": "VIOLATION",
+      "reasons": [
+        "missing_required_occurrence"
+      ],
+      "expected_trace": [
+        {
+          "timestamp": 1647158400.0,
+          "iso": "2022-03-13T00:00:00-08:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647327600.0,
+          "iso": "2022-03-15T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647414000.0,
+          "iso": "2022-03-16T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647500400.0,
+          "iso": "2022-03-17T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647586800.0,
+          "iso": "2022-03-18T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647673200.0,
+          "iso": "2022-03-19T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647759600.0,
+          "iso": "2022-03-20T00:00:00-07:00",
+          "fold": 0
+        },
+        {
+          "timestamp": 1647846000.0,
+          "iso": "2022-03-21T00:00:00-07:00",
+          "fold": 0
+        }
+      ],
+      "replay": "python scripts/replay_record.py --study current-tzdb --case-id America/Vancouver:2022:1647079200:midnight --implementation aps-3.11.3"
+    }
+  ]
+}

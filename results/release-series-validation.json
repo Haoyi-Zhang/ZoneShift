@@ -1,0 +1,73 @@
+{
+  "by_input": {
+    "2025b-py|Europe/Chisinau": {
+      "checks": 90,
+      "transition_records": 30,
+      "zone_file_sha256": "e533e1902b71c5ad01c8b0afed8c4eadce55b5dba2dafd955fcbeb4a8a4f90fb"
+    },
+    "2026a|America/Vancouver": {
+      "checks": 90,
+      "transition_records": 30,
+      "zone_file_sha256": "129a2eef5b147dfbc7075addef04f492bbe8de8917015e39fd359c385a72dba4"
+    },
+    "2026a|Europe/Chisinau": {
+      "checks": 90,
+      "transition_records": 30,
+      "zone_file_sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e"
+    },
+    "2026b|Africa/Casablanca": {
+      "checks": 96,
+      "transition_records": 32,
+      "zone_file_sha256": "30ca6cf13e00c2a6c437a3c837fa643623cc04406ab5165165c78b37ef6bc4c3"
+    },
+    "2026b|America/Edmonton": {
+      "checks": 90,
+      "transition_records": 30,
+      "zone_file_sha256": "0eada6c5c48d59984c591ab1c30b4c71aab000818cc243b3cfe996f1f26c715f"
+    },
+    "2026b|America/Vancouver": {
+      "checks": 27,
+      "transition_records": 9,
+      "zone_file_sha256": "7d23681b36849ac7f50537b9c02bd8d3aa000b98bd3d1825ce85e7ea3e5534c9"
+    },
+    "2026c|Africa/Casablanca": {
+      "checks": 33,
+      "transition_records": 11,
+      "zone_file_sha256": "6b026cdcb00868a3dc1f24f7072a1ce3ac0c3ff83b3d847fee5f3cc01fa85f50"
+    },
+    "2026c|America/Edmonton": {
+      "checks": 27,
+      "transition_records": 9,
+      "zone_file_sha256": "d52173b56a28205d8d6f792bcfa8bc07614ee0d269f7bf6e43ec91f68d410600"
+    },
+    "2026c|America/Inuvik": {
+      "checks": 90,
+      "transition_records": 30,
+      "zone_file_sha256": "77f657f94492ef41c84fefcf44928c63a99b411bdb28bbeccbd6abeee2f6338d"
+    },
+    "2026d|America/Inuvik": {
+      "checks": 27,
+      "transition_records": 9,
+      "zone_file_sha256": "bd932739fc83073f8b9ad0f54f1252983b1be98d718f7d6843d1a9396310b18b"
+    },
+    "2026d|America/Winnipeg": {
+      "checks": 90,
+      "transition_records": 30,
+      "zone_file_sha256": "00dcf0606054d4f927416e0b47e1fdda2e5ce036fde4b53e51084f8566428c3a"
+    },
+    "2026e|America/Winnipeg": {
+      "checks": 27,
+      "transition_records": 9,
+      "zone_file_sha256": "6072e5fb802900b193407239b4fb4de9fb2ce80b43ea0f4286a954665b565cbd"
+    }
+  },
+  "checks": 777,
+  "horizon": [
+    2022,
+    2037
+  ],
+  "inputs": 12,
+  "interpretation": "Exact-offset cross-check against ZoneInfo.from_file; shared TZif bytes remain a common dependency.",
+  "mismatches": [],
+  "transition_records": 259
+}

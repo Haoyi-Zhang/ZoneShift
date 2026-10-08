@@ -1,0 +1,157 @@
+[
+  {
+    "path": "vendor/apscheduler-3.11.0/apscheduler/triggers/base.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/base.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "917af8ca67926ee08578451bb3cbcd9845620ecc",
+    "sha256": "f222a596e6da7b1178e7a20af637e2e7a413ad521f0c33cb6af51cf304e59cbd",
+    "bytes": 1333
+  },
+  {
+    "path": "vendor/apscheduler-3.11.0/apscheduler/triggers/cron/__init__.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.0/src/apscheduler/triggers/cron/__init__.py",
+    "source_tag": "3.11.0",
+    "git_blob_sha1": "03be8196bed8bf98983e8c67ec17faa474abd5a4",
+    "sha256": "0725aae10f7a8145abe00c0aa11440f410f965506fc10e81b5032169f752b63c",
+    "bytes": 9753
+  },
+  {
+    "path": "vendor/apscheduler-3.11.0/apscheduler/triggers/cron/expressions.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/cron/expressions.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "0d84ec23de5bb420cfe81dfcc953614ab82de2a0",
+    "sha256": "f3d9ff1f1034f36eb10496fc469ad5cd40c40acd1d9d9feb5f6c15915b2aea5f",
+    "bytes": 9056
+  },
+  {
+    "path": "vendor/apscheduler-3.11.0/apscheduler/triggers/cron/fields.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/cron/fields.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "4c081797a20834ed18c0b488e1ce1e1ec5e97a20",
+    "sha256": "4556dfe8b732be0fb70aa373119b1fc7343fc1e38d0888aae4b183cc0dc9500c",
+    "bytes": 3618
+  },
+  {
+    "path": "vendor/apscheduler-3.11.1/apscheduler/triggers/base.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/base.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "917af8ca67926ee08578451bb3cbcd9845620ecc",
+    "sha256": "f222a596e6da7b1178e7a20af637e2e7a413ad521f0c33cb6af51cf304e59cbd",
+    "bytes": 1333
+  },
+  {
+    "path": "vendor/apscheduler-3.11.1/apscheduler/triggers/cron/__init__.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/cron/__init__.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "8e30faa4062d80d9832b2d94e9d55077bcbd6f04",
+    "sha256": "f9893e8c0071f65ad9d82b2a0acaa62d93119b85aa52e62c3d66f045cd7d74a9",
+    "bytes": 10104
+  },
+  {
+    "path": "vendor/apscheduler-3.11.1/apscheduler/triggers/cron/expressions.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/cron/expressions.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "0d84ec23de5bb420cfe81dfcc953614ab82de2a0",
+    "sha256": "f3d9ff1f1034f36eb10496fc469ad5cd40c40acd1d9d9feb5f6c15915b2aea5f",
+    "bytes": 9056
+  },
+  {
+    "path": "vendor/apscheduler-3.11.1/apscheduler/triggers/cron/fields.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/cron/fields.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "4c081797a20834ed18c0b488e1ce1e1ec5e97a20",
+    "sha256": "4556dfe8b732be0fb70aa373119b1fc7343fc1e38d0888aae4b183cc0dc9500c",
+    "bytes": 3618
+  },
+  {
+    "path": "vendor/apscheduler-3.11.2/apscheduler/triggers/base.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/base.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "917af8ca67926ee08578451bb3cbcd9845620ecc",
+    "sha256": "f222a596e6da7b1178e7a20af637e2e7a413ad521f0c33cb6af51cf304e59cbd",
+    "bytes": 1333
+  },
+  {
+    "path": "vendor/apscheduler-3.11.2/apscheduler/triggers/cron/__init__.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.2/src/apscheduler/triggers/cron/__init__.py",
+    "source_tag": "3.11.2",
+    "git_blob_sha1": "19219b8da041a7a77bd28b29c6d889a4aa013242",
+    "sha256": "302605d17771ee5dc722604cdde052d72ef9b27ce4387761d20bab212cff41cc",
+    "bytes": 10082
+  },
+  {
+    "path": "vendor/apscheduler-3.11.2/apscheduler/triggers/cron/expressions.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/cron/expressions.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "0d84ec23de5bb420cfe81dfcc953614ab82de2a0",
+    "sha256": "f3d9ff1f1034f36eb10496fc469ad5cd40c40acd1d9d9feb5f6c15915b2aea5f",
+    "bytes": 9056
+  },
+  {
+    "path": "vendor/apscheduler-3.11.2/apscheduler/triggers/cron/fields.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.1/src/apscheduler/triggers/cron/fields.py",
+    "source_tag": "3.11.1",
+    "git_blob_sha1": "4c081797a20834ed18c0b488e1ce1e1ec5e97a20",
+    "sha256": "4556dfe8b732be0fb70aa373119b1fc7343fc1e38d0888aae4b183cc0dc9500c",
+    "bytes": 3618
+  },
+  {
+    "path": "vendor/croniter-2.0.1/croniter.py",
+    "source": "https://github.com/pallets-eco/croniter/blob/2.0.1/src/croniter/croniter.py",
+    "source_tag": "2.0.1",
+    "git_blob_sha1": "9fe857ff81ce6680b8dff85f1db34f1da903dc03",
+    "sha256": "442679a81e545823c0c58c6ff632399ddc67de8d587ad4b3df1d01af27490738",
+    "bytes": 37404
+  },
+  {
+    "path": "vendor/croniter-1.3.10/croniter.py",
+    "source": "https://github.com/pallets-eco/croniter/blob/1.3.10/src/croniter/croniter.py",
+    "source_tag": "1.3.10",
+    "git_blob_sha1": "a461bbf5b6d0a927e5e7afc1f911454cd2e937c9",
+    "sha256": "af6898bc6aa51b5c11d35427471dcf1e6a05fee82f1649b01201a89540f37f4b",
+    "bytes": 35612
+  },
+  {
+    "path": "vendor/apscheduler-3.11.3/apscheduler/triggers/base.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.3/src/apscheduler/triggers/base.py",
+    "source_tag": "3.11.3",
+    "git_blob_sha1": "917af8ca67926ee08578451bb3cbcd9845620ecc",
+    "sha256": "f222a596e6da7b1178e7a20af637e2e7a413ad521f0c33cb6af51cf304e59cbd",
+    "bytes": 1333
+  },
+  {
+    "path": "vendor/apscheduler-3.11.3/apscheduler/triggers/cron/__init__.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.3/src/apscheduler/triggers/cron/__init__.py",
+    "source_tag": "3.11.3",
+    "git_blob_sha1": "028262fad3d0b95d77c151541ca3d780c19a0721",
+    "sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+    "bytes": 10528,
+    "upstream_git_blob_sha1": "028262fad3d0b95d77c151541ca3d780c19a0721"
+  },
+  {
+    "path": "vendor/apscheduler-3.11.3/apscheduler/triggers/cron/expressions.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.3/src/apscheduler/triggers/cron/expressions.py",
+    "source_tag": "3.11.3",
+    "git_blob_sha1": "0d84ec23de5bb420cfe81dfcc953614ab82de2a0",
+    "sha256": "f3d9ff1f1034f36eb10496fc469ad5cd40c40acd1d9d9feb5f6c15915b2aea5f",
+    "bytes": 9056
+  },
+  {
+    "path": "vendor/apscheduler-3.11.3/apscheduler/triggers/cron/fields.py",
+    "source": "https://github.com/agronholm/apscheduler/blob/3.11.3/src/apscheduler/triggers/cron/fields.py",
+    "source_tag": "3.11.3",
+    "git_blob_sha1": "4c081797a20834ed18c0b488e1ce1e1ec5e97a20",
+    "sha256": "4556dfe8b732be0fb70aa373119b1fc7343fc1e38d0888aae4b183cc0dc9500c",
+    "bytes": 3618
+  },
+  {
+    "path": "vendor/croniter-6.2.4/croniter.py",
+    "source": "https://github.com/pallets-eco/croniter/blob/6.2.4/src/croniter/croniter.py",
+    "source_tag": "6.2.4",
+    "git_blob_sha1": "cbcbb6c51017388dce5e139e1c977b35403618cd",
+    "sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+    "bytes": 58844,
+    "upstream_git_blob_sha1": "30c42608bc436de892f957c0109a21647d0ef457",
+    "local_normalization": "source text transcribed from the tagged public blob; executable statements preserved; local bytes are pinned separately"
+  }
+]

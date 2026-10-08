@@ -1,0 +1,80 @@
+{
+  "policy_frontiers": {
+    "api_calls": 4752,
+    "classification_counts": {
+      "aps-3.11.0|fold|robust_violation": 44,
+      "aps-3.11.0|gap|policy_sensitive": 44,
+      "aps-3.11.1|fold|policy_sensitive": 44,
+      "aps-3.11.1|gap|policy_sensitive": 44,
+      "aps-3.11.2|fold|policy_sensitive": 44,
+      "aps-3.11.2|gap|policy_sensitive": 44,
+      "aps-3.11.3|fold|policy_sensitive": 44,
+      "aps-3.11.3|gap|policy_sensitive": 44,
+      "croniter-1.3.10|fold|robust_violation": 44,
+      "croniter-1.3.10|gap|policy_sensitive": 44,
+      "croniter-2.0.1|fold|robust_violation": 44,
+      "croniter-2.0.1|gap|policy_sensitive": 44,
+      "croniter-6.2.4|fold|policy_sensitive": 44,
+      "croniter-6.2.4|gap|policy_sensitive": 44
+    },
+    "design": {
+      "implementations": [
+        "aps-3.11.0",
+        "aps-3.11.1",
+        "aps-3.11.2",
+        "aps-3.11.3",
+        "croniter-1.3.10",
+        "croniter-2.0.1",
+        "croniter-6.2.4"
+      ],
+      "selection": "one whole-minute label inside every measured gap or fold",
+      "tzdb": "2024a",
+      "unit": "one executed scheduler trace and its finite policy-completion frontier",
+      "years": [
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "zones": 16
+    },
+    "elapsed_seconds": 0.477252433,
+    "interpretation": "A policy-sensitive trace is not a defect until the application selects a completion; a robust violation fails every admissible completion.",
+    "support_pattern_counts": {
+      "aps-3.11.0|fold|none": 44,
+      "aps-3.11.0|gap|shift_forward+both": 36,
+      "aps-3.11.0|gap|skip+both": 8,
+      "aps-3.11.1|fold|skip+both": 44,
+      "aps-3.11.1|gap|shift_forward+both": 36,
+      "aps-3.11.1|gap|skip+both": 8,
+      "aps-3.11.2|fold|skip+both": 44,
+      "aps-3.11.2|gap|shift_forward+both": 36,
+      "aps-3.11.2|gap|skip+both": 8,
+      "aps-3.11.3|fold|skip+both": 44,
+      "aps-3.11.3|gap|shift_forward+both": 36,
+      "aps-3.11.3|gap|skip+both": 8,
+      "croniter-1.3.10|fold|none": 44,
+      "croniter-1.3.10|gap|shift_forward+both": 44,
+      "croniter-2.0.1|fold|none": 44,
+      "croniter-2.0.1|gap|shift_forward+both": 44,
+      "croniter-6.2.4|fold|skip+both": 44,
+      "croniter-6.2.4|gap|shift_forward+both": 44
+    },
+    "timeouts": 0,
+    "traces": 616
+  },
+  "upgrade_sufficiency": {
+    "certificates": 2080,
+    "decision_counts": {
+      "aps-3.11.0->aps-3.11.2|baseline_already_passes": 920,
+      "aps-3.11.0->aps-3.11.2|code_change_sufficient": 84,
+      "aps-3.11.0->aps-3.11.2|either_single_change_sufficient": 4,
+      "aps-3.11.0->aps-3.11.2|no_passing_target": 32,
+      "croniter-1.3.10->croniter-2.0.1|baseline_already_passes": 780,
+      "croniter-1.3.10->croniter-2.0.1|data_change_sufficient": 12,
+      "croniter-1.3.10->croniter-2.0.1|no_passing_target": 248
+    },
+    "interpretation": "Minimal sufficient coordinate sets describe the executed square only; they do not claim population-level causal identification.",
+    "noncommutative_observations": 4
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "checks": 14780,
+  "transition_records": 1345,
+  "failures": [],
+  "qualification": "Independent conversion algorithms over shared public TZif data, not independent rule truth"
+}

@@ -1,0 +1,390 @@
+{
+  "unit": "selected bounded case/module observation; not a population estimate",
+  "policy_blind_first_branch": {
+    "alarms": 1456,
+    "actionable_alarms": 1152,
+    "false_alarms_on_pass": 304,
+    "alarms_on_underspecified": 0,
+    "missed_violations": 144
+  },
+  "policy_aware_three_way": {
+    "violations": 1296,
+    "passes": 4304,
+    "underspecified": 0
+  },
+  "naive_cross_library": {
+    "counts": {
+      "pairs": 1120,
+      "alarms": 472,
+      "actionable_alarms": 472,
+      "false_alarms_both_pass": 0,
+      "alarms_with_only_uncertainty": 0,
+      "shared_or_equal_missed_violations": 0,
+      "status:VIOLATION:VIOLATION": 64,
+      "status:PASS:VIOLATION": 408,
+      "status:PASS:PASS": 648
+    },
+    "examples": [
+      {
+        "case_id": "America/Chicago:2022:0:midnight",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:0:five_am",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:1:midnight",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:1:five_am",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:3:midnight",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:3:five_am",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:midnight",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:five_am",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:hourly_30",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:half_hourly",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:5:hourly_30",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:5:half_hourly",
+        "alarm": true,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ]
+      }
+    ]
+  },
+  "release_differential_aps": {
+    "counts": {
+      "pairs": 1120,
+      "alarms": 160,
+      "actionable_alarms": 160,
+      "false_alarms_both_pass": 0,
+      "alarms_with_only_uncertainty": 0,
+      "shared_or_equal_missed_violations": 64,
+      "status:VIOLATION:VIOLATION": 64,
+      "status:PASS:PASS": 896,
+      "status:VIOLATION:PASS": 160
+    },
+    "examples": [
+      {
+        "case_id": "America/Chicago:2022:0:midnight",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:1:midnight",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:hourly_30",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:half_hourly",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:5:hourly_30",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:5:half_hourly",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2023:0:midnight",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2023:1:midnight",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2023:4:hourly_30",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2023:4:half_hourly",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2023:5:hourly_30",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2023:5:half_hourly",
+        "alarm": true,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ]
+      }
+    ]
+  },
+  "release_differential_croniter": {
+    "counts": {
+      "pairs": 1120,
+      "alarms": 0,
+      "actionable_alarms": 0,
+      "false_alarms_both_pass": 0,
+      "alarms_with_only_uncertainty": 0,
+      "shared_or_equal_missed_violations": 472,
+      "status:VIOLATION:VIOLATION": 472,
+      "status:PASS:PASS": 648
+    },
+    "examples": [
+      {
+        "case_id": "America/Chicago:2022:0:midnight",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:0:five_am",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:1:midnight",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:1:five_am",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:3:midnight",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:3:five_am",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:midnight",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:five_am",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:hourly_30",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:4:half_hourly",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:5:hourly_30",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      },
+      {
+        "case_id": "America/Chicago:2022:5:half_hourly",
+        "alarm": false,
+        "statuses": [
+          "VIOLATION",
+          "VIOLATION"
+        ]
+      }
+    ]
+  },
+  "targeted_upstream_inputs": {
+    "3.11.0|fail": 1,
+    "3.11.0|pass": 4,
+    "3.11.1|pass": 5,
+    "3.11.2|pass": 5
+  },
+  "sampling_yield": {
+    "aps-3.11.0": {
+      "boundary_violations": 224,
+      "uniform_mean_violations": 4.4,
+      "uniform_min": 3,
+      "uniform_max": 7,
+      "equal_windows": 1120
+    },
+    "aps-3.11.1": {
+      "boundary_violations": 64,
+      "uniform_mean_violations": 4,
+      "uniform_min": 3,
+      "uniform_max": 6,
+      "equal_windows": 1120
+    },
+    "aps-3.11.2": {
+      "boundary_violations": 64,
+      "uniform_mean_violations": 4,
+      "uniform_min": 3,
+      "uniform_max": 6,
+      "equal_windows": 1120
+    },
+    "croniter-1.3.10": {
+      "boundary_violations": 472,
+      "uniform_mean_violations": 18.6,
+      "uniform_min": 15,
+      "uniform_max": 22,
+      "equal_windows": 1120
+    },
+    "croniter-2.0.1": {
+      "boundary_violations": 472,
+      "uniform_mean_violations": 18.6,
+      "uniform_min": 15,
+      "uniform_max": 22,
+      "equal_windows": 1120
+    }
+  }
+}

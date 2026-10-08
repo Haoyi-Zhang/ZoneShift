@@ -1,0 +1,3594 @@
+{
+  "minimized_witnesses": {
+    "accepted_data_effects": 12,
+    "all_decisions_preserved": true,
+    "all_preserve_real_executed_prefixes": true,
+    "all_replayed_exactly": true,
+    "blocked": 45,
+    "interpretation": "Reduction minimizes evidence prefixes, not semantic inputs or root causes; an execution error is retained at its observed full prefix.",
+    "median_byte_reduction": 0.7486631016042781,
+    "median_event_reduction": 0.75,
+    "replay_validation_api_calls": 538,
+    "witnesses": 57
+  },
+  "release_series": {
+    "affected_zones": 6,
+    "api_calls": 28032,
+    "classification_counts": {
+      "aps-3.11.3|accepted_data_effect": 122,
+      "aps-3.11.3|byte_change_no_observed_behavior_change": 726,
+      "aps-3.11.3|changed_with_violation_or_uncertainty": 28,
+      "croniter-6.2.4|accepted_data_effect": 134,
+      "croniter-6.2.4|byte_change_no_observed_behavior_change": 742
+    },
+    "decision_records": 1752,
+    "design": {
+      "compiler_lineage": "Exact TZif bytes from tagged Python tzdata 2025.2 and 2026.1-2026.5 distributions; Python tzdata release N corresponds to IANA letter release.",
+      "implementations": [
+        "aps-3.11.3",
+        "croniter-6.2.4"
+      ],
+      "pairs": [
+        {
+          "new": "2026a",
+          "old": "2025b-py",
+          "source": "IANA 2026a: Moldova has used EU transition times since 2022",
+          "years": [
+            2022,
+            2025,
+            2026,
+            2027
+          ],
+          "zone": "Europe/Chisinau"
+        },
+        {
+          "new": "2026b",
+          "old": "2026a",
+          "source": "IANA 2026b: British Columbia moves to permanent -07",
+          "years": [
+            2025,
+            2026,
+            2027,
+            2028
+          ],
+          "zone": "America/Vancouver"
+        },
+        {
+          "new": "2026c",
+          "old": "2026b",
+          "source": "IANA 2026c: Alberta moves to permanent -06",
+          "years": [
+            2025,
+            2026,
+            2027,
+            2028
+          ],
+          "zone": "America/Edmonton"
+        },
+        {
+          "new": "2026c",
+          "old": "2026b",
+          "source": "IANA 2026c: Morocco moves to permanent +00",
+          "years": [
+            2025,
+            2026,
+            2027,
+            2028
+          ],
+          "zone": "Africa/Casablanca"
+        },
+        {
+          "new": "2026d",
+          "old": "2026c",
+          "source": "IANA 2026d: Northwest Territories moves to permanent -06",
+          "years": [
+            2025,
+            2026,
+            2027,
+            2028
+          ],
+          "zone": "America/Inuvik"
+        },
+        {
+          "new": "2026e",
+          "old": "2026d",
+          "source": "IANA 2026e: Manitoba moves to permanent -05",
+          "years": [
+            2025,
+            2026,
+            2027,
+            2028
+          ],
+          "zone": "America/Winnipeg"
+        }
+      ],
+      "profiles": [
+        "midnight",
+        "five_am",
+        "hourly_30",
+        "half_hourly"
+      ],
+      "selection": "Each affected zone is named in the corresponding IANA release note; pairs were fixed before scheduler outcomes were executed."
+    },
+    "elapsed_seconds": 3.296838156,
+    "interpretation": "Stepwise source-named release holdout through IANA 2026e. A release-note-supported difference is accepted only when both endpoint traces satisfy the declared contract; correlated windows are observations, not independent policy events.",
+    "nonprogress": 0,
+    "pair_classification_counts": {
+      "2025b-py->2026a:Europe/Chisinau|aps-3.11.3|byte_change_no_observed_behavior_change": 216,
+      "2025b-py->2026a:Europe/Chisinau|aps-3.11.3|changed_with_violation_or_uncertainty": 8,
+      "2025b-py->2026a:Europe/Chisinau|croniter-6.2.4|byte_change_no_observed_behavior_change": 224,
+      "2026a->2026b:America/Vancouver|aps-3.11.3|accepted_data_effect": 24,
+      "2026a->2026b:America/Vancouver|aps-3.11.3|byte_change_no_observed_behavior_change": 100,
+      "2026a->2026b:America/Vancouver|aps-3.11.3|changed_with_violation_or_uncertainty": 4,
+      "2026a->2026b:America/Vancouver|croniter-6.2.4|accepted_data_effect": 26,
+      "2026a->2026b:America/Vancouver|croniter-6.2.4|byte_change_no_observed_behavior_change": 102,
+      "2026b->2026c:Africa/Casablanca|aps-3.11.3|accepted_data_effect": 26,
+      "2026b->2026c:Africa/Casablanca|aps-3.11.3|byte_change_no_observed_behavior_change": 110,
+      "2026b->2026c:Africa/Casablanca|aps-3.11.3|changed_with_violation_or_uncertainty": 4,
+      "2026b->2026c:Africa/Casablanca|croniter-6.2.4|accepted_data_effect": 30,
+      "2026b->2026c:Africa/Casablanca|croniter-6.2.4|byte_change_no_observed_behavior_change": 110,
+      "2026b->2026c:America/Edmonton|aps-3.11.3|accepted_data_effect": 24,
+      "2026b->2026c:America/Edmonton|aps-3.11.3|byte_change_no_observed_behavior_change": 100,
+      "2026b->2026c:America/Edmonton|aps-3.11.3|changed_with_violation_or_uncertainty": 4,
+      "2026b->2026c:America/Edmonton|croniter-6.2.4|accepted_data_effect": 26,
+      "2026b->2026c:America/Edmonton|croniter-6.2.4|byte_change_no_observed_behavior_change": 102,
+      "2026c->2026d:America/Inuvik|aps-3.11.3|accepted_data_effect": 24,
+      "2026c->2026d:America/Inuvik|aps-3.11.3|byte_change_no_observed_behavior_change": 100,
+      "2026c->2026d:America/Inuvik|aps-3.11.3|changed_with_violation_or_uncertainty": 4,
+      "2026c->2026d:America/Inuvik|croniter-6.2.4|accepted_data_effect": 26,
+      "2026c->2026d:America/Inuvik|croniter-6.2.4|byte_change_no_observed_behavior_change": 102,
+      "2026d->2026e:America/Winnipeg|aps-3.11.3|accepted_data_effect": 24,
+      "2026d->2026e:America/Winnipeg|aps-3.11.3|byte_change_no_observed_behavior_change": 100,
+      "2026d->2026e:America/Winnipeg|aps-3.11.3|changed_with_violation_or_uncertainty": 4,
+      "2026d->2026e:America/Winnipeg|croniter-6.2.4|accepted_data_effect": 26,
+      "2026d->2026e:America/Winnipeg|croniter-6.2.4|byte_change_no_observed_behavior_change": 102
+    },
+    "release_pairs": 6,
+    "representative_examples": [
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2025b-py->2026a:Europe/Chisinau:2022:1642248000:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "ordinary",
+        "new": "2026a",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2022-01-16T05:00:00+02:00",
+            "timestamp": 1642302000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-17T05:00:00+02:00",
+            "timestamp": 1642388400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-18T05:00:00+02:00",
+            "timestamp": 1642474800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-19T05:00:00+02:00",
+            "timestamp": 1642561200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-20T05:00:00+02:00",
+            "timestamp": 1642647600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-21T05:00:00+02:00",
+            "timestamp": 1642734000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-22T05:00:00+02:00",
+            "timestamp": 1642820400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-23T05:00:00+02:00",
+            "timestamp": 1642906800.0
+          }
+        ],
+        "new_zone_file_sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e",
+        "old": "2025b-py",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2022-01-16T05:00:00+02:00",
+            "timestamp": 1642302000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-17T05:00:00+02:00",
+            "timestamp": 1642388400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-18T05:00:00+02:00",
+            "timestamp": 1642474800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-19T05:00:00+02:00",
+            "timestamp": 1642561200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-20T05:00:00+02:00",
+            "timestamp": 1642647600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-21T05:00:00+02:00",
+            "timestamp": 1642734000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-22T05:00:00+02:00",
+            "timestamp": 1642820400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-23T05:00:00+02:00",
+            "timestamp": 1642906800.0
+          }
+        ],
+        "old_zone_file_sha256": "e533e1902b71c5ad01c8b0afed8c4eadce55b5dba2dafd955fcbeb4a8a4f90fb",
+        "pair_id": "2025b-py->2026a:Europe/Chisinau",
+        "profile": "five_am",
+        "source": "IANA 2026a: Moldova has used EU transition times since 2022",
+        "start": 1642248000,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "Europe/Chisinau"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2025b-py->2026a:Europe/Chisinau:2022:1642248000:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "ordinary",
+        "new": "2026a",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2022-01-16T05:00:00+02:00",
+            "timestamp": 1642302000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-17T05:00:00+02:00",
+            "timestamp": 1642388400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-18T05:00:00+02:00",
+            "timestamp": 1642474800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-19T05:00:00+02:00",
+            "timestamp": 1642561200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-20T05:00:00+02:00",
+            "timestamp": 1642647600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-21T05:00:00+02:00",
+            "timestamp": 1642734000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-22T05:00:00+02:00",
+            "timestamp": 1642820400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-23T05:00:00+02:00",
+            "timestamp": 1642906800.0
+          }
+        ],
+        "new_zone_file_sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e",
+        "old": "2025b-py",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2022-01-16T05:00:00+02:00",
+            "timestamp": 1642302000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-17T05:00:00+02:00",
+            "timestamp": 1642388400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-18T05:00:00+02:00",
+            "timestamp": 1642474800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-19T05:00:00+02:00",
+            "timestamp": 1642561200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-20T05:00:00+02:00",
+            "timestamp": 1642647600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-21T05:00:00+02:00",
+            "timestamp": 1642734000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-22T05:00:00+02:00",
+            "timestamp": 1642820400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-01-23T05:00:00+02:00",
+            "timestamp": 1642906800.0
+          }
+        ],
+        "old_zone_file_sha256": "e533e1902b71c5ad01c8b0afed8c4eadce55b5dba2dafd955fcbeb4a8a4f90fb",
+        "pair_id": "2025b-py->2026a:Europe/Chisinau",
+        "profile": "five_am",
+        "source": "IANA 2026a: Moldova has used EU transition times since 2022",
+        "start": 1642248000,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "Europe/Chisinau"
+      },
+      {
+        "anchor_offset": -3600,
+        "byte_changed": true,
+        "case_id": "2025b-py->2026a:Europe/Chisinau:2022:1648339200:midnight",
+        "changed": true,
+        "classification": "changed_with_violation_or_uncertainty",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026a",
+        "new_error": null,
+        "new_reasons": [
+          "missing_required_occurrence"
+        ],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2022-03-29T00:00:00+03:00",
+            "timestamp": 1648501200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-03-30T00:00:00+03:00",
+            "timestamp": 1648587600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-03-31T00:00:00+03:00",
+            "timestamp": 1648674000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-01T00:00:00+03:00",
+            "timestamp": 1648760400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-02T00:00:00+03:00",
+            "timestamp": 1648846800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-03T00:00:00+03:00",
+            "timestamp": 1648933200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-04T00:00:00+03:00",
+            "timestamp": 1649019600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-05T00:00:00+03:00",
+            "timestamp": 1649106000.0
+          }
+        ],
+        "new_zone_file_sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e",
+        "old": "2025b-py",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2022-03-28T00:00:00+03:00",
+            "timestamp": 1648414800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-03-29T00:00:00+03:00",
+            "timestamp": 1648501200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-03-30T00:00:00+03:00",
+            "timestamp": 1648587600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-03-31T00:00:00+03:00",
+            "timestamp": 1648674000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-01T00:00:00+03:00",
+            "timestamp": 1648760400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-02T00:00:00+03:00",
+            "timestamp": 1648846800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-03T00:00:00+03:00",
+            "timestamp": 1648933200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2022-04-04T00:00:00+03:00",
+            "timestamp": 1649019600.0
+          }
+        ],
+        "old_zone_file_sha256": "e533e1902b71c5ad01c8b0afed8c4eadce55b5dba2dafd955fcbeb4a8a4f90fb",
+        "pair_id": "2025b-py->2026a:Europe/Chisinau",
+        "profile": "midnight",
+        "source": "IANA 2026a: Moldova has used EU transition times since 2022",
+        "start": 1648339200,
+        "statuses": [
+          "PASS",
+          "VIOLATION"
+        ],
+        "transition_delta": 3600,
+        "zone": "Europe/Chisinau"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026a->2026b:America/Vancouver:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "ordinary",
+        "new": "2026b",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-15T05:00:00-08:00",
+            "timestamp": 1736946000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-08:00",
+            "timestamp": 1737032400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-08:00",
+            "timestamp": 1737118800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-08:00",
+            "timestamp": 1737205200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-08:00",
+            "timestamp": 1737291600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-08:00",
+            "timestamp": 1737378000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-08:00",
+            "timestamp": 1737464400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-08:00",
+            "timestamp": 1737550800.0
+          }
+        ],
+        "new_zone_file_sha256": "7d23681b36849ac7f50537b9c02bd8d3aa000b98bd3d1825ce85e7ea3e5534c9",
+        "old": "2026a",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-15T05:00:00-08:00",
+            "timestamp": 1736946000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-08:00",
+            "timestamp": 1737032400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-08:00",
+            "timestamp": 1737118800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-08:00",
+            "timestamp": 1737205200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-08:00",
+            "timestamp": 1737291600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-08:00",
+            "timestamp": 1737378000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-08:00",
+            "timestamp": 1737464400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-08:00",
+            "timestamp": 1737550800.0
+          }
+        ],
+        "old_zone_file_sha256": "129a2eef5b147dfbc7075addef04f492bbe8de8917015e39fd359c385a72dba4",
+        "pair_id": "2026a->2026b:America/Vancouver",
+        "profile": "five_am",
+        "source": "IANA 2026b: British Columbia moves to permanent -07",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "America/Vancouver"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026a->2026b:America/Vancouver:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "ordinary",
+        "new": "2026b",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-15T05:00:00-08:00",
+            "timestamp": 1736946000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-08:00",
+            "timestamp": 1737032400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-08:00",
+            "timestamp": 1737118800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-08:00",
+            "timestamp": 1737205200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-08:00",
+            "timestamp": 1737291600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-08:00",
+            "timestamp": 1737378000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-08:00",
+            "timestamp": 1737464400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-08:00",
+            "timestamp": 1737550800.0
+          }
+        ],
+        "new_zone_file_sha256": "7d23681b36849ac7f50537b9c02bd8d3aa000b98bd3d1825ce85e7ea3e5534c9",
+        "old": "2026a",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-15T05:00:00-08:00",
+            "timestamp": 1736946000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-08:00",
+            "timestamp": 1737032400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-08:00",
+            "timestamp": 1737118800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-08:00",
+            "timestamp": 1737205200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-08:00",
+            "timestamp": 1737291600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-08:00",
+            "timestamp": 1737378000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-08:00",
+            "timestamp": 1737464400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-08:00",
+            "timestamp": 1737550800.0
+          }
+        ],
+        "old_zone_file_sha256": "129a2eef5b147dfbc7075addef04f492bbe8de8917015e39fd359c385a72dba4",
+        "pair_id": "2026a->2026b:America/Vancouver",
+        "profile": "five_am",
+        "source": "IANA 2026b: British Columbia moves to permanent -07",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "America/Vancouver"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026a->2026b:America/Vancouver:2026:1793437200:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026b",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-07:00",
+            "timestamp": 1793448000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-07:00",
+            "timestamp": 1793534400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-07:00",
+            "timestamp": 1793620800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-07:00",
+            "timestamp": 1793707200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-07:00",
+            "timestamp": 1793793600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-07:00",
+            "timestamp": 1793880000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-07:00",
+            "timestamp": 1793966400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-07:00",
+            "timestamp": 1794052800.0
+          }
+        ],
+        "new_zone_file_sha256": "7d23681b36849ac7f50537b9c02bd8d3aa000b98bd3d1825ce85e7ea3e5534c9",
+        "old": "2026a",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-07:00",
+            "timestamp": 1793448000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-08:00",
+            "timestamp": 1793538000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-08:00",
+            "timestamp": 1793624400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-08:00",
+            "timestamp": 1793710800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-08:00",
+            "timestamp": 1793797200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-08:00",
+            "timestamp": 1793883600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-08:00",
+            "timestamp": 1793970000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-08:00",
+            "timestamp": 1794056400.0
+          }
+        ],
+        "old_zone_file_sha256": "129a2eef5b147dfbc7075addef04f492bbe8de8917015e39fd359c385a72dba4",
+        "pair_id": "2026a->2026b:America/Vancouver",
+        "profile": "five_am",
+        "source": "IANA 2026b: British Columbia moves to permanent -07",
+        "start": 1793437200,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "America/Vancouver"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026a->2026b:America/Vancouver:2026:1793437200:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "transition",
+        "new": "2026b",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-07:00",
+            "timestamp": 1793448000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-07:00",
+            "timestamp": 1793534400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-07:00",
+            "timestamp": 1793620800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-07:00",
+            "timestamp": 1793707200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-07:00",
+            "timestamp": 1793793600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-07:00",
+            "timestamp": 1793880000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-07:00",
+            "timestamp": 1793966400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-07:00",
+            "timestamp": 1794052800.0
+          }
+        ],
+        "new_zone_file_sha256": "7d23681b36849ac7f50537b9c02bd8d3aa000b98bd3d1825ce85e7ea3e5534c9",
+        "old": "2026a",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-07:00",
+            "timestamp": 1793448000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-08:00",
+            "timestamp": 1793538000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-08:00",
+            "timestamp": 1793624400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-08:00",
+            "timestamp": 1793710800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-08:00",
+            "timestamp": 1793797200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-08:00",
+            "timestamp": 1793883600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-08:00",
+            "timestamp": 1793970000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-08:00",
+            "timestamp": 1794056400.0
+          }
+        ],
+        "old_zone_file_sha256": "129a2eef5b147dfbc7075addef04f492bbe8de8917015e39fd359c385a72dba4",
+        "pair_id": "2026a->2026b:America/Vancouver",
+        "profile": "five_am",
+        "source": "IANA 2026b: British Columbia moves to permanent -07",
+        "start": 1793437200,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "America/Vancouver"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026a->2026b:America/Vancouver:2027:1804932000:midnight",
+        "changed": true,
+        "classification": "changed_with_violation_or_uncertainty",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026b",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00-07:00",
+            "timestamp": 1805007600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-15T00:00:00-07:00",
+            "timestamp": 1805094000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00-07:00",
+            "timestamp": 1805180400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00-07:00",
+            "timestamp": 1805266800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00-07:00",
+            "timestamp": 1805353200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00-07:00",
+            "timestamp": 1805439600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00-07:00",
+            "timestamp": 1805526000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00-07:00",
+            "timestamp": 1805612400.0
+          }
+        ],
+        "new_zone_file_sha256": "7d23681b36849ac7f50537b9c02bd8d3aa000b98bd3d1825ce85e7ea3e5534c9",
+        "old": "2026a",
+        "old_error": null,
+        "old_reasons": [
+          "missing_required_occurrence"
+        ],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00-08:00",
+            "timestamp": 1805011200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00-07:00",
+            "timestamp": 1805180400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00-07:00",
+            "timestamp": 1805266800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00-07:00",
+            "timestamp": 1805353200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00-07:00",
+            "timestamp": 1805439600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00-07:00",
+            "timestamp": 1805526000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00-07:00",
+            "timestamp": 1805612400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-22T00:00:00-07:00",
+            "timestamp": 1805698800.0
+          }
+        ],
+        "old_zone_file_sha256": "129a2eef5b147dfbc7075addef04f492bbe8de8917015e39fd359c385a72dba4",
+        "pair_id": "2026a->2026b:America/Vancouver",
+        "profile": "midnight",
+        "source": "IANA 2026b: British Columbia moves to permanent -07",
+        "start": 1804932000,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ],
+        "transition_delta": 3600,
+        "zone": "America/Vancouver"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:America/Edmonton:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "ordinary",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-07:00",
+            "timestamp": 1737028800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-07:00",
+            "timestamp": 1737115200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-07:00",
+            "timestamp": 1737201600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-07:00",
+            "timestamp": 1737288000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-07:00",
+            "timestamp": 1737374400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-07:00",
+            "timestamp": 1737460800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-07:00",
+            "timestamp": 1737547200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-07:00",
+            "timestamp": 1737633600.0
+          }
+        ],
+        "new_zone_file_sha256": "d52173b56a28205d8d6f792bcfa8bc07614ee0d269f7bf6e43ec91f68d410600",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-07:00",
+            "timestamp": 1737028800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-07:00",
+            "timestamp": 1737115200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-07:00",
+            "timestamp": 1737201600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-07:00",
+            "timestamp": 1737288000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-07:00",
+            "timestamp": 1737374400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-07:00",
+            "timestamp": 1737460800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-07:00",
+            "timestamp": 1737547200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-07:00",
+            "timestamp": 1737633600.0
+          }
+        ],
+        "old_zone_file_sha256": "0eada6c5c48d59984c591ab1c30b4c71aab000818cc243b3cfe996f1f26c715f",
+        "pair_id": "2026b->2026c:America/Edmonton",
+        "profile": "five_am",
+        "source": "IANA 2026c: Alberta moves to permanent -06",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "America/Edmonton"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:America/Edmonton:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "ordinary",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-07:00",
+            "timestamp": 1737028800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-07:00",
+            "timestamp": 1737115200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-07:00",
+            "timestamp": 1737201600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-07:00",
+            "timestamp": 1737288000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-07:00",
+            "timestamp": 1737374400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-07:00",
+            "timestamp": 1737460800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-07:00",
+            "timestamp": 1737547200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-07:00",
+            "timestamp": 1737633600.0
+          }
+        ],
+        "new_zone_file_sha256": "d52173b56a28205d8d6f792bcfa8bc07614ee0d269f7bf6e43ec91f68d410600",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-07:00",
+            "timestamp": 1737028800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-07:00",
+            "timestamp": 1737115200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-07:00",
+            "timestamp": 1737201600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-07:00",
+            "timestamp": 1737288000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-07:00",
+            "timestamp": 1737374400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-07:00",
+            "timestamp": 1737460800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-07:00",
+            "timestamp": 1737547200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-07:00",
+            "timestamp": 1737633600.0
+          }
+        ],
+        "old_zone_file_sha256": "0eada6c5c48d59984c591ab1c30b4c71aab000818cc243b3cfe996f1f26c715f",
+        "pair_id": "2026b->2026c:America/Edmonton",
+        "profile": "five_am",
+        "source": "IANA 2026c: Alberta moves to permanent -06",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "America/Edmonton"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:America/Edmonton:2026:1793433600:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-06:00",
+            "timestamp": 1793444400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-06:00",
+            "timestamp": 1793530800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-06:00",
+            "timestamp": 1793617200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-06:00",
+            "timestamp": 1793703600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-06:00",
+            "timestamp": 1793790000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-06:00",
+            "timestamp": 1793876400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-06:00",
+            "timestamp": 1793962800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-06:00",
+            "timestamp": 1794049200.0
+          }
+        ],
+        "new_zone_file_sha256": "d52173b56a28205d8d6f792bcfa8bc07614ee0d269f7bf6e43ec91f68d410600",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-06:00",
+            "timestamp": 1793444400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-07:00",
+            "timestamp": 1793534400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-07:00",
+            "timestamp": 1793620800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-07:00",
+            "timestamp": 1793707200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-07:00",
+            "timestamp": 1793793600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-07:00",
+            "timestamp": 1793880000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-07:00",
+            "timestamp": 1793966400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-07:00",
+            "timestamp": 1794052800.0
+          }
+        ],
+        "old_zone_file_sha256": "0eada6c5c48d59984c591ab1c30b4c71aab000818cc243b3cfe996f1f26c715f",
+        "pair_id": "2026b->2026c:America/Edmonton",
+        "profile": "five_am",
+        "source": "IANA 2026c: Alberta moves to permanent -06",
+        "start": 1793433600,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "America/Edmonton"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:America/Edmonton:2026:1793433600:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "transition",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-06:00",
+            "timestamp": 1793444400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-06:00",
+            "timestamp": 1793530800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-06:00",
+            "timestamp": 1793617200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-06:00",
+            "timestamp": 1793703600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-06:00",
+            "timestamp": 1793790000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-06:00",
+            "timestamp": 1793876400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-06:00",
+            "timestamp": 1793962800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-06:00",
+            "timestamp": 1794049200.0
+          }
+        ],
+        "new_zone_file_sha256": "d52173b56a28205d8d6f792bcfa8bc07614ee0d269f7bf6e43ec91f68d410600",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-06:00",
+            "timestamp": 1793444400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-07:00",
+            "timestamp": 1793534400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-07:00",
+            "timestamp": 1793620800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-07:00",
+            "timestamp": 1793707200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-07:00",
+            "timestamp": 1793793600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-07:00",
+            "timestamp": 1793880000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-07:00",
+            "timestamp": 1793966400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-07:00",
+            "timestamp": 1794052800.0
+          }
+        ],
+        "old_zone_file_sha256": "0eada6c5c48d59984c591ab1c30b4c71aab000818cc243b3cfe996f1f26c715f",
+        "pair_id": "2026b->2026c:America/Edmonton",
+        "profile": "five_am",
+        "source": "IANA 2026c: Alberta moves to permanent -06",
+        "start": 1793433600,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "America/Edmonton"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:America/Edmonton:2027:1804928400:midnight",
+        "changed": true,
+        "classification": "changed_with_violation_or_uncertainty",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00-06:00",
+            "timestamp": 1805004000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-15T00:00:00-06:00",
+            "timestamp": 1805090400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00-06:00",
+            "timestamp": 1805176800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00-06:00",
+            "timestamp": 1805263200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00-06:00",
+            "timestamp": 1805349600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00-06:00",
+            "timestamp": 1805436000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00-06:00",
+            "timestamp": 1805522400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00-06:00",
+            "timestamp": 1805608800.0
+          }
+        ],
+        "new_zone_file_sha256": "d52173b56a28205d8d6f792bcfa8bc07614ee0d269f7bf6e43ec91f68d410600",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [
+          "missing_required_occurrence"
+        ],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00-07:00",
+            "timestamp": 1805007600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00-06:00",
+            "timestamp": 1805176800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00-06:00",
+            "timestamp": 1805263200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00-06:00",
+            "timestamp": 1805349600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00-06:00",
+            "timestamp": 1805436000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00-06:00",
+            "timestamp": 1805522400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00-06:00",
+            "timestamp": 1805608800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-22T00:00:00-06:00",
+            "timestamp": 1805695200.0
+          }
+        ],
+        "old_zone_file_sha256": "0eada6c5c48d59984c591ab1c30b4c71aab000818cc243b3cfe996f1f26c715f",
+        "pair_id": "2026b->2026c:America/Edmonton",
+        "profile": "midnight",
+        "source": "IANA 2026c: Alberta moves to permanent -06",
+        "start": 1804928400,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ],
+        "transition_delta": 3600,
+        "zone": "America/Edmonton"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:Africa/Casablanca:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "ordinary",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00+01:00",
+            "timestamp": 1737000000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00+01:00",
+            "timestamp": 1737086400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00+01:00",
+            "timestamp": 1737172800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00+01:00",
+            "timestamp": 1737259200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00+01:00",
+            "timestamp": 1737345600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00+01:00",
+            "timestamp": 1737432000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00+01:00",
+            "timestamp": 1737518400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00+01:00",
+            "timestamp": 1737604800.0
+          }
+        ],
+        "new_zone_file_sha256": "6b026cdcb00868a3dc1f24f7072a1ce3ac0c3ff83b3d847fee5f3cc01fa85f50",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00+01:00",
+            "timestamp": 1737000000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00+01:00",
+            "timestamp": 1737086400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00+01:00",
+            "timestamp": 1737172800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00+01:00",
+            "timestamp": 1737259200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00+01:00",
+            "timestamp": 1737345600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00+01:00",
+            "timestamp": 1737432000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00+01:00",
+            "timestamp": 1737518400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00+01:00",
+            "timestamp": 1737604800.0
+          }
+        ],
+        "old_zone_file_sha256": "30ca6cf13e00c2a6c437a3c837fa643623cc04406ab5165165c78b37ef6bc4c3",
+        "pair_id": "2026b->2026c:Africa/Casablanca",
+        "profile": "five_am",
+        "source": "IANA 2026c: Morocco moves to permanent +00",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "Africa/Casablanca"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:Africa/Casablanca:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "ordinary",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00+01:00",
+            "timestamp": 1737000000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00+01:00",
+            "timestamp": 1737086400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00+01:00",
+            "timestamp": 1737172800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00+01:00",
+            "timestamp": 1737259200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00+01:00",
+            "timestamp": 1737345600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00+01:00",
+            "timestamp": 1737432000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00+01:00",
+            "timestamp": 1737518400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00+01:00",
+            "timestamp": 1737604800.0
+          }
+        ],
+        "new_zone_file_sha256": "6b026cdcb00868a3dc1f24f7072a1ce3ac0c3ff83b3d847fee5f3cc01fa85f50",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00+01:00",
+            "timestamp": 1737000000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00+01:00",
+            "timestamp": 1737086400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00+01:00",
+            "timestamp": 1737172800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00+01:00",
+            "timestamp": 1737259200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00+01:00",
+            "timestamp": 1737345600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00+01:00",
+            "timestamp": 1737432000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00+01:00",
+            "timestamp": 1737518400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00+01:00",
+            "timestamp": 1737604800.0
+          }
+        ],
+        "old_zone_file_sha256": "30ca6cf13e00c2a6c437a3c837fa643623cc04406ab5165165c78b37ef6bc4c3",
+        "pair_id": "2026b->2026c:Africa/Casablanca",
+        "profile": "five_am",
+        "source": "IANA 2026c: Morocco moves to permanent +00",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "Africa/Casablanca"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:Africa/Casablanca:2026:1789779600:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-09-19T05:00:00+01:00",
+            "timestamp": 1789790400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-20T05:00:00+00:00",
+            "timestamp": 1789880400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-21T05:00:00+00:00",
+            "timestamp": 1789966800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-22T05:00:00+00:00",
+            "timestamp": 1790053200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-23T05:00:00+00:00",
+            "timestamp": 1790139600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-24T05:00:00+00:00",
+            "timestamp": 1790226000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-25T05:00:00+00:00",
+            "timestamp": 1790312400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-26T05:00:00+00:00",
+            "timestamp": 1790398800.0
+          }
+        ],
+        "new_zone_file_sha256": "6b026cdcb00868a3dc1f24f7072a1ce3ac0c3ff83b3d847fee5f3cc01fa85f50",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-09-19T05:00:00+01:00",
+            "timestamp": 1789790400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-20T05:00:00+01:00",
+            "timestamp": 1789876800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-21T05:00:00+01:00",
+            "timestamp": 1789963200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-22T05:00:00+01:00",
+            "timestamp": 1790049600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-23T05:00:00+01:00",
+            "timestamp": 1790136000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-24T05:00:00+01:00",
+            "timestamp": 1790222400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-25T05:00:00+01:00",
+            "timestamp": 1790308800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-26T05:00:00+01:00",
+            "timestamp": 1790395200.0
+          }
+        ],
+        "old_zone_file_sha256": "30ca6cf13e00c2a6c437a3c837fa643623cc04406ab5165165c78b37ef6bc4c3",
+        "pair_id": "2026b->2026c:Africa/Casablanca",
+        "profile": "five_am",
+        "source": "IANA 2026c: Morocco moves to permanent +00",
+        "start": 1789779600,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "Africa/Casablanca"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:Africa/Casablanca:2026:1789779600:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "transition",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-09-19T05:00:00+01:00",
+            "timestamp": 1789790400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-20T05:00:00+00:00",
+            "timestamp": 1789880400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-21T05:00:00+00:00",
+            "timestamp": 1789966800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-22T05:00:00+00:00",
+            "timestamp": 1790053200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-23T05:00:00+00:00",
+            "timestamp": 1790139600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-24T05:00:00+00:00",
+            "timestamp": 1790226000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-25T05:00:00+00:00",
+            "timestamp": 1790312400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-26T05:00:00+00:00",
+            "timestamp": 1790398800.0
+          }
+        ],
+        "new_zone_file_sha256": "6b026cdcb00868a3dc1f24f7072a1ce3ac0c3ff83b3d847fee5f3cc01fa85f50",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-09-19T05:00:00+01:00",
+            "timestamp": 1789790400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-20T05:00:00+01:00",
+            "timestamp": 1789876800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-21T05:00:00+01:00",
+            "timestamp": 1789963200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-22T05:00:00+01:00",
+            "timestamp": 1790049600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-23T05:00:00+01:00",
+            "timestamp": 1790136000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-24T05:00:00+01:00",
+            "timestamp": 1790222400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-25T05:00:00+01:00",
+            "timestamp": 1790308800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-09-26T05:00:00+01:00",
+            "timestamp": 1790395200.0
+          }
+        ],
+        "old_zone_file_sha256": "30ca6cf13e00c2a6c437a3c837fa643623cc04406ab5165165c78b37ef6bc4c3",
+        "pair_id": "2026b->2026c:Africa/Casablanca",
+        "profile": "five_am",
+        "source": "IANA 2026c: Morocco moves to permanent +00",
+        "start": 1789779600,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "Africa/Casablanca"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026b->2026c:Africa/Casablanca:2027:1804903200:midnight",
+        "changed": true,
+        "classification": "changed_with_violation_or_uncertainty",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026c",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00+00:00",
+            "timestamp": 1804982400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-15T00:00:00+00:00",
+            "timestamp": 1805068800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00+00:00",
+            "timestamp": 1805155200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00+00:00",
+            "timestamp": 1805241600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00+00:00",
+            "timestamp": 1805328000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00+00:00",
+            "timestamp": 1805414400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00+00:00",
+            "timestamp": 1805500800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00+00:00",
+            "timestamp": 1805587200.0
+          }
+        ],
+        "new_zone_file_sha256": "6b026cdcb00868a3dc1f24f7072a1ce3ac0c3ff83b3d847fee5f3cc01fa85f50",
+        "old": "2026b",
+        "old_error": null,
+        "old_reasons": [
+          "missing_required_occurrence"
+        ],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00+00:00",
+            "timestamp": 1804982400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00+01:00",
+            "timestamp": 1805151600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00+01:00",
+            "timestamp": 1805238000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00+01:00",
+            "timestamp": 1805324400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00+01:00",
+            "timestamp": 1805410800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00+01:00",
+            "timestamp": 1805497200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00+01:00",
+            "timestamp": 1805583600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-22T00:00:00+01:00",
+            "timestamp": 1805670000.0
+          }
+        ],
+        "old_zone_file_sha256": "30ca6cf13e00c2a6c437a3c837fa643623cc04406ab5165165c78b37ef6bc4c3",
+        "pair_id": "2026b->2026c:Africa/Casablanca",
+        "profile": "midnight",
+        "source": "IANA 2026c: Morocco moves to permanent +00",
+        "start": 1804903200,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ],
+        "transition_delta": 3600,
+        "zone": "Africa/Casablanca"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026c->2026d:America/Inuvik:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "ordinary",
+        "new": "2026d",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-07:00",
+            "timestamp": 1737028800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-07:00",
+            "timestamp": 1737115200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-07:00",
+            "timestamp": 1737201600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-07:00",
+            "timestamp": 1737288000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-07:00",
+            "timestamp": 1737374400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-07:00",
+            "timestamp": 1737460800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-07:00",
+            "timestamp": 1737547200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-07:00",
+            "timestamp": 1737633600.0
+          }
+        ],
+        "new_zone_file_sha256": "bd932739fc83073f8b9ad0f54f1252983b1be98d718f7d6843d1a9396310b18b",
+        "old": "2026c",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-07:00",
+            "timestamp": 1737028800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-07:00",
+            "timestamp": 1737115200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-07:00",
+            "timestamp": 1737201600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-07:00",
+            "timestamp": 1737288000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-07:00",
+            "timestamp": 1737374400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-07:00",
+            "timestamp": 1737460800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-07:00",
+            "timestamp": 1737547200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-07:00",
+            "timestamp": 1737633600.0
+          }
+        ],
+        "old_zone_file_sha256": "77f657f94492ef41c84fefcf44928c63a99b411bdb28bbeccbd6abeee2f6338d",
+        "pair_id": "2026c->2026d:America/Inuvik",
+        "profile": "five_am",
+        "source": "IANA 2026d: Northwest Territories moves to permanent -06",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "America/Inuvik"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026c->2026d:America/Inuvik:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "ordinary",
+        "new": "2026d",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-07:00",
+            "timestamp": 1737028800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-07:00",
+            "timestamp": 1737115200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-07:00",
+            "timestamp": 1737201600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-07:00",
+            "timestamp": 1737288000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-07:00",
+            "timestamp": 1737374400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-07:00",
+            "timestamp": 1737460800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-07:00",
+            "timestamp": 1737547200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-07:00",
+            "timestamp": 1737633600.0
+          }
+        ],
+        "new_zone_file_sha256": "bd932739fc83073f8b9ad0f54f1252983b1be98d718f7d6843d1a9396310b18b",
+        "old": "2026c",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-07:00",
+            "timestamp": 1737028800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-07:00",
+            "timestamp": 1737115200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-07:00",
+            "timestamp": 1737201600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-07:00",
+            "timestamp": 1737288000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-07:00",
+            "timestamp": 1737374400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-07:00",
+            "timestamp": 1737460800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-07:00",
+            "timestamp": 1737547200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-07:00",
+            "timestamp": 1737633600.0
+          }
+        ],
+        "old_zone_file_sha256": "77f657f94492ef41c84fefcf44928c63a99b411bdb28bbeccbd6abeee2f6338d",
+        "pair_id": "2026c->2026d:America/Inuvik",
+        "profile": "five_am",
+        "source": "IANA 2026d: Northwest Territories moves to permanent -06",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "America/Inuvik"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026c->2026d:America/Inuvik:2026:1793433600:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026d",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-06:00",
+            "timestamp": 1793444400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-06:00",
+            "timestamp": 1793530800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-06:00",
+            "timestamp": 1793617200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-06:00",
+            "timestamp": 1793703600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-06:00",
+            "timestamp": 1793790000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-06:00",
+            "timestamp": 1793876400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-06:00",
+            "timestamp": 1793962800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-06:00",
+            "timestamp": 1794049200.0
+          }
+        ],
+        "new_zone_file_sha256": "bd932739fc83073f8b9ad0f54f1252983b1be98d718f7d6843d1a9396310b18b",
+        "old": "2026c",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-06:00",
+            "timestamp": 1793444400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-07:00",
+            "timestamp": 1793534400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-07:00",
+            "timestamp": 1793620800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-07:00",
+            "timestamp": 1793707200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-07:00",
+            "timestamp": 1793793600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-07:00",
+            "timestamp": 1793880000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-07:00",
+            "timestamp": 1793966400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-07:00",
+            "timestamp": 1794052800.0
+          }
+        ],
+        "old_zone_file_sha256": "77f657f94492ef41c84fefcf44928c63a99b411bdb28bbeccbd6abeee2f6338d",
+        "pair_id": "2026c->2026d:America/Inuvik",
+        "profile": "five_am",
+        "source": "IANA 2026d: Northwest Territories moves to permanent -06",
+        "start": 1793433600,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "America/Inuvik"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026c->2026d:America/Inuvik:2026:1793433600:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "transition",
+        "new": "2026d",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-06:00",
+            "timestamp": 1793444400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-06:00",
+            "timestamp": 1793530800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-06:00",
+            "timestamp": 1793617200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-06:00",
+            "timestamp": 1793703600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-06:00",
+            "timestamp": 1793790000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-06:00",
+            "timestamp": 1793876400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-06:00",
+            "timestamp": 1793962800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-06:00",
+            "timestamp": 1794049200.0
+          }
+        ],
+        "new_zone_file_sha256": "bd932739fc83073f8b9ad0f54f1252983b1be98d718f7d6843d1a9396310b18b",
+        "old": "2026c",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-06:00",
+            "timestamp": 1793444400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-07:00",
+            "timestamp": 1793534400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-07:00",
+            "timestamp": 1793620800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-07:00",
+            "timestamp": 1793707200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-07:00",
+            "timestamp": 1793793600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-07:00",
+            "timestamp": 1793880000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-07:00",
+            "timestamp": 1793966400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-07:00",
+            "timestamp": 1794052800.0
+          }
+        ],
+        "old_zone_file_sha256": "77f657f94492ef41c84fefcf44928c63a99b411bdb28bbeccbd6abeee2f6338d",
+        "pair_id": "2026c->2026d:America/Inuvik",
+        "profile": "five_am",
+        "source": "IANA 2026d: Northwest Territories moves to permanent -06",
+        "start": 1793433600,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "America/Inuvik"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026c->2026d:America/Inuvik:2027:1804928400:midnight",
+        "changed": true,
+        "classification": "changed_with_violation_or_uncertainty",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026d",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00-06:00",
+            "timestamp": 1805004000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-15T00:00:00-06:00",
+            "timestamp": 1805090400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00-06:00",
+            "timestamp": 1805176800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00-06:00",
+            "timestamp": 1805263200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00-06:00",
+            "timestamp": 1805349600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00-06:00",
+            "timestamp": 1805436000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00-06:00",
+            "timestamp": 1805522400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00-06:00",
+            "timestamp": 1805608800.0
+          }
+        ],
+        "new_zone_file_sha256": "bd932739fc83073f8b9ad0f54f1252983b1be98d718f7d6843d1a9396310b18b",
+        "old": "2026c",
+        "old_error": null,
+        "old_reasons": [
+          "missing_required_occurrence"
+        ],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00-07:00",
+            "timestamp": 1805007600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00-06:00",
+            "timestamp": 1805176800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00-06:00",
+            "timestamp": 1805263200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00-06:00",
+            "timestamp": 1805349600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00-06:00",
+            "timestamp": 1805436000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00-06:00",
+            "timestamp": 1805522400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00-06:00",
+            "timestamp": 1805608800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-22T00:00:00-06:00",
+            "timestamp": 1805695200.0
+          }
+        ],
+        "old_zone_file_sha256": "77f657f94492ef41c84fefcf44928c63a99b411bdb28bbeccbd6abeee2f6338d",
+        "pair_id": "2026c->2026d:America/Inuvik",
+        "profile": "midnight",
+        "source": "IANA 2026d: Northwest Territories moves to permanent -06",
+        "start": 1804928400,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ],
+        "transition_delta": 3600,
+        "zone": "America/Inuvik"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026d->2026e:America/Winnipeg:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "ordinary",
+        "new": "2026e",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-06:00",
+            "timestamp": 1737025200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-06:00",
+            "timestamp": 1737111600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-06:00",
+            "timestamp": 1737198000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-06:00",
+            "timestamp": 1737284400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-06:00",
+            "timestamp": 1737370800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-06:00",
+            "timestamp": 1737457200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-06:00",
+            "timestamp": 1737543600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-06:00",
+            "timestamp": 1737630000.0
+          }
+        ],
+        "new_zone_file_sha256": "6072e5fb802900b193407239b4fb4de9fb2ce80b43ea0f4286a954665b565cbd",
+        "old": "2026d",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-06:00",
+            "timestamp": 1737025200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-06:00",
+            "timestamp": 1737111600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-06:00",
+            "timestamp": 1737198000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-06:00",
+            "timestamp": 1737284400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-06:00",
+            "timestamp": 1737370800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-06:00",
+            "timestamp": 1737457200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-06:00",
+            "timestamp": 1737543600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-06:00",
+            "timestamp": 1737630000.0
+          }
+        ],
+        "old_zone_file_sha256": "00dcf0606054d4f927416e0b47e1fdda2e5ce036fde4b53e51084f8566428c3a",
+        "pair_id": "2026d->2026e:America/Winnipeg",
+        "profile": "five_am",
+        "source": "IANA 2026e: Manitoba moves to permanent -05",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "America/Winnipeg"
+      },
+      {
+        "anchor_offset": 0,
+        "byte_changed": true,
+        "case_id": "2026d->2026e:America/Winnipeg:2025:1736942400:five_am",
+        "changed": false,
+        "classification": "byte_change_no_observed_behavior_change",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "ordinary",
+        "new": "2026e",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-06:00",
+            "timestamp": 1737025200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-06:00",
+            "timestamp": 1737111600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-06:00",
+            "timestamp": 1737198000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-06:00",
+            "timestamp": 1737284400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-06:00",
+            "timestamp": 1737370800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-06:00",
+            "timestamp": 1737457200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-06:00",
+            "timestamp": 1737543600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-06:00",
+            "timestamp": 1737630000.0
+          }
+        ],
+        "new_zone_file_sha256": "6072e5fb802900b193407239b4fb4de9fb2ce80b43ea0f4286a954665b565cbd",
+        "old": "2026d",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2025-01-16T05:00:00-06:00",
+            "timestamp": 1737025200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-17T05:00:00-06:00",
+            "timestamp": 1737111600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-18T05:00:00-06:00",
+            "timestamp": 1737198000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-19T05:00:00-06:00",
+            "timestamp": 1737284400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-20T05:00:00-06:00",
+            "timestamp": 1737370800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-21T05:00:00-06:00",
+            "timestamp": 1737457200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-22T05:00:00-06:00",
+            "timestamp": 1737543600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2025-01-23T05:00:00-06:00",
+            "timestamp": 1737630000.0
+          }
+        ],
+        "old_zone_file_sha256": "00dcf0606054d4f927416e0b47e1fdda2e5ce036fde4b53e51084f8566428c3a",
+        "pair_id": "2026d->2026e:America/Winnipeg",
+        "profile": "five_am",
+        "source": "IANA 2026e: Manitoba moves to permanent -05",
+        "start": 1736942400,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": 0,
+        "zone": "America/Winnipeg"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026d->2026e:America/Winnipeg:2026:1793430000:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026e",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-05:00",
+            "timestamp": 1793440800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-05:00",
+            "timestamp": 1793527200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-05:00",
+            "timestamp": 1793613600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-05:00",
+            "timestamp": 1793700000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-05:00",
+            "timestamp": 1793786400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-05:00",
+            "timestamp": 1793872800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-05:00",
+            "timestamp": 1793959200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-05:00",
+            "timestamp": 1794045600.0
+          }
+        ],
+        "new_zone_file_sha256": "6072e5fb802900b193407239b4fb4de9fb2ce80b43ea0f4286a954665b565cbd",
+        "old": "2026d",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-05:00",
+            "timestamp": 1793440800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-06:00",
+            "timestamp": 1793530800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-06:00",
+            "timestamp": 1793617200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-06:00",
+            "timestamp": 1793703600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-06:00",
+            "timestamp": 1793790000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-06:00",
+            "timestamp": 1793876400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-06:00",
+            "timestamp": 1793962800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-06:00",
+            "timestamp": 1794049200.0
+          }
+        ],
+        "old_zone_file_sha256": "00dcf0606054d4f927416e0b47e1fdda2e5ce036fde4b53e51084f8566428c3a",
+        "pair_id": "2026d->2026e:America/Winnipeg",
+        "profile": "five_am",
+        "source": "IANA 2026e: Manitoba moves to permanent -05",
+        "start": 1793430000,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "America/Winnipeg"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026d->2026e:America/Winnipeg:2026:1793430000:five_am",
+        "changed": true,
+        "classification": "accepted_data_effect",
+        "implementation": "croniter-6.2.4",
+        "implementation_source_sha256": "cebf0269ed7eb75a1e372a5d87b3cb22f78ca18a500a54c6bfde11a022e7f687",
+        "kind": "transition",
+        "new": "2026e",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-05:00",
+            "timestamp": 1793440800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-05:00",
+            "timestamp": 1793527200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-05:00",
+            "timestamp": 1793613600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-05:00",
+            "timestamp": 1793700000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-05:00",
+            "timestamp": 1793786400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-05:00",
+            "timestamp": 1793872800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-05:00",
+            "timestamp": 1793959200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-05:00",
+            "timestamp": 1794045600.0
+          }
+        ],
+        "new_zone_file_sha256": "6072e5fb802900b193407239b4fb4de9fb2ce80b43ea0f4286a954665b565cbd",
+        "old": "2026d",
+        "old_error": null,
+        "old_reasons": [],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2026-10-31T05:00:00-05:00",
+            "timestamp": 1793440800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-01T05:00:00-06:00",
+            "timestamp": 1793530800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-02T05:00:00-06:00",
+            "timestamp": 1793617200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-03T05:00:00-06:00",
+            "timestamp": 1793703600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-04T05:00:00-06:00",
+            "timestamp": 1793790000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-05T05:00:00-06:00",
+            "timestamp": 1793876400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-06T05:00:00-06:00",
+            "timestamp": 1793962800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2026-11-07T05:00:00-06:00",
+            "timestamp": 1794049200.0
+          }
+        ],
+        "old_zone_file_sha256": "00dcf0606054d4f927416e0b47e1fdda2e5ce036fde4b53e51084f8566428c3a",
+        "pair_id": "2026d->2026e:America/Winnipeg",
+        "profile": "five_am",
+        "source": "IANA 2026e: Manitoba moves to permanent -05",
+        "start": 1793430000,
+        "statuses": [
+          "PASS",
+          "PASS"
+        ],
+        "transition_delta": -3600,
+        "zone": "America/Winnipeg"
+      },
+      {
+        "anchor_offset": -86400,
+        "byte_changed": true,
+        "case_id": "2026d->2026e:America/Winnipeg:2027:1804924800:midnight",
+        "changed": true,
+        "classification": "changed_with_violation_or_uncertainty",
+        "implementation": "aps-3.11.3",
+        "implementation_source_sha256": "d45d8fb6987ab66b2a9d69498a4589c7d2d2667a3647c41c1b9f7a8ebd6b31f5",
+        "kind": "transition",
+        "new": "2026e",
+        "new_error": null,
+        "new_reasons": [],
+        "new_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00-05:00",
+            "timestamp": 1805000400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-15T00:00:00-05:00",
+            "timestamp": 1805086800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00-05:00",
+            "timestamp": 1805173200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00-05:00",
+            "timestamp": 1805259600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00-05:00",
+            "timestamp": 1805346000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00-05:00",
+            "timestamp": 1805432400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00-05:00",
+            "timestamp": 1805518800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00-05:00",
+            "timestamp": 1805605200.0
+          }
+        ],
+        "new_zone_file_sha256": "6072e5fb802900b193407239b4fb4de9fb2ce80b43ea0f4286a954665b565cbd",
+        "old": "2026d",
+        "old_error": null,
+        "old_reasons": [
+          "missing_required_occurrence"
+        ],
+        "old_trace": [
+          {
+            "fold": 0,
+            "iso": "2027-03-14T00:00:00-06:00",
+            "timestamp": 1805004000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-16T00:00:00-05:00",
+            "timestamp": 1805173200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-17T00:00:00-05:00",
+            "timestamp": 1805259600.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-18T00:00:00-05:00",
+            "timestamp": 1805346000.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-19T00:00:00-05:00",
+            "timestamp": 1805432400.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-20T00:00:00-05:00",
+            "timestamp": 1805518800.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-21T00:00:00-05:00",
+            "timestamp": 1805605200.0
+          },
+          {
+            "fold": 0,
+            "iso": "2027-03-22T00:00:00-05:00",
+            "timestamp": 1805691600.0
+          }
+        ],
+        "old_zone_file_sha256": "00dcf0606054d4f927416e0b47e1fdda2e5ce036fde4b53e51084f8566428c3a",
+        "pair_id": "2026d->2026e:America/Winnipeg",
+        "profile": "midnight",
+        "source": "IANA 2026e: Manitoba moves to permanent -05",
+        "start": 1804924800,
+        "statuses": [
+          "VIOLATION",
+          "PASS"
+        ],
+        "transition_delta": 3600,
+        "zone": "America/Winnipeg"
+      }
+    ],
+    "status_counts": {
+      "2025b-py|aps-3.11.3|PASS": 212,
+      "2025b-py|aps-3.11.3|VIOLATION": 12,
+      "2025b-py|croniter-6.2.4|PASS": 224,
+      "2026a|aps-3.11.3|PASS": 324,
+      "2026a|aps-3.11.3|VIOLATION": 28,
+      "2026a|croniter-6.2.4|PASS": 352,
+      "2026b|aps-3.11.3|PASS": 376,
+      "2026b|aps-3.11.3|VIOLATION": 20,
+      "2026b|croniter-6.2.4|PASS": 396,
+      "2026c|aps-3.11.3|PASS": 380,
+      "2026c|aps-3.11.3|VIOLATION": 16,
+      "2026c|croniter-6.2.4|PASS": 396,
+      "2026d|aps-3.11.3|PASS": 244,
+      "2026d|aps-3.11.3|VIOLATION": 12,
+      "2026d|croniter-6.2.4|PASS": 256,
+      "2026e|aps-3.11.3|PASS": 124,
+      "2026e|aps-3.11.3|VIOLATION": 4,
+      "2026e|croniter-6.2.4|PASS": 128
+    },
+    "timeouts": 0,
+    "traces": 3504
+  },
+  "release_series_conversion_validation": {
+    "by_input": {
+      "2025b-py|Europe/Chisinau": {
+        "checks": 90,
+        "transition_records": 30,
+        "zone_file_sha256": "e533e1902b71c5ad01c8b0afed8c4eadce55b5dba2dafd955fcbeb4a8a4f90fb"
+      },
+      "2026a|America/Vancouver": {
+        "checks": 90,
+        "transition_records": 30,
+        "zone_file_sha256": "129a2eef5b147dfbc7075addef04f492bbe8de8917015e39fd359c385a72dba4"
+      },
+      "2026a|Europe/Chisinau": {
+        "checks": 90,
+        "transition_records": 30,
+        "zone_file_sha256": "439e1ca44e245387148c1141d7d7c5e84bcca73188ff85351a126c8deea0e12e"
+      },
+      "2026b|Africa/Casablanca": {
+        "checks": 96,
+        "transition_records": 32,
+        "zone_file_sha256": "30ca6cf13e00c2a6c437a3c837fa643623cc04406ab5165165c78b37ef6bc4c3"
+      },
+      "2026b|America/Edmonton": {
+        "checks": 90,
+        "transition_records": 30,
+        "zone_file_sha256": "0eada6c5c48d59984c591ab1c30b4c71aab000818cc243b3cfe996f1f26c715f"
+      },
+      "2026b|America/Vancouver": {
+        "checks": 27,
+        "transition_records": 9,
+        "zone_file_sha256": "7d23681b36849ac7f50537b9c02bd8d3aa000b98bd3d1825ce85e7ea3e5534c9"
+      },
+      "2026c|Africa/Casablanca": {
+        "checks": 33,
+        "transition_records": 11,
+        "zone_file_sha256": "6b026cdcb00868a3dc1f24f7072a1ce3ac0c3ff83b3d847fee5f3cc01fa85f50"
+      },
+      "2026c|America/Edmonton": {
+        "checks": 27,
+        "transition_records": 9,
+        "zone_file_sha256": "d52173b56a28205d8d6f792bcfa8bc07614ee0d269f7bf6e43ec91f68d410600"
+      },
+      "2026c|America/Inuvik": {
+        "checks": 90,
+        "transition_records": 30,
+        "zone_file_sha256": "77f657f94492ef41c84fefcf44928c63a99b411bdb28bbeccbd6abeee2f6338d"
+      },
+      "2026d|America/Inuvik": {
+        "checks": 27,
+        "transition_records": 9,
+        "zone_file_sha256": "bd932739fc83073f8b9ad0f54f1252983b1be98d718f7d6843d1a9396310b18b"
+      },
+      "2026d|America/Winnipeg": {
+        "checks": 90,
+        "transition_records": 30,
+        "zone_file_sha256": "00dcf0606054d4f927416e0b47e1fdda2e5ce036fde4b53e51084f8566428c3a"
+      },
+      "2026e|America/Winnipeg": {
+        "checks": 27,
+        "transition_records": 9,
+        "zone_file_sha256": "6072e5fb802900b193407239b4fb4de9fb2ce80b43ea0f4286a954665b565cbd"
+      }
+    },
+    "checks": 777,
+    "horizon": [
+      2022,
+      2037
+    ],
+    "inputs": 12,
+    "interpretation": "Exact-offset cross-check against ZoneInfo.from_file; shared TZif bytes remain a common dependency.",
+    "mismatches": [],
+    "transition_records": 259
+  },
+  "signature_budget": {
+    "budget_averaged_unique_signatures": {
+      "aps-3.11.0|boundary": 10.608297101449274,
+      "aps-3.11.0|uniform": 2.205,
+      "aps-3.11.1|boundary": 3.553586956521739,
+      "aps-3.11.1|uniform": 2.0054710144927537,
+      "aps-3.11.2|boundary": 3.526739130434783,
+      "aps-3.11.2|uniform": 1.9848913043478258,
+      "croniter-1.3.10|boundary": 25.247355072463762,
+      "croniter-1.3.10|uniform": 8.931014492753624,
+      "croniter-2.0.1|boundary": 25.277391304347823,
+      "croniter-2.0.1|uniform": 9.004601449275363
+    },
+    "full_pool": {
+      "aps-3.11.0": {
+        "boundary_cases": 1120,
+        "boundary_unique_signatures": 12,
+        "boundary_violations": 224,
+        "uniform": [
+          {
+            "cases": 1120,
+            "seed": 101,
+            "unique_signatures": 5,
+            "violations": 5
+          },
+          {
+            "cases": 1120,
+            "seed": 211,
+            "unique_signatures": 3,
+            "violations": 3
+          },
+          {
+            "cases": 1120,
+            "seed": 307,
+            "unique_signatures": 4,
+            "violations": 4
+          },
+          {
+            "cases": 1120,
+            "seed": 401,
+            "unique_signatures": 7,
+            "violations": 7
+          },
+          {
+            "cases": 1120,
+            "seed": 503,
+            "unique_signatures": 3,
+            "violations": 3
+          }
+        ]
+      },
+      "aps-3.11.1": {
+        "boundary_cases": 1120,
+        "boundary_unique_signatures": 4,
+        "boundary_violations": 64,
+        "uniform": [
+          {
+            "cases": 1120,
+            "seed": 101,
+            "unique_signatures": 4,
+            "violations": 4
+          },
+          {
+            "cases": 1120,
+            "seed": 211,
+            "unique_signatures": 3,
+            "violations": 3
+          },
+          {
+            "cases": 1120,
+            "seed": 307,
+            "unique_signatures": 4,
+            "violations": 4
+          },
+          {
+            "cases": 1120,
+            "seed": 401,
+            "unique_signatures": 6,
+            "violations": 6
+          },
+          {
+            "cases": 1120,
+            "seed": 503,
+            "unique_signatures": 3,
+            "violations": 3
+          }
+        ]
+      },
+      "aps-3.11.2": {
+        "boundary_cases": 1120,
+        "boundary_unique_signatures": 4,
+        "boundary_violations": 64,
+        "uniform": [
+          {
+            "cases": 1120,
+            "seed": 101,
+            "unique_signatures": 4,
+            "violations": 4
+          },
+          {
+            "cases": 1120,
+            "seed": 211,
+            "unique_signatures": 3,
+            "violations": 3
+          },
+          {
+            "cases": 1120,
+            "seed": 307,
+            "unique_signatures": 4,
+            "violations": 4
+          },
+          {
+            "cases": 1120,
+            "seed": 401,
+            "unique_signatures": 6,
+            "violations": 6
+          },
+          {
+            "cases": 1120,
+            "seed": 503,
+            "unique_signatures": 3,
+            "violations": 3
+          }
+        ]
+      },
+      "croniter-1.3.10": {
+        "boundary_cases": 1120,
+        "boundary_unique_signatures": 29,
+        "boundary_violations": 472,
+        "uniform": [
+          {
+            "cases": 1120,
+            "seed": 101,
+            "unique_signatures": 18,
+            "violations": 20
+          },
+          {
+            "cases": 1120,
+            "seed": 211,
+            "unique_signatures": 15,
+            "violations": 16
+          },
+          {
+            "cases": 1120,
+            "seed": 307,
+            "unique_signatures": 14,
+            "violations": 15
+          },
+          {
+            "cases": 1120,
+            "seed": 401,
+            "unique_signatures": 21,
+            "violations": 22
+          },
+          {
+            "cases": 1120,
+            "seed": 503,
+            "unique_signatures": 19,
+            "violations": 20
+          }
+        ]
+      },
+      "croniter-2.0.1": {
+        "boundary_cases": 1120,
+        "boundary_unique_signatures": 29,
+        "boundary_violations": 472,
+        "uniform": [
+          {
+            "cases": 1120,
+            "seed": 101,
+            "unique_signatures": 18,
+            "violations": 20
+          },
+          {
+            "cases": 1120,
+            "seed": 211,
+            "unique_signatures": 15,
+            "violations": 16
+          },
+          {
+            "cases": 1120,
+            "seed": 307,
+            "unique_signatures": 14,
+            "violations": 15
+          },
+          {
+            "cases": 1120,
+            "seed": 401,
+            "unique_signatures": 21,
+            "violations": 22
+          },
+          {
+            "cases": 1120,
+            "seed": 503,
+            "unique_signatures": 19,
+            "violations": 20
+          }
+        ]
+      }
+    }
+  }
+}

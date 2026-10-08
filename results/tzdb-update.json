@@ -1,0 +1,4542 @@
+[
+  {
+    "implementation": "aps-3.11.0",
+    "start_utc": "2025-03-15T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742720400.0,
+            "iso": "2025-03-23T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 369548,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 452180,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.1",
+    "start_utc": "2025-03-15T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742720400.0,
+            "iso": "2025-03-23T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 439481,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 392341,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.2",
+    "start_utc": "2025-03-15T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742720400.0,
+            "iso": "2025-03-23T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 372732,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 359683,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-1.3.10",
+    "start_utc": "2025-03-15T12:00:00Z",
+    "changed": true,
+    "verdict": "VIOLATION",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742724000.0,
+            "iso": "2025-03-23T06:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 5035857,
+        "qualification": {
+          "status": "VIOLATION",
+          "reasons": [
+            "missing_required_occurrence",
+            "off_recurrence"
+          ],
+          "missing": [
+            1742720400.0
+          ]
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 568813,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-2.0.1",
+    "start_utc": "2025-03-15T12:00:00Z",
+    "changed": true,
+    "verdict": "VIOLATION",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742724000.0,
+            "iso": "2025-03-23T06:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 324851,
+        "qualification": {
+          "status": "VIOLATION",
+          "reasons": [
+            "missing_required_occurrence",
+            "off_recurrence"
+          ],
+          "missing": [
+            1742720400.0
+          ]
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742112000.0,
+            "iso": "2025-03-16T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742198400.0,
+            "iso": "2025-03-17T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742284800.0,
+            "iso": "2025-03-18T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742371200.0,
+            "iso": "2025-03-19T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742457600.0,
+            "iso": "2025-03-20T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742544000.0,
+            "iso": "2025-03-21T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742630400.0,
+            "iso": "2025-03-22T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 316729,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.0",
+    "start_utc": "2025-03-22T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742720400.0,
+            "iso": "2025-03-23T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 375046,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 330269,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.1",
+    "start_utc": "2025-03-22T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742720400.0,
+            "iso": "2025-03-23T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 372311,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 317541,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.2",
+    "start_utc": "2025-03-22T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742720400.0,
+            "iso": "2025-03-23T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 433782,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 386392,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-1.3.10",
+    "start_utc": "2025-03-22T12:00:00Z",
+    "changed": true,
+    "verdict": "VIOLATION",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742724000.0,
+            "iso": "2025-03-23T06:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 360954,
+        "qualification": {
+          "status": "VIOLATION",
+          "reasons": [
+            "missing_required_occurrence",
+            "off_recurrence"
+          ],
+          "missing": [
+            1742720400.0
+          ]
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 343739,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-2.0.1",
+    "start_utc": "2025-03-22T12:00:00Z",
+    "changed": true,
+    "verdict": "VIOLATION",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742724000.0,
+            "iso": "2025-03-23T06:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 599247,
+        "qualification": {
+          "status": "VIOLATION",
+          "reasons": [
+            "missing_required_occurrence",
+            "off_recurrence"
+          ],
+          "missing": [
+            1742720400.0
+          ]
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742716800.0,
+            "iso": "2025-03-23T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 307826,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.0",
+    "start_utc": "2025-03-23T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743411600.0,
+            "iso": "2025-03-31T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 338451,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743408000.0,
+            "iso": "2025-03-31T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 323138,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.1",
+    "start_utc": "2025-03-23T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743411600.0,
+            "iso": "2025-03-31T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 322457,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743408000.0,
+            "iso": "2025-03-31T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 441353,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.2",
+    "start_utc": "2025-03-23T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743411600.0,
+            "iso": "2025-03-31T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 353224,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743408000.0,
+            "iso": "2025-03-31T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 347524,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-1.3.10",
+    "start_utc": "2025-03-23T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743411600.0,
+            "iso": "2025-03-31T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 421445,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743408000.0,
+            "iso": "2025-03-31T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 473131,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-2.0.1",
+    "start_utc": "2025-03-23T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1742806800.0,
+            "iso": "2025-03-24T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742893200.0,
+            "iso": "2025-03-25T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742979600.0,
+            "iso": "2025-03-26T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743066000.0,
+            "iso": "2025-03-27T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743152400.0,
+            "iso": "2025-03-28T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743238800.0,
+            "iso": "2025-03-29T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743325200.0,
+            "iso": "2025-03-30T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743411600.0,
+            "iso": "2025-03-31T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 320886,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1742803200.0,
+            "iso": "2025-03-24T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742889600.0,
+            "iso": "2025-03-25T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1742976000.0,
+            "iso": "2025-03-26T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743062400.0,
+            "iso": "2025-03-27T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743148800.0,
+            "iso": "2025-03-28T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743235200.0,
+            "iso": "2025-03-29T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743321600.0,
+            "iso": "2025-03-30T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743408000.0,
+            "iso": "2025-03-31T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 337680,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.0",
+    "start_utc": "2025-04-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1743584400.0,
+            "iso": "2025-04-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743670800.0,
+            "iso": "2025-04-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743757200.0,
+            "iso": "2025-04-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743843600.0,
+            "iso": "2025-04-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743930000.0,
+            "iso": "2025-04-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744016400.0,
+            "iso": "2025-04-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744102800.0,
+            "iso": "2025-04-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744189200.0,
+            "iso": "2025-04-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 370358,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1743580800.0,
+            "iso": "2025-04-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743667200.0,
+            "iso": "2025-04-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743753600.0,
+            "iso": "2025-04-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743840000.0,
+            "iso": "2025-04-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743926400.0,
+            "iso": "2025-04-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744012800.0,
+            "iso": "2025-04-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744099200.0,
+            "iso": "2025-04-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744185600.0,
+            "iso": "2025-04-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 316639,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.1",
+    "start_utc": "2025-04-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1743584400.0,
+            "iso": "2025-04-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743670800.0,
+            "iso": "2025-04-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743757200.0,
+            "iso": "2025-04-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743843600.0,
+            "iso": "2025-04-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743930000.0,
+            "iso": "2025-04-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744016400.0,
+            "iso": "2025-04-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744102800.0,
+            "iso": "2025-04-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744189200.0,
+            "iso": "2025-04-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 347424,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1743580800.0,
+            "iso": "2025-04-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743667200.0,
+            "iso": "2025-04-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743753600.0,
+            "iso": "2025-04-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743840000.0,
+            "iso": "2025-04-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743926400.0,
+            "iso": "2025-04-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744012800.0,
+            "iso": "2025-04-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744099200.0,
+            "iso": "2025-04-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744185600.0,
+            "iso": "2025-04-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 402817,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.2",
+    "start_utc": "2025-04-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1743584400.0,
+            "iso": "2025-04-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743670800.0,
+            "iso": "2025-04-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743757200.0,
+            "iso": "2025-04-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743843600.0,
+            "iso": "2025-04-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743930000.0,
+            "iso": "2025-04-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744016400.0,
+            "iso": "2025-04-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744102800.0,
+            "iso": "2025-04-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744189200.0,
+            "iso": "2025-04-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 345832,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1743580800.0,
+            "iso": "2025-04-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743667200.0,
+            "iso": "2025-04-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743753600.0,
+            "iso": "2025-04-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743840000.0,
+            "iso": "2025-04-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743926400.0,
+            "iso": "2025-04-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744012800.0,
+            "iso": "2025-04-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744099200.0,
+            "iso": "2025-04-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744185600.0,
+            "iso": "2025-04-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 352392,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-1.3.10",
+    "start_utc": "2025-04-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1743584400.0,
+            "iso": "2025-04-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743670800.0,
+            "iso": "2025-04-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743757200.0,
+            "iso": "2025-04-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743843600.0,
+            "iso": "2025-04-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743930000.0,
+            "iso": "2025-04-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744016400.0,
+            "iso": "2025-04-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744102800.0,
+            "iso": "2025-04-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744189200.0,
+            "iso": "2025-04-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 348285,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1743580800.0,
+            "iso": "2025-04-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743667200.0,
+            "iso": "2025-04-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743753600.0,
+            "iso": "2025-04-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743840000.0,
+            "iso": "2025-04-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743926400.0,
+            "iso": "2025-04-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744012800.0,
+            "iso": "2025-04-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744099200.0,
+            "iso": "2025-04-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744185600.0,
+            "iso": "2025-04-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 347013,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-2.0.1",
+    "start_utc": "2025-04-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1743584400.0,
+            "iso": "2025-04-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743670800.0,
+            "iso": "2025-04-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743757200.0,
+            "iso": "2025-04-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743843600.0,
+            "iso": "2025-04-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743930000.0,
+            "iso": "2025-04-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744016400.0,
+            "iso": "2025-04-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744102800.0,
+            "iso": "2025-04-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744189200.0,
+            "iso": "2025-04-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 300615,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1743580800.0,
+            "iso": "2025-04-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743667200.0,
+            "iso": "2025-04-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743753600.0,
+            "iso": "2025-04-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743840000.0,
+            "iso": "2025-04-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1743926400.0,
+            "iso": "2025-04-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744012800.0,
+            "iso": "2025-04-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744099200.0,
+            "iso": "2025-04-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1744185600.0,
+            "iso": "2025-04-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 310259,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.0",
+    "start_utc": "2025-06-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1748854800.0,
+            "iso": "2025-06-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748941200.0,
+            "iso": "2025-06-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749027600.0,
+            "iso": "2025-06-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749114000.0,
+            "iso": "2025-06-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749200400.0,
+            "iso": "2025-06-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749286800.0,
+            "iso": "2025-06-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749373200.0,
+            "iso": "2025-06-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749459600.0,
+            "iso": "2025-06-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 336779,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1748851200.0,
+            "iso": "2025-06-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748937600.0,
+            "iso": "2025-06-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749024000.0,
+            "iso": "2025-06-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749110400.0,
+            "iso": "2025-06-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749196800.0,
+            "iso": "2025-06-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749283200.0,
+            "iso": "2025-06-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749369600.0,
+            "iso": "2025-06-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749456000.0,
+            "iso": "2025-06-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 311862,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.1",
+    "start_utc": "2025-06-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1748854800.0,
+            "iso": "2025-06-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748941200.0,
+            "iso": "2025-06-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749027600.0,
+            "iso": "2025-06-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749114000.0,
+            "iso": "2025-06-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749200400.0,
+            "iso": "2025-06-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749286800.0,
+            "iso": "2025-06-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749373200.0,
+            "iso": "2025-06-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749459600.0,
+            "iso": "2025-06-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 341907,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1748851200.0,
+            "iso": "2025-06-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748937600.0,
+            "iso": "2025-06-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749024000.0,
+            "iso": "2025-06-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749110400.0,
+            "iso": "2025-06-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749196800.0,
+            "iso": "2025-06-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749283200.0,
+            "iso": "2025-06-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749369600.0,
+            "iso": "2025-06-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749456000.0,
+            "iso": "2025-06-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 320625,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.2",
+    "start_utc": "2025-06-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1748854800.0,
+            "iso": "2025-06-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748941200.0,
+            "iso": "2025-06-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749027600.0,
+            "iso": "2025-06-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749114000.0,
+            "iso": "2025-06-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749200400.0,
+            "iso": "2025-06-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749286800.0,
+            "iso": "2025-06-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749373200.0,
+            "iso": "2025-06-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749459600.0,
+            "iso": "2025-06-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 355907,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1748851200.0,
+            "iso": "2025-06-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748937600.0,
+            "iso": "2025-06-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749024000.0,
+            "iso": "2025-06-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749110400.0,
+            "iso": "2025-06-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749196800.0,
+            "iso": "2025-06-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749283200.0,
+            "iso": "2025-06-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749369600.0,
+            "iso": "2025-06-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749456000.0,
+            "iso": "2025-06-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 324771,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-1.3.10",
+    "start_utc": "2025-06-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1748854800.0,
+            "iso": "2025-06-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748941200.0,
+            "iso": "2025-06-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749027600.0,
+            "iso": "2025-06-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749114000.0,
+            "iso": "2025-06-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749200400.0,
+            "iso": "2025-06-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749286800.0,
+            "iso": "2025-06-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749373200.0,
+            "iso": "2025-06-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749459600.0,
+            "iso": "2025-06-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 370829,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1748851200.0,
+            "iso": "2025-06-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748937600.0,
+            "iso": "2025-06-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749024000.0,
+            "iso": "2025-06-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749110400.0,
+            "iso": "2025-06-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749196800.0,
+            "iso": "2025-06-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749283200.0,
+            "iso": "2025-06-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749369600.0,
+            "iso": "2025-06-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749456000.0,
+            "iso": "2025-06-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 317320,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-2.0.1",
+    "start_utc": "2025-06-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1748854800.0,
+            "iso": "2025-06-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748941200.0,
+            "iso": "2025-06-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749027600.0,
+            "iso": "2025-06-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749114000.0,
+            "iso": "2025-06-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749200400.0,
+            "iso": "2025-06-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749286800.0,
+            "iso": "2025-06-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749373200.0,
+            "iso": "2025-06-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749459600.0,
+            "iso": "2025-06-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 310771,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1748851200.0,
+            "iso": "2025-06-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1748937600.0,
+            "iso": "2025-06-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749024000.0,
+            "iso": "2025-06-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749110400.0,
+            "iso": "2025-06-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749196800.0,
+            "iso": "2025-06-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749283200.0,
+            "iso": "2025-06-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749369600.0,
+            "iso": "2025-06-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1749456000.0,
+            "iso": "2025-06-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 289269,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.0",
+    "start_utc": "2025-09-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1756803600.0,
+            "iso": "2025-09-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756890000.0,
+            "iso": "2025-09-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756976400.0,
+            "iso": "2025-09-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757062800.0,
+            "iso": "2025-09-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757149200.0,
+            "iso": "2025-09-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757235600.0,
+            "iso": "2025-09-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757322000.0,
+            "iso": "2025-09-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757408400.0,
+            "iso": "2025-09-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 336198,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1756800000.0,
+            "iso": "2025-09-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756886400.0,
+            "iso": "2025-09-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756972800.0,
+            "iso": "2025-09-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757059200.0,
+            "iso": "2025-09-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757145600.0,
+            "iso": "2025-09-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757232000.0,
+            "iso": "2025-09-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757318400.0,
+            "iso": "2025-09-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757404800.0,
+            "iso": "2025-09-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 342267,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.1",
+    "start_utc": "2025-09-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1756803600.0,
+            "iso": "2025-09-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756890000.0,
+            "iso": "2025-09-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756976400.0,
+            "iso": "2025-09-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757062800.0,
+            "iso": "2025-09-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757149200.0,
+            "iso": "2025-09-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757235600.0,
+            "iso": "2025-09-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757322000.0,
+            "iso": "2025-09-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757408400.0,
+            "iso": "2025-09-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 313534,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1756800000.0,
+            "iso": "2025-09-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756886400.0,
+            "iso": "2025-09-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756972800.0,
+            "iso": "2025-09-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757059200.0,
+            "iso": "2025-09-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757145600.0,
+            "iso": "2025-09-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757232000.0,
+            "iso": "2025-09-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757318400.0,
+            "iso": "2025-09-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757404800.0,
+            "iso": "2025-09-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 366052,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.2",
+    "start_utc": "2025-09-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1756803600.0,
+            "iso": "2025-09-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756890000.0,
+            "iso": "2025-09-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756976400.0,
+            "iso": "2025-09-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757062800.0,
+            "iso": "2025-09-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757149200.0,
+            "iso": "2025-09-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757235600.0,
+            "iso": "2025-09-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757322000.0,
+            "iso": "2025-09-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757408400.0,
+            "iso": "2025-09-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 330359,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1756800000.0,
+            "iso": "2025-09-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756886400.0,
+            "iso": "2025-09-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756972800.0,
+            "iso": "2025-09-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757059200.0,
+            "iso": "2025-09-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757145600.0,
+            "iso": "2025-09-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757232000.0,
+            "iso": "2025-09-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757318400.0,
+            "iso": "2025-09-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757404800.0,
+            "iso": "2025-09-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 332232,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-1.3.10",
+    "start_utc": "2025-09-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1756803600.0,
+            "iso": "2025-09-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756890000.0,
+            "iso": "2025-09-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756976400.0,
+            "iso": "2025-09-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757062800.0,
+            "iso": "2025-09-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757149200.0,
+            "iso": "2025-09-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757235600.0,
+            "iso": "2025-09-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757322000.0,
+            "iso": "2025-09-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757408400.0,
+            "iso": "2025-09-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 380413,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1756800000.0,
+            "iso": "2025-09-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756886400.0,
+            "iso": "2025-09-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756972800.0,
+            "iso": "2025-09-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757059200.0,
+            "iso": "2025-09-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757145600.0,
+            "iso": "2025-09-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757232000.0,
+            "iso": "2025-09-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757318400.0,
+            "iso": "2025-09-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757404800.0,
+            "iso": "2025-09-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 323710,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-2.0.1",
+    "start_utc": "2025-09-01T12:00:00Z",
+    "changed": true,
+    "verdict": "EXPECTED_CHANGE",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1756803600.0,
+            "iso": "2025-09-02T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756890000.0,
+            "iso": "2025-09-03T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756976400.0,
+            "iso": "2025-09-04T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757062800.0,
+            "iso": "2025-09-05T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757149200.0,
+            "iso": "2025-09-06T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757235600.0,
+            "iso": "2025-09-07T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757322000.0,
+            "iso": "2025-09-08T05:00:00-04:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757408400.0,
+            "iso": "2025-09-09T05:00:00-04:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 327084,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1756800000.0,
+            "iso": "2025-09-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756886400.0,
+            "iso": "2025-09-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1756972800.0,
+            "iso": "2025-09-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757059200.0,
+            "iso": "2025-09-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757145600.0,
+            "iso": "2025-09-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757232000.0,
+            "iso": "2025-09-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757318400.0,
+            "iso": "2025-09-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1757404800.0,
+            "iso": "2025-09-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 296409,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.0",
+    "start_utc": "2025-10-06T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 336027,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 325782,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.1",
+    "start_utc": "2025-10-06T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 324260,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 336368,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.2",
+    "start_utc": "2025-10-06T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 337480,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 352032,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-1.3.10",
+    "start_utc": "2025-10-06T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 355326,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 332232,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-2.0.1",
+    "start_utc": "2025-10-06T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 304772,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1759824000.0,
+            "iso": "2025-10-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759910400.0,
+            "iso": "2025-10-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1759996800.0,
+            "iso": "2025-10-09T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760083200.0,
+            "iso": "2025-10-10T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760169600.0,
+            "iso": "2025-10-11T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760256000.0,
+            "iso": "2025-10-12T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760342400.0,
+            "iso": "2025-10-13T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1760428800.0,
+            "iso": "2025-10-14T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 301686,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.0",
+    "start_utc": "2025-12-01T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 354786,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 316840,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.1",
+    "start_utc": "2025-12-01T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 348406,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 314786,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "aps-3.11.2",
+    "start_utc": "2025-12-01T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 346664,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 326122,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-1.3.10",
+    "start_utc": "2025-12-01T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 349657,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 348025,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  },
+  {
+    "implementation": "croniter-2.0.1",
+    "start_utc": "2025-12-01T12:00:00Z",
+    "changed": false,
+    "verdict": "UNCHANGED",
+    "explanation": "IANA tz 2025a NEWS: Paraguay permanent -03 after 2024-10-06; future timestamp changes start 2025-03-22",
+    "runs": {
+      "2024a": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 416417,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      },
+      "2025b": {
+        "trace": [
+          {
+            "timestamp": 1764662400.0,
+            "iso": "2025-12-02T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764748800.0,
+            "iso": "2025-12-03T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764835200.0,
+            "iso": "2025-12-04T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1764921600.0,
+            "iso": "2025-12-05T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765008000.0,
+            "iso": "2025-12-06T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765094400.0,
+            "iso": "2025-12-07T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765180800.0,
+            "iso": "2025-12-08T05:00:00-03:00",
+            "fold": 0
+          },
+          {
+            "timestamp": 1765267200.0,
+            "iso": "2025-12-09T05:00:00-03:00",
+            "fold": 0
+          }
+        ],
+        "error": null,
+        "calls": 8,
+        "elapsed_ns": 359492,
+        "qualification": {
+          "status": "PASS",
+          "reasons": [],
+          "missing": []
+        }
+      }
+    }
+  }
+]

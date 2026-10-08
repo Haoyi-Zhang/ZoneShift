@@ -1,0 +1,9 @@
+{
+  "release_pages": 12,
+  "replay_pages": 12,
+  "release_text_sha256": "e189bb8928700c5df5f740454f09ca25b23805544242ecb4d9111f856540a74c",
+  "replay_text_sha256": "e189bb8928700c5df5f740454f09ca25b23805544242ecb4d9111f856540a74c",
+  "text_identical": true,
+  "main_content_pages": 10,
+  "reference_only_pages": 2
+}
