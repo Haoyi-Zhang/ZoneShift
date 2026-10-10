@@ -124,18 +124,10 @@ class TZif:
             start_rule = _rule_seconds(recurring['start'])
             end_rule = _rule_seconds(recurring['end'])
             last = self.times[-1] if self.times else MIN_TIME - 1
-            first_year = max(1970, datetime.fromtimestamp(max(last, MIN_TIME), timezone.utc).year - 1)
-            for year in range(first_year, 2038):
-                start_local = _rule_local(year, start_rule)
-                end_local = _rule_local(year, end_rule)
-                start_utc = int((start_local - EPOCH).total_seconds()) - std_offset
-                end_utc = int((end_local - EPOCH).total_seconds()) - dst_offset
-                candidates = [Transition(start_utc, std_offset, dst_offset),
-                              Transition(end_utc, dst_offset, std_offset)]
-                for tr in sorted(candidates, key=lambda x: x.utc):
-                    if last < tr.utc < MAX_TIME:
-                        self.tail_transitions.append(tr)
-            self.tail_transitions.sort(key=lambda x: x.utc)
+            initial, self.tail_transitions = _recurring_tail(
+                std_offset, dst_offset, start_rule, end_rule, last)
+            if not self.times:
+                self.tail_initial = initial
         elif self.footer:
             raise ValueError(f'Unsupported dynamic POSIX TZif footer: {self.footer}')
         self.offsets = sorted({t[0] for t in self.types})
@@ -205,3 +197,22 @@ class TZif:
             for key in ("shift_forward", "shift_backward")
             if key in projections
         ]
+
+
+def _recurring_tail(std_offset: int, dst_offset: int, start_rule, end_rule,
+                    last: int) -> tuple[int, list[Transition]]:
+    """Expand a bounded rule and infer the state before its first transition."""
+    transitions: list[Transition] = []
+    # A December civil rule can spill into January UTC. Include 1969 at the
+    # lower boundary; the strict last/MAX_TIME filter keeps footer-only output bounded.
+    first_year = max(1969, datetime.fromtimestamp(max(last, MIN_TIME), timezone.utc).year - 1)
+    for year in range(first_year, 2038):
+        start_utc = int((_rule_local(year, start_rule) - EPOCH).total_seconds()) - std_offset
+        end_utc = int((_rule_local(year, end_rule) - EPOCH).total_seconds()) - dst_offset
+        for tr in (Transition(start_utc, std_offset, dst_offset),
+                   Transition(end_utc, dst_offset, std_offset)):
+            if last < tr.utc < MAX_TIME:
+                transitions.append(tr)
+    transitions.sort(key=lambda tr: tr.utc)
+    initial = transitions[0].before if transitions else std_offset
+    return initial, transitions

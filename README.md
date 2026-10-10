@@ -27,6 +27,13 @@ and `docs/` describes the supported recurrence fragment. Monthly recurrence,
 distributed delivery, and live deployment are not claimed by the core checker.
 Original code is MIT-licensed; vendored sources retain their own notices.
 
+The reference rejects non-finite or out-of-range starting UTC instants. Its
+supported UTC range remains 1970--2036, with at most 64 candidate civil dates.
+Recurring footer rules include prior-year December spillovers into January 1970;
+their initial seasonal state comes from the first applicable UTC transition.
+The focused `test_reference_boundary_regressions.py` tests use only mathematical
+and in-memory fixtures, without binary TZif files or scheduler execution.
+
 The focused offline regressions need only Python's standard library:
 
 ```sh

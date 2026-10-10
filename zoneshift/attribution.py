@@ -46,7 +46,12 @@ def classify_upgrade_square(
     statuses: Mapping[CellName, str],
     traces: Mapping[CellName, tuple[float, ...]] | None = None,
 ) -> dict[str, object]:
-    """Build a compact promotion-sufficiency certificate for a 2x2 square."""
+    """Build a promotion certificate with a sequence-inequality-presence flag.
+
+    ``noncommutative_observation`` compares whether sequence differences exist
+    along parallel edges, not their magnitudes or their qualification. Cell
+    statuses and minimal passing changes remain separate verdict information.
+    """
 
     minimal = minimal_sufficient_changes(statuses)
     baseline = statuses["old_code_old_data"]

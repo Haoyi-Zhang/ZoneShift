@@ -12,7 +12,7 @@ from dataclasses import asdict, dataclass, replace
 from datetime import datetime, timedelta
 from typing import Literal
 
-from .tzif import TZif
+from .tzif import EPOCH, MAX_TIME, MIN_TIME, TZif
 
 GapPolicy = Literal["skip", "shift_forward", "shift_backward", "unspecified"]
 FoldPolicy = Literal["both", "first", "second", "unspecified"]
@@ -99,6 +99,12 @@ class Contract:
         return asdict(self)
 
 
+def _validate_start(start: float) -> None:
+    # The bounded comparison also rejects NaN and infinite float values.
+    if not MIN_TIME <= start < MAX_TIME:
+        raise ValueError("Outside declared reference range 1970--2036")
+
+
 def reference(
     zone: TZif,
     contract: Contract,
@@ -115,8 +121,14 @@ def reference(
 
     if not 1 <= count <= 1024:
         raise ValueError("Count outside bounded reference domain")
+    _validate_start(start)
 
-    first_day = zone.wall(start).date() - timedelta(days=1)
+    # A future branch has label_seconds = utc + offset. Use every admitted
+    # offset, including footer offsets, rather than the offset at start.
+    minimum_offset, maximum_offset = min(zone.offsets), max(zone.offsets)
+    first_day = (EPOCH + timedelta(seconds=start + minimum_offset)).date()
+    lookahead_days = (maximum_offset - minimum_offset + 86399) // 86400 + 1
+    through_day = (EPOCH + timedelta(seconds=through + maximum_offset)).date() if through is not None else None
     events: list[dict[str, object]] = []
     gaps: list[dict[str, object]] = []
     reached: int | None = None
@@ -159,13 +171,13 @@ def reference(
 
         selected_count = min(len(required(events, replace(contract, fold=fold)))
                              for fold in ('first', 'second')) if through is None else 0
-        horizon_reached = through is not None and day >= zone.wall(through).date()
+        horizon_reached = through_day is not None and day >= through_day
         if reached is None and (selected_count >= count or horizon_reached):
             reached = day_index
-        # Two extra local dates plus the one-day offset bound are sufficient to
-        # establish UTC order for this limited recurrence domain.
-        covered = through is None or day >= zone.wall(through).date() + timedelta(days=2)
-        if reached is not None and day_index >= reached + 2 and covered:
+        # Offset-span lookahead establishes UTC order after prefix coverage;
+        # through_day covers every civil label that can map into that horizon.
+        covered = through_day is None or day >= through_day
+        if reached is not None and day_index >= reached + lookahead_days and covered:
             break
     else:
         raise ValueError("Reference horizon exhausted")
@@ -207,6 +219,7 @@ def _qualify_complete(
 ) -> dict[str, object]:
     if not contract.complete:
         raise ValueError("Explicit gap and fold policies are required")
+    _validate_start(start)
 
     values = [float(item["timestamp"]) for item in trace]
     reasons: list[str] = []
