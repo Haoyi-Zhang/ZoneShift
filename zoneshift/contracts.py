@@ -14,13 +14,14 @@ from typing import Literal
 
 from .tzif import EPOCH, MAX_TIME, MIN_TIME, TZif
 
-GapPolicy = Literal["skip", "shift_forward", "shift_backward", "unspecified"]
+GapPolicy = Literal["skip", "shift_forward", "shift_backward", "clamp_forward", "unspecified"]
 FoldPolicy = Literal["both", "first", "second", "unspecified"]
 
 COMPLETE_GAP_POLICIES: tuple[GapPolicy, ...] = (
     "skip",
     "shift_forward",
     "shift_backward",
+    "clamp_forward",
 )
 COMPLETE_FOLD_POLICIES: tuple[FoldPolicy, ...] = ("both", "first", "second")
 
@@ -41,6 +42,7 @@ class Contract:
     gap: GapPolicy = "unspecified"
     fold: FoldPolicy = "unspecified"
     recurrence: str = "wall"
+    policy_scope: Literal["enumerated", "open"] = "enumerated"
 
     def __post_init__(self) -> None:
         for values, upper in (
@@ -61,6 +63,8 @@ class Contract:
             raise ValueError(f"Unsupported fold policy: {self.fold}")
         if self.recurrence != "wall":
             raise ValueError("Elapsed intervals must use the separate elapsed reference")
+        if self.policy_scope not in {"enumerated", "open"}:
+            raise ValueError("Unsupported policy scope")
 
     @property
     def complete(self) -> bool:
@@ -88,11 +92,20 @@ class Contract:
             "second": 0,
         }
 
-    def cron(self) -> str:
+    def cron(self, *, native_wildcards: bool = False) -> str:
         # Cron uses Sunday=0; Python uses Monday=0.
         days = ",".join(map(str, sorted({(value + 1) % 7 for value in self.weekdays})))
         minutes = ",".join(map(str, self.minutes))
         hours = ",".join(map(str, self.hours))
+        # Lexical wildcards affect Debian/cronsim DST semantics. Historical
+        # adapters retain their original explicit-list serialization.
+        if native_wildcards:
+            if self.hours == tuple(range(24)):
+                hours = "*"
+            if self.minutes == tuple(range(60)):
+                minutes = "*"
+            if self.weekdays == tuple(range(7)):
+                days = "*"
         return f"{minutes} {hours} * * {days}"
 
     def to_dict(self) -> dict[str, object]:
@@ -115,8 +128,8 @@ def reference(
     """Enumerate a bounded prefix without invoking a scheduler under test.
 
     The second return value records every missing civil label encountered and
-    both deterministic projection candidates.  When a complete gap policy
-    selects a projection, the projected instant is also included in ``events``.
+    its projection and clamp candidates. When a complete gap policy selects a
+    candidate, that instant is also included in ``events``.
     """
 
     if not 1 <= count <= 1024:
@@ -206,7 +219,9 @@ def required(events: list[dict[str, object]], contract: Contract) -> list[float]
             result.append(timestamp)
         elif contract.fold == "second" and branch == multiplicity - 1:
             result.append(timestamp)
-    return result
+    # Several missed labels can clamp to the same instant. This contract
+    # qualifies coalesced next-occurrence instants, not job delivery counts.
+    return sorted(set(result))
 
 
 def _qualify_complete(
@@ -252,7 +267,7 @@ def _qualify_complete(
             for event in candidates
             if event.get("origin") == "valid_label" and int(event["multiplicity"]) > 1
         ]
-        if valid_fold_events:
+        if valid_fold_events and len(valid_fold_events) == len(candidates):
             permitted = False
             for event in valid_fold_events:
                 branch = int(event["branch"])
@@ -292,8 +307,10 @@ def policy_completion_frontier(
     """Return the finite set of complete policies consistent with a trace.
 
     The frontier is an actionable ambiguity certificate.  A trace is robustly
-    passing only when every admissible completion passes, robustly violating
-    only when every completion violates, and policy-sensitive otherwise.
+    passing only when every supported completion passes, robustly violating
+    only when every supported completion violates, and policy-sensitive
+    otherwise. An open policy domain retains candidate diagnostics but cannot
+    justify either robust classification or promotion.
     """
 
     rows: list[dict[str, object]] = []
@@ -321,7 +338,9 @@ def policy_completion_frontier(
         if row["status"] == "PASS"
     ]
     statuses = {str(row["status"]) for row in rows}
-    if statuses == {"PASS"}:
+    if contract.policy_scope == "open":
+        classification = "unresolved_policy_domain"
+    elif statuses == {"PASS"}:
         classification = "robust_pass"
     elif statuses == {"VIOLATION"}:
         classification = "robust_violation"
@@ -333,6 +352,9 @@ def policy_completion_frontier(
         "completions": rows,
         "passing_completions": passing,
         "completion_count": len(rows),
+        "policy_scope": contract.policy_scope,
+        "supported_gap_policies": list(COMPLETE_GAP_POLICIES),
+        "supported_fold_policies": list(COMPLETE_FOLD_POLICIES),
     }
 
 
@@ -345,6 +367,13 @@ def qualify(
 ) -> dict[str, object]:
     """Return PASS, VIOLATION, or UNDERSPECIFIED for a finite trace."""
 
+    if contract.policy_scope == "open":
+        return {
+            "status": "UNDERSPECIFIED",
+            "reasons": ["unsupported_policy_domain"],
+            "missing": [],
+            "policy_frontier": policy_completion_frontier(zone, contract, start, trace, error),
+        }
     if contract.complete:
         return _qualify_complete(zone, contract, start, trace, error)
 

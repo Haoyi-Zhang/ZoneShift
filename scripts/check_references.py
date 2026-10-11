@@ -16,8 +16,8 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-BIB = ROOT / "paper" / "references.bib"
-TEX = ROOT / "paper" / "main.tex"
+BIB = ROOT.parent / "paper" / "references.bib"
+TEX = ROOT.parent / "paper" / "main.tex"
 LEDGER = ROOT / "docs" / "reference-verification.json"
 LIVE_AUDIT = ROOT / "docs" / "reference-live-audit.json"
 OUT = ROOT / "results" / "reference-check.json"
@@ -27,9 +27,9 @@ CITE_RE = re.compile(r"\\cite\w*\{([^}]*)\}")
 DOI_RE = re.compile(r"^10\.\d{4,9}/\S+$", re.I)
 URL_RE = re.compile(r"^https://\S+$", re.I)
 
-PUBLIC_CASES = {"issue529", "issue606", "issue1021", "sentryissue"}
+PUBLIC_CASES = {"issue529", "issue606", "issue1021", "sentryissue", "sentrymigration"}
 STANDARDS = {"pep495", "pep615", "rfc5545", "rfc6557", "rfc7808", "rfc8536", "rfc9636", "tza", "tzlicense", "tz2026a", "tz2026b", "tz2026c", "tz2026d", "tz2026e"}
-SOFTWARE = {"apsdoc", "apshistory", "aps0", "aps1", "aps2", "aps3", "tests0", "tests2", "cronreadme", "cron1310", "cron201", "cron624", "sentryschedule", "sentrypin"}
+SOFTWARE = {"apsdoc", "apshistory", "aps0", "aps1", "aps2", "aps3", "tests0", "tests2", "cronreadme", "cron1310", "cron201", "cron624", "sentryschedule", "sentrypin", "cronsim26", "sentrycronsim"}
 ORACLE = {"weyuker1982", "barr2015"}
 GENERATION = {"hypothesis", "quickcheck", "dart", "klee", "randoop", "evosuite", "csmith"}
 DIFF_META = {"mckeeman", "genmorph", "mtsurvey", "mtreview", "mrscout"}
@@ -42,6 +42,9 @@ REPRO = {"collberg2016", "wohlin2012", "nas2019"}
 FULL_PRIMARY = PUBLIC_CASES | STANDARDS | SOFTWARE | {"hypothesis", "tang", "mckeeman", "klee"}
 
 SPECIAL_NOTES = {
+    "cronsim26": "Official version-2.6 source and native DST documentation inspected on 2026-10-11; installed 2.6 calculation module read in full before execution. Version pin and source digest are recorded in the separate native comparison. Literal minute/hour wildcards select the native DST mode. The release year is left undated, rather than inferred from access time.",
+    "sentrymigration": "Primary issue 80208 read for the November 2024 migration and its explicit link to issue 66868. It is an existing upstream response, not an additional defect or a ZoneShift deployment claim.",
+    "sentrycronsim": "Released 24.12.1 schedule source inspected on 2026-10-11: next(CronSim(expression, reference_ts)) followed by minute truncation. The local branch comparison selects cronsim 2.6 without asserting an exact current Sentry pin or running the full application.",
     "issue529": "Issue body, recurrence, expected timestamp, labels, and status inspected; the original pandas/pytz environment is not claimed as rerun.",
     "issue606": "Issue body and duplicate disposition inspected; treated as the same historical family as issue 529, not an independent defect.",
     "issue1021": "Issue body supplies the repeated-interval nonprogress input and names APScheduler 3.11.0; local replay is reported separately.",
@@ -247,7 +250,8 @@ def make_ledger(entries: dict[str, dict[str, str]], tex: str) -> dict[str, Any]:
     return {
         "schema_version": 2,
         "audited_on": "2026-10-04",
-        "scope": "Offline retained verification ledger. It records the primary-source audit basis and manuscript use; the automated checker does not claim live DOI/URL resolution.",
+        "supplemented_on": "2026-10-11",
+        "scope": "Retained 2026-10-04 audit basis, with three primary-source migration/native-policy additions checked on 2026-10-11. Citation contexts reflect the current manuscript. This checker does not re-resolve DOI/URL records or re-audit the inherited sources.",
         "entry_count": len(rows),
         "entries": rows,
     }

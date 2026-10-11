@@ -33,6 +33,23 @@ def _resolve_label(label: datetime, zone, contract: Contract) -> list[datetime]:
 
     if contract.gap == "skip":
         return []
+    if contract.gap == "clamp_forward":
+        # ZoneInfo supplies the two offsets of this gap. Find the first valid
+        # whole-second label with round trips, without the TZif reference.
+        forward = [value.replace(tzinfo=None) for value in roundtrips.values()
+                   if value.replace(tzinfo=None) > label]
+        if not forward:
+            raise ValueError("No forward gap boundary supplied by ZoneInfo")
+        lower, upper = label, min(forward)
+        while (upper - lower).total_seconds() > 1:
+            midpoint = lower + timedelta(seconds=int((upper - lower).total_seconds()) // 2)
+            candidate = midpoint.replace(tzinfo=zone, fold=0)
+            back = datetime.fromtimestamp(candidate.timestamp(), zone)
+            if back.replace(tzinfo=None) == midpoint:
+                upper = midpoint
+            else:
+                lower = midpoint
+        return [upper.replace(tzinfo=zone, fold=0)]
     if contract.gap not in {"shift_forward", "shift_backward"}:
         raise ValueError("Adapter intervention requires explicit gap intent")
 
@@ -57,7 +74,7 @@ def wall_next(previous: datetime, contract: Contract) -> datetime:
 
     if previous.tzinfo is None:
         raise ValueError("Aware, pinned-zone datetime required")
-    if not contract.complete:
+    if not contract.complete or contract.policy_scope == 'open':
         raise ValueError("Adapter intervention requires explicit gap/fold intent")
 
     start = previous.timestamp()

@@ -369,7 +369,7 @@ def test_policy_frontier_study_uses_real_scheduler_calls():
     assert summary["timeouts"] == 0
     assert summary["classification_counts"]["aps-3.11.0|fold|robust_violation"] == 44
     assert summary["classification_counts"]["croniter-6.2.4|fold|policy_sensitive"] == 44
-    assert summary["support_pattern_counts"]["croniter-6.2.4|gap|shift_forward+both"] == 44
+    assert summary["support_pattern_counts"]["croniter-6.2.4|gap|shift_forward+both,clamp_forward+both"] == 44
 
 
 def test_upgrade_sufficiency_certificate_unit_cases():
@@ -438,7 +438,7 @@ def test_robust_policy_frontier_can_pass_without_inventing_irrelevant_policy():
     result = qualify(oracle, incomplete, start, trace(required(events, explicit)[:8]))
     assert result["status"] == "PASS"
     assert result["policy_frontier"]["classification"] == "robust_pass"
-    assert result["policy_frontier"]["completion_count"] == 9
+    assert result["policy_frontier"]["completion_count"] == 12
 
 
 def test_upgrade_cli_executes_four_cells_and_emits_sufficiency_certificate(tmp_path, capsys):

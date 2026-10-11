@@ -44,3 +44,34 @@ They check that variable startup durations do not change the semantic digest,
 while scheduled timestamps, verdicts, and source/data hashes still do, and that
 the current derived size includes the complete core package. They do not rerun
 the retained scheduler campaigns or replace their timing measurements.
+
+## Native-policy comparison
+
+Install the optional, fixed comparator with `pip install '.[comparison]'`.
+`python scripts/run_native_comparison.py` requalifies the retained 616 frontier,
+33,600 benchmark, and 10,400 matrix traces, recomputes the 2,080 certificates, and executes
+a separate cronsim 2.6 comparison. It requires the retained results as inputs;
+it does not rerun or replace the historical Linux campaign or its timings.
+`--limit 4` performs a smoke run with a separately named output. Table generation
+uses `python scripts/make_paper_tables.py --paper-dir ../paper`.
+`--requalify-only` rechecks retained traces and attribution without new scheduler
+calls and updates the requalification branch of an existing native result.
+
+The comparator records literal cron expressions. Fixed-time cronsim expressions
+use immediate gap catch-up (`clamp_forward`) and the first fold branch;
+wildcard-hour expressions use skip/both. Expanding `*` into a list can change
+native cronsim DST mode even when the sets of hours agree. The bounded model
+coalesces several clamped labels to one next-occurrence instant, not job counts.
+`policy_scope="open"` preserves `UNDERSPECIFIED` for policy domains outside the
+enumerated menu; unsupported option names still fail configuration validation.
+
+`results/native-cronsim-comparison.json` records 1,368 new traces and 10,944 API
+calls with no timeout: 96 traces pass native policy but violate skip/both, while
+eight Lord Howe hourly-at-30 traces still omit valid occurrences under the
+native contract. Both stateful cronsim and reconstruction of Sentry's later
+CronSim branch pass the same 80 five-o'clock windows. Sentry migrated in November
+2024 (issue 80208); the 24.3.0 croniter replay is historical. The comparison pin
+does not assert an exact current Sentry distribution, production outcome, or a
+performance advantage. Changes of at least three hours remain outside the
+documented small-change native attribution. The historical seven-module totals
+and the separate native comparison must not be conflated.

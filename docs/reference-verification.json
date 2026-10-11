@@ -1,8 +1,9 @@
 {
   "schema_version": 2,
   "audited_on": "2026-10-04",
-  "scope": "Offline retained verification ledger. It records the primary-source audit basis and manuscript use; the automated checker does not claim live DOI/URL resolution.",
-  "entry_count": 69,
+  "supplemented_on": "2026-10-11",
+  "scope": "Retained 2026-10-04 audit basis, with three primary-source migration/native-policy additions checked on 2026-10-11. Citation contexts reflect the current manuscript. This checker does not re-resolve DOI/URL records or re-audit the inherited sources.",
+  "entry_count": 72,
   "entries": [
     {
       "key": "apsdoc",
@@ -16,7 +17,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Versioned DST policy and examples inspected. The paper preserves documented legal missing/repeated occurrences as negative controls.",
       "citation_contexts": [
-        "At the same time, APScheduler documents that a cron schedule may legitimately execute zero or two times when its selected local time falls in a gap or fold~\\cite{apsdoc}."
+        "Yet APScheduler also documents that a cron schedule may legitimately execute zero or two times when its selected local label lies in a gap or fold~\\cite{apsdoc}."
       ]
     },
     {
@@ -76,7 +77,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Issue body and downstream effect description inspected; customer impact remains attributed context, while all numerical results are local measurements.",
       "citation_contexts": [
-        "Sentry issue 66868 reports that the cron expression \\texttt{0 5 * * *} can yield an expected check-in one hour early when daylight saving time (DST) begins and one hour late when it ends~\\cite{sentryissue}."
+        "Sentry issue 66868 reports that the cron expression \\emph{0 5 * * *} can move an expected check-in one hour early when daylight saving time (DST) begins and one hour late when it ends~\\cite{sentryissue}."
       ]
     },
     {
@@ -91,7 +92,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Primary PEP inspected for fold/gap terminology and the semantics of the fold attribute.",
       "citation_contexts": [
-        "PEP~495 introduces Python's \\texttt{fold} bit to disambiguate repeated labels, and PEP~615 defines \\texttt{ZoneInfo} plus explicit file loading from IANA data~\\cite{pep495,pep615}."
+        "PEP~495 introduces Python's \\emph{fold} bit to disambiguate repeated labels, and PEP~615 defines \\emph{ZoneInfo} plus explicit file loading from IANA data~\\cite{pep495,pep615}."
       ]
     },
     {
@@ -106,7 +107,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Primary PEP inspected for ZoneInfo construction and versioned data-source behavior.",
       "citation_contexts": [
-        "PEP~495 introduces Python's \\texttt{fold} bit to disambiguate repeated labels, and PEP~615 defines \\texttt{ZoneInfo} plus explicit file loading from IANA data~\\cite{pep495,pep615}."
+        "PEP~495 introduces Python's \\emph{fold} bit to disambiguate repeated labels, and PEP~615 defines \\emph{ZoneInfo} plus explicit file loading from IANA data~\\cite{pep495,pep615}."
       ]
     },
     {
@@ -121,7 +122,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "IANA 2025a NEWS entry for Paraguay inspected and used only to justify an expected rule-data change.",
       "citation_contexts": [
-        "The IANA 2025a release, for example, records Paraguay's adoption of permanent UTC$-03$, affecting future timestamps from March 2025~\\cite{tza}."
+        "IANA 2025a records Paraguay's adoption of permanent UTC$-03$, changing future UTC instants for unchanged civil requirements~\\cite{tza}."
       ]
     },
     {
@@ -136,7 +137,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Complete upstream notice inspected and retained with the pinned data.",
       "citation_contexts": [
-        "Forty-seven zone files pin 21 zones across seven IANA releases and retain the applicable time-zone data notice~\\cite{tzlicense}."
+        "Forty-seven zone files pin 21 zones across seven IANA releases and retain the time-zone data notice~\\cite{tzlicense}."
       ]
     },
     {
@@ -241,7 +242,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
       "citation_contexts": [
-        "1 release are both executed~\\cite{cron1310,cron201}; their documentation explicitly requires timezone-aware bases for DST handling~\\cite{cronreadme}."
+        "The released croniter modules and timezone-aware-base requirement remain relevant to the historical comparison~\\cite{cron1310,cron201,cronreadme}."
       ]
     },
     {
@@ -256,7 +257,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Exact released module retained and byte-identified; it is Sentry 24.3.0's frozen dependency in the local integration replay.",
       "citation_contexts": [
-        "1 release are both executed~\\cite{cron1310,cron201}; their documentation explicitly requires timezone-aware bases for DST handling~\\cite{cronreadme}.",
+        "The released croniter modules and timezone-aware-base requirement remain relevant to the historical comparison~\\cite{cron1310,cron201,cronreadme}.",
         "4~\\cite{cron1310,cron201,cron624}; a current release never replaces the frozen Sentry dependency."
       ]
     },
@@ -272,7 +273,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Exact released module retained and byte-identified; used as a later release comparator, not as Sentry's deployed version.",
       "citation_contexts": [
-        "1 release are both executed~\\cite{cron1310,cron201}; their documentation explicitly requires timezone-aware bases for DST handling~\\cite{cronreadme}.",
+        "The released croniter modules and timezone-aware-base requirement remain relevant to the historical comparison~\\cite{cron1310,cron201,cronreadme}.",
         "4~\\cite{cron1310,cron201,cron624}; a current release never replaces the frozen Sentry dependency."
       ]
     },
@@ -333,7 +334,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Publisher record and substantive paper sections inspected; cited only as a methodological connection from reports to validated cases.",
       "citation_contexts": [
-        "The report-to-replay process is related to work that uses user reports to guide validated failure discovery~\\cite{tang}, but we neither reuse that algorithm nor claim independent annotators or private data."
+        "The report-to-replay process is related to work that uses user reports to guide validated failure discovery~\\cite{tang}."
       ]
     },
     {
@@ -423,7 +424,8 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
       "citation_contexts": [
-        "The iCalendar specification formalizes recurring calendar components, while the IETF procedures for maintaining and distributing time-zone data recognize that rules are versioned operational inputs~\\cite{rfc5545,rfc6557,rfc7808}."
+        "The iCalendar specification formalizes recurring calendar components, while the IETF procedures for maintaining and distributing time-zone data recognize that rules are versioned operational inputs~\\cite{rfc5545,rfc6557,rfc7808}.",
+        "iCalendar also specifies scheduling policy: an ambiguous DATE-TIME selects its first occurrence, and nonexistent recurrence instances are omitted~\\cite{rfc5545}."
       ]
     },
     {
@@ -906,7 +908,7 @@
       "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
       "citation_contexts": [
         "Repeatability guidance for systems and software-engineering experiments motivates retaining exact inputs, commands, and limitations~\\cite{collberg2016,wohlin2012,nas2019}.",
-        "The full source and result ledger supports repeatability while recognizing that reproducibility in systems work also depends on environment and independent reruns~\\cite{collberg2016,nas2019}."
+        "Exact inputs and bounded execution follow repeatability guidance~\\cite{collberg2016,nas2019}."
       ]
     },
     {
@@ -937,7 +939,7 @@
       "verification_basis": "Metadata retained from the DOI/publisher or official primary record used in the source audit; the citation is limited to the contextual or methodological point shown in the manuscript context.",
       "citation_contexts": [
         "Repeatability guidance for systems and software-engineering experiments motivates retaining exact inputs, commands, and limitations~\\cite{collberg2016,wohlin2012,nas2019}.",
-        "The full source and result ledger supports repeatability while recognizing that reproducibility in systems work also depends on environment and independent reruns~\\cite{collberg2016,nas2019}."
+        "Exact inputs and bounded execution follow repeatability guidance~\\cite{collberg2016,nas2019}."
       ]
     },
     {
@@ -984,7 +986,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Official IANA 2026a release note inspected for Moldova's transition-time correction; used to preselect Europe/Chisinau before outcome inspection.",
       "citation_contexts": [
-        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The 2026a--2026e releases then revise Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}."
       ]
     },
@@ -1000,7 +1002,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Official IANA 2026b release note inspected for British Columbia's permanent UTC-07 change; used to preselect America/Vancouver before outcome inspection.",
       "citation_contexts": [
-        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The 2026a--2026e releases then revise Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "Vancouver contributes 31 accepted 2025b--2026b effects because both endpoints pass and the IANA note supports the permanent-offset change~\\cite{tz2026b}."
       ]
@@ -1017,7 +1019,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Official IANA 2026e release note inspected for Manitoba permanent UTC-05; America/Winnipeg is executed in the stepwise holdout.",
       "citation_contexts": [
-        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The 2026a--2026e releases then revise Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "The sequence matters: Alberta and Morocco change in 2026c, Inuvik in 2026d, and Winnipeg in 2026e~\\cite{tz2026c,tz2026d,tz2026e}.",
         "The source-named release series executes exact tagged Python tzdata bytes through IANA 2026e; releases or zones outside those retained pairs are not inferred~\\cite{tz2026e}."
@@ -1035,7 +1037,7 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Official IANA 2026c release note inspected for Alberta's permanent UTC-06 and Morocco's permanent UTC+00 changes; both zones are executed in the stepwise holdout.",
       "citation_contexts": [
-        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The 2026a--2026e releases then revise Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "The sequence matters: Alberta and Morocco change in 2026c, Inuvik in 2026d, and Winnipeg in 2026e~\\cite{tz2026c,tz2026d,tz2026e}."
       ]
@@ -1052,9 +1054,54 @@
       "read_scope": "Primary source or complete relevant versioned source sections inspected.",
       "verification_basis": "Official IANA 2026d release note inspected for Northwest Territories permanent UTC-06; America/Inuvik is executed in the stepwise holdout.",
       "citation_contexts": [
-        "The 2026a--2026e releases then changed Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules in rapid succession~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
+        "The 2026a--2026e releases then revise Moldova, British Columbia, Alberta, Morocco, Northwest Territories, and Manitoba rules~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "The first preselects Vancouver and Chisinau from the 2026a/2026b notes; the second follows six consecutive source-named pairs through 2026e, adding Edmonton, Casablanca, Inuvik, and Winnipeg before scheduler outcomes are inspected~\\cite{tz2026a,tz2026b,tz2026c,tz2026d,tz2026e}.",
         "The sequence matters: Alberta and Morocco change in 2026c, Inuvik in 2026d, and Winnipeg in 2026e~\\cite{tz2026c,tz2026d,tz2026e}."
+      ]
+    },
+    {
+      "key": "cronsim26",
+      "entry_type": "misc",
+      "authors_latex": "{CronSim contributors}",
+      "title_latex": "{CronSim: DST transitions and calculation source}",
+      "year": "n.d.",
+      "identifier": "https://github.com/cuu508/cronsim/blob/2.6/README.md",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Official version-2.6 source and native DST documentation inspected on 2026-10-11; installed 2.6 calculation module read in full before execution. Version pin and source digest are recorded in the separate native comparison. Literal minute/hour wildcards select the native DST mode. The release year is left undated, rather than inferred from access time.",
+      "citation_contexts": [
+        "\\subsection{Native-policy comparison and the Sentry migration} Cronsim follows Debian cron's immediate catch-up for missed fixed-time jobs and avoids their repeated fold execution; frequent wildcard schedules use ordinary physical-time progression~\\cite{cronsim26}."
+      ]
+    },
+    {
+      "key": "sentrymigration",
+      "entry_type": "misc",
+      "authors_latex": "Evan Purkhiser",
+      "title_latex": "{crons: Migrate to Cronsim library over croniter}",
+      "year": "2024",
+      "identifier": "https://github.com/getsentry/sentry/issues/80208",
+      "source_kind": "public_practice_case",
+      "use_in_paper": "Motivates and bounds the historical problem family; not counted as newly discovered defects.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Primary issue 80208 read for the November 2024 migration and its explicit link to issue 66868. It is an existing upstream response, not an additional defect or a ZoneShift deployment claim.",
+      "citation_contexts": [
+        "1 branch uses CronSim instead~\\cite{sentrymigration,sentrycronsim}."
+      ]
+    },
+    {
+      "key": "sentrycronsim",
+      "entry_type": "misc",
+      "authors_latex": "{Sentry contributors}",
+      "title_latex": "{Monitor schedule calculation}",
+      "year": "2024",
+      "identifier": "https://github.com/getsentry/sentry/blob/24.12.1/src/sentry/monitors/schedule.py",
+      "source_kind": "versioned_software_or_documentation",
+      "use_in_paper": "Pins the practical calculation path, release scope, documented behavior, or dependency version.",
+      "read_scope": "Primary source or complete relevant versioned source sections inspected.",
+      "verification_basis": "Released 24.12.1 schedule source inspected on 2026-10-11: next(CronSim(expression, reference_ts)) followed by minute truncation. The local branch comparison selects cronsim 2.6 without asserting an exact current Sentry pin or running the full application.",
+      "citation_contexts": [
+        "1 branch uses CronSim instead~\\cite{sentrymigration,sentrycronsim}."
       ]
     }
   ]

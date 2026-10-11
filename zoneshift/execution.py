@@ -6,7 +6,7 @@ from pathlib import Path
 import multiprocessing
 import signal,time
 from weakref import WeakKeyDictionary
-from .adapters import aps_class,croniter_class,sentry_next,ROOT
+from .adapters import aps_class,croniter_class,cronsim_class,sentry_next,ROOT
 from .contracts import Contract
 
 
@@ -45,6 +45,16 @@ def _make_step(implementation, zone, contract, start):
         def step():
             nonlocal now
             now=sentry_next(now,contract.cron(), '1.3.10' if implementation=='sentry-24.3.0' else '2.0.1')
+            return now
+    elif implementation == 'cronsim-2.6':
+        iterator = cronsim_class()(contract.cron(native_wildcards=True),
+                                  datetime.fromtimestamp(start, zone))
+        def step():return next(iterator)
+    elif implementation == 'sentry-cronsim-2.6':
+        now = datetime.fromtimestamp(start, zone)
+        def step():
+            nonlocal now
+            now = next(cronsim_class()(contract.cron(native_wildcards=True), now)).replace(second=0, microsecond=0)
             return now
     else:raise ValueError(implementation)
     return step
@@ -164,7 +174,8 @@ def _run_process(implementation, zone, contract, start, count, factory=_make_ste
 def run_trace(implementation: str, zone: ZoneInfo, contract: Contract, start: float, count=8):
     if not 1 <= count <= 256:raise ValueError('Unbounded call count')
     if implementation not in {'aps-3.11.0','aps-3.11.1','aps-3.11.2','aps-3.11.3','croniter-1.3.10',
-                              'croniter-2.0.1','croniter-6.2.4','sentry-adapter','sentry-24.3.0'}:
+                              'croniter-2.0.1','croniter-6.2.4','sentry-adapter','sentry-24.3.0',
+                              'cronsim-2.6','sentry-cronsim-2.6'}:
         raise ValueError(implementation)
     if not hasattr(signal, 'SIGALRM') or not hasattr(signal, 'setitimer'):
         return _run_process(implementation, zone, contract, start, count)

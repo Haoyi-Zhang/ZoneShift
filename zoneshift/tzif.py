@@ -175,8 +175,10 @@ class TZif:
         """Return deterministic projections for a missing civil label.
 
         ``shift_forward`` preserves the position inside the gap and lands after
-        the transition.  ``shift_backward`` lands the same distance before the
-        transition.  An empty mapping means the label is not in a gap.
+        the transition. ``shift_backward`` lands the same distance before the
+        transition. ``clamp_forward`` maps every missing label to the first
+        valid instant at the transition, losing its position inside the gap.
+        An empty mapping means the label is not in a gap.
         """
         local = wall_seconds(wall)
         for transition in self.transitions:
@@ -186,6 +188,7 @@ class TZif:
                 return {
                     "shift_forward": local - transition.before,
                     "shift_backward": local - transition.after,
+                    "clamp_forward": transition.utc,
                 }
         return {}
 

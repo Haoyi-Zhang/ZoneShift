@@ -53,3 +53,12 @@ def sentry_next(reference_ts, crontab, version='2.0.1'):
     """
     iterator=croniter_class(version)(crontab, reference_ts)
     return iterator.get_next(datetime).replace(second=0, microsecond=0)
+
+
+def cronsim_class():
+    """Optional, version-pinned native comparator; never substitutes croniter."""
+    from importlib.metadata import version
+    if version('cronsim') != '2.6':
+        raise ValueError('Native comparison requires cronsim==2.6')
+    from cronsim import CronSim
+    return CronSim

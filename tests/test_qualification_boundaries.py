@@ -32,8 +32,8 @@ def test_frontier_reuses_only_fold_independent_reference(monkeypatch):
         return original(*args, **kwargs)
     monkeypatch.setattr(contracts, 'reference', counted)
     frontier = policy_completion_frontier(ref('America/New_York'), contract, start, trace(times))
-    assert frontier['completion_count'] == 9
-    assert sorted(calls) == ['shift_backward', 'shift_forward', 'skip']
+    assert frontier['completion_count'] == 12
+    assert sorted(calls) == ['clamp_forward', 'shift_backward', 'shift_forward', 'skip']
 
 
 @pytest.mark.parametrize('implementation', ['aps-3.11.0', 'aps-3.11.1', 'aps-3.11.2', 'aps-3.11.3',

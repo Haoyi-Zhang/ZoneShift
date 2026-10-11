@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RES = ROOT / 'results'
 parser = argparse.ArgumentParser()
-parser.add_argument('--paper-dir', type=Path, default=ROOT / 'paper')
+parser.add_argument('--paper-dir', type=Path, default=ROOT.parent / 'paper')
 OUT = parser.parse_args().paper_dir / 'generated'
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -201,7 +201,7 @@ for impl in labels:
             fold_name = pattern.split('+', 1)[1]
             fold_support.append(f'{fold_name} {value}')
         elif kind == 'gap':
-            gap_name = pattern.split('+', 1)[0].replace('shift_forward', 'forward').replace('shift_backward', 'backward')
+            gap_name = '/'.join(item.split('+', 1)[0].replace('shift_forward', 'forward').replace('shift_backward', 'backward').replace('clamp_forward', 'clamp') for item in pattern.split(','))
             gap_support.append(f'{gap_name} {value}')
     fold_cell = f'{fold_robust} robust V' if fold_robust else ', '.join(fold_support)
     gap_cell = ', '.join(gap_support)
