@@ -9,6 +9,7 @@ files in the artifact.  It adds: (1) a code-version x rule-data matrix,
 from __future__ import annotations
 
 from collections import Counter, defaultdict
+from dataclasses import replace
 import argparse
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -428,24 +429,71 @@ def minute_inside(lo: int, hi: int) -> datetime:
     return EPOCH + timedelta(seconds=value)
 
 
-def policy_matrix(out: Path) -> dict:
-    """Exercise every complete gap/fold policy and incomplete-policy frontier."""
+# Domain recovered from results/policy-matrix.json, including row order and
+# lower-boundary candidate positions. This is the retained reference challenge,
+# not the current checker's policy menu or the scheduler frontier study.
+RETAINED_GAP_POLICIES = ("skip", "shift_forward", "shift_backward")
+RETAINED_FOLD_POLICIES = ("both", "first", "second")
+
+
+def _challenge_qualification(zone, contract, start, trace, gaps, folds):
+    """Qualify only within this reference challenge's declared policy domain.
+
+    Explicit completions use the current checker unchanged. Incomplete inputs
+    are evaluated against this experiment's menu, so adding a current policy
+    cannot silently change a historical row's support set.
+    """
+    if contract.complete:
+        return qualify(zone, contract, start, trace)
+    completions = [
+        (gap, fold, qualify(zone, replace(contract, gap=gap, fold=fold), start, trace))
+        for gap in (gaps if contract.gap == "unspecified" else (contract.gap,))
+        for fold in (folds if contract.fold == "unspecified" else (contract.fold,))
+    ]
+    passing = [{"gap": gap, "fold": fold} for gap, fold, q in completions
+               if q["status"] == "PASS"]
+    if len(passing) == len(completions):
+        status, reasons = "PASS", []
+    elif not passing:
+        common = set.intersection(*(set(q["reasons"]) for _, _, q in completions))
+        status, reasons = "VIOLATION", sorted(common) or ["policy_invariant_violation"]
+    else:
+        status, reasons = "UNDERSPECIFIED", ["policy_completion_required"]
+    return {"status": status, "reasons": reasons,
+            "policy_frontier": {"passing_completions": passing}}
+
+
+def policy_matrix(out: Path, *, domain: str = "retained") -> dict:
+    """Replay the retained challenge or a separately named current extension.
+
+    Retained rows use the historical three-gap/three-fold menu and lower whole
+    minute. The current four-gap extension uses whole-minute midpoints to
+    distinguish projection from clamping; it never replaces retained results.
+    """
+    if domain not in {"retained", "current"}:
+        raise ValueError("Unknown reference-challenge domain")
+    gaps = RETAINED_GAP_POLICIES if domain == "retained" else COMPLETE_GAP_POLICIES
+    folds = RETAINED_FOLD_POLICIES if domain == "retained" else COMPLETE_FOLD_POLICIES
+    def candidate(lower, upper):
+        if domain == "current":
+            lower += (upper - lower) // 2
+        return minute_inside(lower, upper)
     fold_rows: list[dict] = []
     gap_rows: list[dict] = []
     for zone_name in all_zones():
         zone = TZif(ROOT / "data/tzdb" / P["tzdb_main"] / zone_name)
         for transition in zone.transitions:
-            year = datetime.fromtimestamp(transition.utc, UTC).year
+            year = (EPOCH + timedelta(seconds=transition.utc)).year
             if year not in P["years"]:
                 continue
             start = transition.utc - 2 * 86400
             if transition.delta < 0:
-                label = minute_inside(
+                label = candidate(
                     transition.utc + transition.after,
                     transition.utc + transition.before,
                 )
                 variants: dict[str, list[dict]] = {}
-                for policy in COMPLETE_FOLD_POLICIES:
+                for policy in folds:
                     contract = Contract(
                         (label.hour,),
                         (label.minute,),
@@ -455,14 +503,14 @@ def policy_matrix(out: Path) -> dict:
                     events, _ = reference(zone, contract, start, 10)
                     variants[policy] = event_trace(required(events, contract)[:8], zone)
                 for expected_policy, trace in variants.items():
-                    for checked_policy in (*COMPLETE_FOLD_POLICIES, "unspecified"):
+                    for checked_policy in (*folds, "unspecified"):
                         contract = Contract(
                             (label.hour,),
                             (label.minute,),
                             gap="skip",
                             fold=checked_policy,
                         )
-                        result = qualify(zone, contract, start, trace)
+                        result = _challenge_qualification(zone, contract, start, trace, gaps, folds)
                         fold_rows.append(
                             {
                                 "zone": zone_name,
@@ -478,12 +526,12 @@ def policy_matrix(out: Path) -> dict:
                             }
                         )
             elif transition.delta > 0:
-                label = minute_inside(
+                label = candidate(
                     transition.utc + transition.before,
                     transition.utc + transition.after,
                 )
                 variants = {}
-                for policy in COMPLETE_GAP_POLICIES:
+                for policy in gaps:
                     contract = Contract(
                         (label.hour,),
                         (label.minute,),
@@ -493,14 +541,14 @@ def policy_matrix(out: Path) -> dict:
                     events, _ = reference(zone, contract, start, 10)
                     variants[policy] = event_trace(required(events, contract)[:8], zone)
                 for expected_policy, trace in variants.items():
-                    for checked_policy in (*COMPLETE_GAP_POLICIES, "unspecified"):
+                    for checked_policy in (*gaps, "unspecified"):
                         contract = Contract(
                             (label.hour,),
                             (label.minute,),
                             gap=checked_policy,
                             fold="both",
                         )
-                        result = qualify(zone, contract, start, trace)
+                        result = _challenge_qualification(zone, contract, start, trace, gaps, folds)
                         gap_rows.append(
                             {
                                 "zone": zone_name,
@@ -529,8 +577,8 @@ def policy_matrix(out: Path) -> dict:
         "gap_cases": len(gap_rows),
         "fold_counts": {"|".join(key): value for key, value in sorted(fold_counts.items())},
         "gap_counts": {"|".join(key): value for key, value in sorted(gap_counts.items())},
-        "complete_gap_policies": list(COMPLETE_GAP_POLICIES),
-        "complete_fold_policies": list(COMPLETE_FOLD_POLICIES),
+        "complete_gap_policies": list(gaps),
+        "complete_fold_policies": list(folds),
         "interpretation": (
             "Self-consistency and policy-discrimination check of the bounded contract; "
             "not independent evidence of scheduler correctness"
@@ -538,7 +586,9 @@ def policy_matrix(out: Path) -> dict:
         "fold_rows": fold_rows,
         "gap_rows": gap_rows,
     }
-    dump(out / "policy-matrix.json", result)
+    if domain == "current":
+        result["challenge_domain"] = "current-four-gap-midpoint"
+    dump(out / ("policy-matrix.json" if domain == "retained" else "policy-matrix-current.json"), result)
     return result
 
 
@@ -589,7 +639,7 @@ def mutation_study(out: Path) -> dict:
     # Dedicated forbidden-fold-branch mutations.
     for zone_name in all_zones():
         zone = TZif(ROOT / "data/tzdb" / P["tzdb_main"] / zone_name)
-        fold = next((t for t in zone.transitions if t.delta < 0 and datetime.fromtimestamp(t.utc, UTC).year in P["years"]), None)
+        fold = next((t for t in zone.transitions if t.delta < 0 and (EPOCH + timedelta(seconds=t.utc)).year in P["years"]), None)
         if not fold:
             continue
         label = minute_inside(fold.utc + fold.after, fold.utc + fold.before)
@@ -598,7 +648,7 @@ def mutation_study(out: Path) -> dict:
         events, _ = reference(zone, both, start, 10)
         second_trace = event_trace(required(events, Contract(both.hours, both.minutes, gap="skip", fold="second"))[:8], zone)
         q = qualify(zone, Contract(both.hours, both.minutes, gap="skip", fold="first"), start, second_trace)
-        rows.append({"zone": zone_name, "year": datetime.fromtimestamp(fold.utc, UTC).year, "profile": "fold_label", "operator": "wrong_fold_branch", "status": q["status"], "reasons": q["reasons"]})
+        rows.append({"zone": zone_name, "year": (EPOCH + timedelta(seconds=fold.utc)).year, "profile": "fold_label", "operator": "wrong_fold_branch", "status": q["status"], "reasons": q["reasons"]})
 
     op_counts = Counter((x["operator"], x["status"]) for x in rows)
     reason_counts = Counter((x["operator"], reason) for x in rows for reason in x["reasons"])

@@ -25,6 +25,19 @@ The real adapters and a separately implemented intervention use Python `ZoneInfo
 
 The main benchmark uses complete application profiles with `gap=skip` and `fold=both`, so every trace receives a decisive bounded verdict. A separate frontier study removes one policy coordinate at a time and enumerates the supported domain. Requalification with clamping retains all 616 executed traces and their classifications but changes the gap support sets: at the lower gap boundary, forward projection and clamping coincide. Native midpoint traces distinguish them. Robustness is conditional on the declared enumerated domain; open domains retain diagnostics but do not establish a universal defect or a passing promotion. Both studies require unique matching instants and strict UTC progress. The historical benchmark executes APScheduler 3.11.0/1/2 and croniter 1.3.10/2.0.1 with pinned 2024a data.
 
+The retained reference challenge is a separate domain: three gap policies
+(`skip`, `shift_forward`, `shift_backward`), three fold policies
+(`both`, `first`, `second`), and the first whole-minute label at each gap/fold
+lower boundary. `scripts.run_extended.policy_matrix(out)` replays that domain,
+including its incomplete-policy support sets, into `policy-matrix.json`.
+The menus and positions are recovered from the retained rows; an archived
+original generator is not included. The offline replay regression compares all
+528 fold and 528 gap rows, their order, labels, reasons and supporting policies.
+`policy_matrix(out, domain="current")` instead writes
+`policy-matrix-current.json`, with four gap policies and midpoint labels that
+distinguish clamping from projection. This reference-only extension does not
+replace retained measurements or narrow the current checker's policy menu.
+
 The two-axis matrix evaluates coordinates `(C,D)`, where `C` is scheduler-code version and `D` is TZif snapshot. For fixed code, a data update is classified as:
 
 1. identical bytes and identical behavior;

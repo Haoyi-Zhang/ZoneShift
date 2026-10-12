@@ -67,7 +67,7 @@ def policy_frontier_study(out: Path) -> dict[str, object]:
     for zone_name, reference_zone in reference_cache.items():
         runtime_zone = zone_cache[zone_name]
         for transition in reference_zone.transitions:
-            year = datetime.fromtimestamp(transition.utc, UTC).year
+            year = (EPOCH + timedelta(seconds=transition.utc)).year
             if year not in P["years"] or transition.delta == 0:
                 continue
             start = transition.utc - 2 * 86400
