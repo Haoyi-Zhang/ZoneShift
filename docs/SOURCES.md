@@ -99,7 +99,6 @@
 
 - ICSE 2027 SEIP: 10 main-text pages plus no more than 2 reference-only pages; IEEEtran `10pt,conference`; non-anonymous track.
 - ICSE 2027 open-science policy: `Data Availability` immediately follows the Conclusion; no uncreated DOI or unuploaded public URL is claimed.
-- Substantive generative-AI assistance was used in preparing the research materials; no human-only analysis or independent peer-review claim is made.
 
 Official policy pages checked for manuscript compliance:
 
