@@ -174,7 +174,7 @@ def _run_process(implementation, zone, contract, start, count, factory=_make_ste
 def validate_count(count):
     """Keep the declared prefix bound identical to the executed call bound."""
     if type(count) is not int or not 1 <= count <= 256:
-        raise ValueError('Call count must be an integer in 1..256')
+        raise ValueError('Unbounded or invalid call count; expected an integer in 1..256')
     return count
 
 

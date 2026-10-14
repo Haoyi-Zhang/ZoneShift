@@ -8,6 +8,12 @@ from zoneshift.execution import run_trace, validate_count
 
 
 class CountContractTests(unittest.TestCase):
+    def test_legacy_out_of_range_diagnostic_is_preserved(self):
+        for count in (0, -1, 257):
+            with self.subTest(count=count):
+                with self.assertRaisesRegex(ValueError, 'Unbounded'):
+                    validate_count(count)
+
     def test_invalid_bounds_are_rejected_without_scheduler_execution(self):
         contract=Contract((5,), (0,), gap='skip', fold='both')
         for count in (True, False, 1.0, 1.9, '8', None, [], {}, 0, -1, 257):
