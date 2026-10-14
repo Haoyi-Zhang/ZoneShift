@@ -171,8 +171,15 @@ def _run_process(implementation, zone, contract, start, count, factory=_make_ste
             'runner':'spawned-process', 'startup_ns':startup_ns}
 
 
+def validate_count(count):
+    """Keep the declared prefix bound identical to the executed call bound."""
+    if type(count) is not int or not 1 <= count <= 256:
+        raise ValueError('Call count must be an integer in 1..256')
+    return count
+
+
 def run_trace(implementation: str, zone: ZoneInfo, contract: Contract, start: float, count=8):
-    if not 1 <= count <= 256:raise ValueError('Unbounded call count')
+    validate_count(count)
     if implementation not in {'aps-3.11.0','aps-3.11.1','aps-3.11.2','aps-3.11.3','croniter-1.3.10',
                               'croniter-2.0.1','croniter-6.2.4','sentry-adapter','sentry-24.3.0',
                               'cronsim-2.6','sentry-cronsim-2.6'}:

@@ -41,11 +41,11 @@ for r in analysis['table']:
         f"{r['uniform_mean']:.1f} [{r['uniform_min']},{r['uniform_max']}] & {r['boundary_calls']:,} \\\\"
     )
 (OUT / 'benchmark-table.tex').write_text(
-    '\\begin{tabular}{lrrrr}\n\\toprule\n'
+    '\\begin{tabularx}{\\columnwidth}{@{}Xrrrr@{}}\n\\toprule\n'
     'Calculation module & Boundary V & U & Uniform V & Calls$^a$\\\\\n'
     '\\midrule\n' + '\n'.join(rows) + '\n\\bottomrule\n'
     '\\multicolumn{5}{l}{$^a$Actual next-occurrence calls in the boundary matrix.}\n'
-    '\\end{tabular}\n'
+    '\\end{tabularx}\n'
 )
 
 # Comparator table
@@ -55,7 +55,7 @@ naive = comp['naive_cross_library']['counts']
 aps = comp['release_differential_aps']['counts']
 cron = comp['release_differential_croniter']['counts']
 (OUT / 'comparator-table.tex').write_text(
-    '\\begin{tabular}{lrrrr}\n\\toprule\n'
+    '\\begin{tabularx}{\\columnwidth}{@{}Xrrrr@{}}\n\\toprule\n'
     'Comparator & Alarms & Actionable & Uncertain/FP & Missed V\\\\\n'
     '\\midrule\n'
     f"Policy-blind branch & {pb['alarms']:,} & {pb['actionable_alarms']:,} & "
@@ -66,7 +66,7 @@ cron = comp['release_differential_croniter']['counts']
     f"{aps['alarms_with_only_uncertainty'] + aps['false_alarms_both_pass']:,} & {aps['shared_or_equal_missed_violations']:,} \\\\\n"
     f"croniter release diff. & {cron['alarms']:,} & {cron['actionable_alarms']:,} & "
     f"{cron['alarms_with_only_uncertainty'] + cron['false_alarms_both_pass']:,} & {cron['shared_or_equal_missed_violations']:,} \\\\\n"
-    '\\bottomrule\n\\end{tabular}\n'
+    '\\bottomrule\n\\end{tabularx}\n'
 )
 
 # Factorial data-effect table.  Keep current-release holdouts out of the
@@ -92,14 +92,14 @@ for impl in factorial_implementations:
 mut = extended['mutation']
 pol = extended['policy']
 (OUT / 'challenge-table.tex').write_text(
-    '\\begin{tabular}{lrrl}\n\\toprule\n'
+    '\\begin{tabularx}{\\columnwidth}{@{}XrrX@{}}\n\\toprule\n'
     'Challenge & Cases & Correct verdicts & Interpretation\\\\\n'
     '\\midrule\n'
-    f"Explicit fold policies & {pol['fold_cases']} & {pol['fold_cases']} & match/mismatch/unknown separated \\\\\n"
-    f"Gap policies & {pol['gap_cases']} & {pol['gap_cases']} & skip/forward/backward/unknown \\\\\n"
+    f"Explicit fold policies & {pol['fold_cases']} & {pol['fold_cases']} & match, mismatch, unknown separated \\\\\n"
+    f"Gap policies & {pol['gap_cases']} & {pol['gap_cases']} & skip, forward, backward, unknown \\\\\n"
     f"Fault-seeded traces & {mut['mutants']} & {mut['detected']} & all six operators detected \\\\\n"
     f"Benign transformations & {mut['benign_cases']} & {mut['benign_cases']} & no alarms \\\\\n"
-    '\\bottomrule\n\\end{tabular}\n'
+    '\\bottomrule\n\\end{tabularx}\n'
 )
 
 # Time-separated current-release and tzdb holdouts
@@ -115,9 +115,9 @@ for impl, pred in [('aps-3.11.3','aps-3.11.2'),('croniter-6.2.4','croniter-2.0.1
     violated = status.get(f'{impl}|VIOLATION', 0)
     rows.append(f"{labels[impl]} & {cases:,} & {changed:,} & {passed:,} & {violated:,} \\\\")
 (OUT / 'current-holdout-table.tex').write_text(
-    '\\begin{tabular}{lrrrr}\n\\toprule\n'
-    'Current module & Cases & Changed vs. predecessor & Pass & Violation\\\\\n'
-    '\\midrule\n' + '\n'.join(rows) + '\n\\bottomrule\n\\end{tabular}\n'
+    '\\begin{tabularx}{\\columnwidth}{@{}Xrrrr@{}}\n\\toprule\n'
+    'Current module & Cases & Changed$^a$ & Pass & Violation\\\\\n'
+    '\\midrule\n' + '\n'.join(rows) + '\n\\bottomrule\n\\end{tabularx}\n'
 )
 
 # Anchor data, grouping the two croniter releases because their selected traces are identical.
@@ -177,9 +177,9 @@ for spec in rule_series['design']['pairs']:
         f"{totals['byte_change_no_observed_behavior_change']} \\\\"
     )
 (OUT / 'release-series-table.tex').write_text(
-    '\\begin{tabular}{lrrr}\n\\toprule\n'
+    '\\begin{tabularx}{\\columnwidth}{@{}Xrrr@{}}\n\\toprule\n'
     'Rule pair / zone & Accepted $\\Delta$ & Blocked $\\Delta$ & Byte-only\\\\\n'
-    '\\midrule\n' + '\n'.join(release_rows) + '\n\\bottomrule\n\\end{tabular}\n'
+    '\\midrule\n' + '\n'.join(release_rows) + '\n\\bottomrule\n\\end{tabularx}\n'
 )
 
 
@@ -209,9 +209,9 @@ for impl in labels:
         f"{labels[impl]} & {fold_cell} & {gap_cell} " + r"\\"
     )
 (OUT / 'policy-frontier-table.tex').write_text(
-    '\\begin{tabular}{lll}\n\\toprule\n'
+    '\\begin{tabularx}{\\columnwidth}{@{}XlX@{}}\n\\toprule\n'
     'Module & Fold frontier & Gap frontier\\\\\n'
-    '\\midrule\n' + '\n'.join(frontier_rows) + '\n\\bottomrule\n\\end{tabular}\n'
+    '\\midrule\n' + '\n'.join(frontier_rows) + '\n\\bottomrule\n\\end{tabularx}\n'
 )
 
 # Inclusion-minimal coordinate changes that reach PASS in an executed 2x2 square.
@@ -233,9 +233,9 @@ for pair in ('aps-3.11.0->aps-3.11.2', 'croniter-1.3.10->croniter-2.0.1'):
         f"{counts.get('no_passing_target', 0)} " + r"\\"
     )
 (OUT / 'sufficiency-table.tex').write_text(
-    '\\begin{tabular}{lrrrrrr}\n\\toprule\n'
+    '\\begin{tabularx}{\\columnwidth}{@{}Xrrrrrr@{}}\n\\toprule\n'
     'Upgrade & Base P & Code & Data & Either & Both & No pass\\\\\n'
-    '\\midrule\n' + '\n'.join(sufficiency_rows) + '\n\\bottomrule\n\\end{tabular}\n'
+    '\\midrule\n' + '\n'.join(sufficiency_rows) + '\n\\bottomrule\n\\end{tabularx}\n'
 )
 
 witness_rows = [

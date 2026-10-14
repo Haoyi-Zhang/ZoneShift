@@ -11,7 +11,7 @@ from typing import Any
 from .adapters import ROOT
 from .attribution import classify_upgrade_square
 from .contracts import Contract, qualify
-from .execution import load_zone, run_trace
+from .execution import load_zone, run_trace, validate_count
 from .tzif import TZif
 
 STATUS_EXIT = {"PASS": 0, "VIOLATION": 1, "UNDERSPECIFIED": 2}
@@ -84,13 +84,14 @@ def _single(cfg: dict[str, Any]) -> tuple[dict[str, Any], int]:
     if unknown:
         raise ValueError(f"Unknown single-check fields: {sorted(unknown)}")
     contract = _contract(cfg["contract"])
+    count = validate_count(cfg.get("count", 8))
     run = _execute_cell(
         cfg["implementation"],
         cfg["tzdb"],
         cfg["zone"],
         cfg,
         contract,
-        int(cfg.get("count", 8)),
+        count,
     )
     result = {"mode": "single", "input": cfg, **run}
     return result, STATUS_EXIT[run["qualification"]["status"]]
@@ -101,7 +102,7 @@ def _upgrade(cfg: dict[str, Any]) -> tuple[dict[str, Any], int]:
     if unknown:
         raise ValueError(f"Unknown upgrade-check fields: {sorted(unknown)}")
     contract = _contract(cfg["contract"])
-    count = int(cfg.get("count", 8))
+    count = validate_count(cfg.get("count", 8))
     old_zone = load_zone(cfg['old_tzdb'], cfg['zone'])
     resolved_start = _start(cfg, old_zone)
     old_oracle = TZif(ROOT / 'data/tzdb' / cfg['old_tzdb'] / cfg['zone'])
