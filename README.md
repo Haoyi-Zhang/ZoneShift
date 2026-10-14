@@ -75,3 +75,12 @@ does not assert an exact current Sentry distribution, production outcome, or a
 performance advantage. Changes of at least three hours remain outside the
 documented small-change native attribution. The historical seven-module totals
 and the separate native comparison must not be conflated.
+
+## Render retained signature yields
+
+Install the optional `figures` extra, then run
+`python scripts/render_signature_budget.py --source plot_inputs/signature-budget.dat --output-dir figures --font-root /path/to/texmf-dist/fonts`.
+This embedded-font vector plot preserves seven budgets and both retained mean
+series. Each point is an equal-weight mean over five modules' retained
+resampling means, not a defect count or a new sampling experiment. Five input
+and routing tests run in the ordinary suite.
