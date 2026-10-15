@@ -7,6 +7,8 @@ reports the minimal passing coordinate changes in an executed upgrade square.
 
 ## Install and test
 
+Run from this `artifact/` directory with Python 3.11 or newer:
+
 ```sh
 python -m pip install -e '.[test]'
 python -m pytest -q
@@ -48,11 +50,16 @@ the retained scheduler campaigns or replace their timing measurements.
 ## Native-policy comparison
 
 Install the optional, fixed comparator with `pip install '.[comparison]'`.
-`python scripts/run_native_comparison.py` requalifies the retained 616 frontier,
+`python scripts/run_native_comparison.py --output results/native-comparison-new`
+requalifies the retained 616 frontier,
 33,600 benchmark, and 10,400 matrix traces, recomputes the 2,080 certificates, and executes
 a separate cronsim 2.6 comparison. It requires the retained results as inputs;
 it does not rerun or replace the historical Linux campaign or its timings.
-`--limit 4` performs a smoke run with a separately named output. Table generation
+Choose a directory that does not exist; omitting `--output` selects the retained
+`results/` directory and may replace its comparison files. For a four-trace
+native smoke, use `--output results/native-comparison-smoke-new --limit 4`.
+This still makes actual optional-comparator calls and is not an offline unit
+test. Table generation
 uses `python scripts/make_paper_tables.py --paper-dir ../paper`.
 `--requalify-only` rechecks retained traces and attribution without new scheduler
 calls and updates the requalification branch of an existing native result.
