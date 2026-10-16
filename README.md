@@ -85,6 +85,13 @@ and the separate native comparison must not be conflated.
 
 ## Render retained signature yields
 
+The code--data workflow is a direct Matplotlib vector with embedded fonts.
+`paper/build.py` regenerates it in the full bundle. From this artifact root:
+
+```sh
+python plots/draw_workflow.py --output-dir ../paper/figures
+```
+
 Install the optional `figures` extra, then run
 `python scripts/render_signature_budget.py --source plot_inputs/signature-budget.dat --output-dir figures --font-root /path/to/texmf-dist/fonts`.
 This embedded-font vector plot preserves seven budgets and both retained mean
