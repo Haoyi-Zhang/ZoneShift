@@ -170,10 +170,11 @@ def policy_frontier_study(out: Path) -> dict[str, object]:
     return summary
 
 
-def upgrade_sufficiency_study(out: Path) -> dict[str, object]:
+def upgrade_sufficiency_study(out: Path, *, input_results: Path | None = None) -> dict[str, object]:
     """Derive verdict-level sufficiency certificates from the executed 2x2 matrix."""
 
-    matrix = json.loads((out / "version-data-matrix.json").read_text())
+    source = out if input_results is None else input_results
+    matrix = json.loads((source / "version-data-matrix.json").read_text())
     runs = matrix["runs"]
     by = {
         (row["case_id"], row["implementation"], row["tzdb"]): row

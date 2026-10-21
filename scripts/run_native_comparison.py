@@ -49,14 +49,15 @@ def unsupported_native_transitions(oracle, start, horizon):
             if start <= tr.utc <= horizon and abs(tr.delta) >= 10800]
 
 
-def requalify(out):
+def requalify(out, *, input_results=None):
+    source = Path(input_results) if input_results is not None else ROOT / 'results'
     zones = {}
     def oracle(tzdb, name):
         if (tzdb, name) not in zones:
             zones[tzdb, name] = TZif(ROOT / 'data/tzdb' / tzdb / name)
         return zones[tzdb, name]
 
-    frontier_data = json.loads((out / 'policy-frontiers.json').read_text())
+    frontier_data = json.loads((source / 'policy-frontiers.json').read_text())
     classifications, supports = Counter(), Counter()
     changed = 0
     for row in frontier_data['runs']:
@@ -72,13 +73,13 @@ def requalify(out):
     summary['classification_counts'] = {'|'.join(key): value for key, value in sorted(classifications.items())}
     summary['support_pattern_counts'] = {'|'.join(key): value for key, value in sorted(supports.items())}
     summary['qualification_model'] = 'four gap policies / three fold policies; coalesced instants'
-    summary['execution_basis'] = 'Retained 616 executed traces; frontiers recomputed, no new scheduler calls'
+    summary['execution_basis'] = f"Retained {len(frontier_data['runs'])} executed traces; frontiers recomputed, no new scheduler calls"
     summary['interpretation'] = 'Robustness is relative to the enumerated policy domain, not every application policy.'
     dump(out / 'policy-frontiers.json', frontier_data)
 
     # Re-evaluate violations and square attribution from actual retained traces.
     # Complete skip/both contracts should not change merely by extending the menu.
-    matrix = json.loads((out / 'version-data-matrix.json').read_text())
+    matrix = json.loads((source / 'version-data-matrix.json').read_text())
     matrix_changes = []
     status_counts = Counter()
     for row in matrix['runs']:
@@ -93,7 +94,7 @@ def requalify(out):
     main_changes = []
     main_counts = Counter()
     main_traces = 0
-    for line in (ROOT / 'results/runs.jsonl').read_text().splitlines():
+    for line in (source / 'runs.jsonl').read_text().splitlines():
         row = json.loads(line)
         result = qualify(oracle(row['tzdb'], row['zone']), PROFILES[row['profile']],
                          row['start'], row['trace'], row['error'])
@@ -105,7 +106,7 @@ def requalify(out):
                                  'before': row['qualification'], 'after': result})
     if main_changes:
         raise RuntimeError('Retained benchmark changed; inspect its comparator accounting')
-    sufficiency = upgrade_sufficiency_study(out)
+    sufficiency = upgrade_sufficiency_study(out, input_results=source)
     dump(out / 'policy-attribution-summary.json', {'policy_frontiers': summary, 'upgrade_sufficiency': sufficiency})
     verification = {'frontier_traces_requalified': len(frontier_data['runs']),
         'frontier_classification_changes': changed,
@@ -120,30 +121,34 @@ def requalify(out):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=Path, default=ROOT / 'results')
+    parser.add_argument('--input-results', type=Path, default=ROOT / 'results',
+                        help='Read-only retained study inputs (default: results/)')
+    parser.add_argument('--output', type=Path, default=ROOT / 'results/native-comparison-new',
+                        help='New output directory; existing directories are never overwritten')
     parser.add_argument('--limit', type=int, help='Smoke run only; writes a separately named result')
     parser.add_argument('--requalify-only', action='store_true', help='Recheck retained traces without new scheduler calls')
     args = parser.parse_args()
+    if args.limit is not None and args.limit <= 0:
+        parser.error('--limit must be a positive integer')
+    source = args.input_results.resolve()
     out = args.output.resolve()
     if not out.is_relative_to(ROOT.resolve()):
         raise ValueError('Output must stay inside this artifact')
-    out.mkdir(parents=True, exist_ok=True)
+    if out.exists():
+        raise FileExistsError(f'Output already exists; choose a new directory: {out}')
+    if not args.requalify_only:
+        cronsim_class()  # Assert exact optional dependency before creating outputs.
+    out.mkdir(parents=True, exist_ok=False)
     if args.requalify_only:
-        verification, _ = requalify(out)
-        native_path = out / 'native-cronsim-comparison.json'
-        if native_path.exists():
-            native = json.loads(native_path.read_text())
-            native['summary']['requalification'] = verification
-            dump(native_path, native)
+        verification, _ = requalify(out, input_results=source)
         print(json.dumps(verification, indent=2), flush=True)
         return
-    cronsim_class()  # Assert exact optional dependency before any experiment.
-    requalification, retained_frontiers = requalify(out) if args.limit is None else (None,
-        json.loads((ROOT / 'results/policy-frontiers.json').read_text())['runs'])
+    requalification, retained_frontiers = requalify(out, input_results=source) if args.limit is None else (None,
+        json.loads((source / 'policy-frontiers.json').read_text())['runs'])
     rows = []
     cache = {}
     boundary_baselines = {}
-    for line in (ROOT / 'results/runs.jsonl').read_text().splitlines():
+    for line in (source / 'runs.jsonl').read_text().splitlines():
         row = json.loads(line)
         if row['strategy'] == 'boundary':
             boundary_baselines[row['case_id'], row['implementation']] = row
@@ -179,7 +184,7 @@ def main():
             'skip_both_qualification': fixed_result, 'frontier': frontier,
             'unsupported_large_transitions': unsupported, 'retained_baseline_comparisons': baselines, **run})
 
-    cases = json.loads((ROOT / 'results/design.json').read_text())['case_specification']
+    cases = json.loads((source / 'design.json').read_text())['case_specification']
     for index, case in enumerate(cases[:args.limit] if args.limit else cases):
         execute('boundary', case['case_id'], case['zone'], case['start'], PROFILES[case['profile']])
         if (index + 1) % 100 == 0:
@@ -195,7 +200,7 @@ def main():
             label = EPOCH + timedelta(seconds=middle)
             contract = Contract((label.hour,), (label.minute,), gap='unspecified', fold='unspecified')
             execute('midpoint_' + row['kind'], row['case_id'] + ':midpoint', row['zone'], row['start'], contract)
-        sentry = json.loads((ROOT / 'results/released-sentry.json').read_text())
+        sentry = json.loads((source / 'released-sentry.json').read_text())
         for index, row in enumerate(sentry['runs']):
             for implementation in ('cronsim-2.6', 'sentry-cronsim-2.6'):
                 execute('sentry_five_am', f'sentry:{index}', row['zone'], row['start'], PROFILES['five_am'], implementation)

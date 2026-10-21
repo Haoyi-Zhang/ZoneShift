@@ -55,14 +55,24 @@ requalifies the retained 616 frontier,
 33,600 benchmark, and 10,400 matrix traces, recomputes the 2,080 certificates, and executes
 a separate cronsim 2.6 comparison. It requires the retained results as inputs;
 it does not rerun or replace the historical Linux campaign or its timings.
-Choose a directory that does not exist; omitting `--output` selects the retained
-`results/` directory and may replace its comparison files. For a four-trace
+Historical inputs are read from `results/`, independently of the output directory;
+`--input-results PATH` selects another retained input set for every comparison
+reader. No historical result files are copied into the new directory as new runs.
+Choose a directory that does not exist. Omitting `--output` selects
+`results/native-comparison-new`; an existing output directory is rejected before
+dependency checks or writes. Neither user outputs nor retained records are overwritten.
+For a four-trace
 native smoke, use `--output results/native-comparison-smoke-new --limit 4`.
 This still makes actual optional-comparator calls and is not an offline unit
 test. Table generation
 uses `python scripts/make_paper_tables.py --paper-dir ../paper`.
 `--requalify-only` rechecks retained traces and attribution without new scheduler
-calls and updates the requalification branch of an existing native result.
+calls, writing only recomputed frontier, certificate, and verification files to
+a new output directory. It does not copy or update an old native-comparison result.
+For example, `python scripts/run_native_comparison.py --output results/requalification-new --requalify-only`
+does not require the optional cronsim dependency. The small offline routing tests
+in `tests/test_native_output_routing.py` use real bounded qualification fixtures
+and stop at the first native-call boundary; they do not run the native campaign.
 
 The comparator records literal cron expressions. Fixed-time cronsim expressions
 use immediate gap catch-up (`clamp_forward`) and the first fold branch;
