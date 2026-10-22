@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Deterministic table/figure generation from raw runs (no fabricated values)."""
+"""Aggregate retained runs into analysis JSON/CSV.
+
+Generate manuscript tables separately with make_paper_tables.py --paper-dir ../paper.
+"""
 from pathlib import Path
 import sys,json,collections,statistics,csv
 ROOT=Path(__file__).resolve().parents[1]
 def main():
-    r=ROOT/'results'; out=ROOT/'paper/generated';out.mkdir(exist_ok=True,parents=True)
+    r=ROOT/'results'
     runs=[json.loads(x) for x in (r/'runs.jsonl').read_text().splitlines()]
     groups=collections.defaultdict(list)
     for x in runs:groups[x['strategy'],x['implementation']].append(x)
@@ -44,25 +47,5 @@ def main():
     (r/'analysis.json').write_text(json.dumps(findings,indent=2)+'\n')
     with (r/'principal-table.csv').open('w') as f:
         w=csv.DictWriter(f,fieldnames=list(table[0]));w.writeheader();w.writerows(table)
-    tex=[]
-    for x in table:
-        label=x['implementation'].replace('aps-','APS ').replace('croniter-','croniter ')
-        tex.append(f"{label} & {x['boundary_v']} & {x['boundary_u']} & {x['uniform_mean']:.1f} [{x['uniform_min']},{x['uniform_max']}] & {x['boundary_calls']:,} \\\\")
-    (out/'benchmark-rows.tex').write_text('\n'.join(tex)+'\n')
-    header=r"""\begin{tabular}{lrrrr}
-\toprule
-Calculation module & Boundary V & U & Uniform V & Calls$^a$\\
-\midrule
-"""
-    footer=r"""\bottomrule
-\multicolumn{5}{l}{$^a$Actual next-occurrence calls in the boundary matrix.}
-\end{tabular}
-"""
-    (out/'benchmark-table.tex').write_text(header+'\n'.join(tex)+'\n'+footer)
-    names=['aps-3.11.0','aps-3.11.2','croniter-2.0.1']
-    with (out/'anchors.dat').open('w') as f:
-        f.write('anchor APS0 APS2 Croniter\n')
-        for i,k in enumerate(['-86400','-3600','1','ordinary']):
-            f.write(str(i)+' '+' '.join(str(anchor[n,k,'VIOLATION']) for n in names)+'\n')
     print(json.dumps(findings,indent=2))
 if __name__=='__main__':main()

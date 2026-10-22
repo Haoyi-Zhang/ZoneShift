@@ -94,11 +94,15 @@ def workflow(out):
     d.box('row',11.7,2.85,2.75,.8,'Code effect\nwith data fixed',size=8.5)
     d.box('col',11.7,.95,2.75,.8,'Data effect\nwith code fixed',size=8.5)
     d.box('decision',15.6,1.9,3.55,1.0,'Frontier + certificate\npromotion decision',size=8.5)
-    for a,b in [('contract','oo'),('contract','on'),('oo','no'),('on','nn'),('no','row'),('nn','col'),('row','decision'),('col','decision')]:
+    for a,b in [('contract','oo'),('contract','on'),('oo','no'),('on','nn'),('no','row'),('row','decision'),('col','decision')]:
         d.edge(a,b,'e','w')
     for a,b,x in [('oo','on',5.1),('no','nn',8.35)]:
         d.edge(a,b,'s','n',dashed=True);d.edge(b,a,'n','s',dashed=True)
         d.text(x+.18,1.9,'data',size=8,ha='left')
+    # Fixed C_new: take the data comparison from the no/nn vertical pair.
+    # Route below its label and above nn, then through the inter-column gap.
+    d.arrow((8.35,1.9),d.point('col','w'),
+            via=[(8.35,1.65),(9.95,1.65),(9.95,.95)])
     for a,b,y in [('oo','no',3.6),('on','nn',.2)]:
         pa=d.point(a,'n' if y>2 else 's');pb=d.point(b,'n' if y>2 else 's')
         d.arrow(pa,pb,True,via=[(pa[0],y),(pb[0],y)])

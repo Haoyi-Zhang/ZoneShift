@@ -15,8 +15,8 @@ python -m pytest -q
 python scripts/verify_inputs.py
 ```
 
-The retained study reports 127 tests; the current suite also includes nested
-semantic-comparator and current-size regressions. Pinned TZif files and licensed scheduler
+The retained study's test logs are preserved separately from the current suite,
+which includes nested semantic-comparator and current-size regressions. Pinned TZif files and licensed scheduler
 sources are included in `data/` and `vendor/`; the checker does not fall back to
 the host's current time-zone database. Windows evaluation uses a bounded worker
 process, while POSIX supports the recorded signal-based boundary.

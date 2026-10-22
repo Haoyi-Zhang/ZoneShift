@@ -1,6 +1,6 @@
 # Retained TZif data
 
-This directory contains byte-pinned TZif files used by the executable study. `manifest.json` is the authoritative path/SHA-256/provenance list; `NOTICE.txt` retains the upstream data notice.
+This directory contains byte-pinned TZif files used by the executable study. `manifest.json` is the authoritative path/SHA-256/provenance list; `LICENSE` retains the upstream data notice.
 
 The corpus contains **47 zone files**:
 
