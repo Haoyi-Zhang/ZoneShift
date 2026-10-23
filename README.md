@@ -93,6 +93,13 @@ performance advantage. Changes of at least three hours remain outside the
 documented small-change native attribution. The historical seven-module totals
 and the separate native comparison must not be conflated.
 
+`python scripts/study_denominators.py` checks the six base-study component
+summaries against 53,400 traces/422,592 calls, recounts the native raw rows and
+their calls, and checks the 43-witness and 7,032-decision batches. It makes no
+scheduler calls. The manuscript builder uses this checked ledger to render its
+cohort/file-mapping table in the isolated build tree; renderer or TeX failures
+do not replace the delivered PDF or workflow figure.
+
 ## Render retained signature yields
 
 The code--data workflow is a direct Matplotlib vector with embedded fonts.
